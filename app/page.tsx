@@ -73,7 +73,8 @@ export default function Home() {
           {[
             { label: 'Cómo Funciona', href: '#como-funciona' },
             { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
-            { label: 'Preguntas Frecuentes', href: '#preguntas-frecuentes' },
+            { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+            { label: 'Blog', href: '/blog' },
           ].map(item => (
             <a key={item.label} href={item.href} className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">{item.label}</a>
           ))}
@@ -336,7 +337,8 @@ export default function Home() {
                 {[
                   { label: 'Cómo Funciona', href: '#como-funciona' },
                   { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
-                  { label: 'Preguntas Frecuentes', href: '#preguntas-frecuentes' },
+                  { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+                  { label: 'Blog', href: '/blog' },
                 ].map(item => (
                   <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {item.label}
