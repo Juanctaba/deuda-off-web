@@ -440,6 +440,216 @@ export const BLOG_POSTS: BlogPost[] = [
 <blockquote>No tienes que aguantar el acoso. Tienes derechos como deudor y la ley colombiana te protege. En Deuda OFF te explicamos cómo ejercerlos sin costo en tu primera consulta.</blockquote>
     `,
   },
+  {
+    slug: 'deudas-cooperativas-insolvencia-colombia',
+    title: 'Deudas con cooperativas en Colombia: ¿se pueden incluir en insolvencia?',
+    description: 'Sí, las deudas con cooperativas de ahorro y crédito pueden incluirse en el proceso de insolvencia de persona natural. Te explicamos cómo funciona y qué condiciones aplican bajo la Ley 2445 de 2025.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Guías',
+    readTime: '6 min',
+    about: ['Deudas cooperativas insolvencia', 'Insolvencia persona natural Colombia', 'Ley 2445 de 2025'],
+    mentions: ['Superintendencia de la Economía Solidaria', 'Superintendencia de Sociedades', 'Ministerio de Justicia Colombia', 'Núcleo Jurídico SAS'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> Sí. Las deudas con cooperativas de ahorro y crédito pueden incluirse en el proceso de insolvencia de persona natural bajo la Ley 2445 de 2025, siempre que la cooperativa actúe como tu acreedor financiero. Esto significa que los intereses se congelan, el cobro coercitivo se suspende y la deuda entra en la negociación colectiva.</p>
+
+<p>Muchos colombianos tienen deudas con cooperativas y creen erróneamente que el proceso de insolvencia no aplica para ellas. La realidad es que las cooperativas de ahorro y crédito están incluidas en el régimen legal de insolvencia de persona natural, y sus deudas se tratan de la misma forma que las deudas bancarias.</p>
+
+<h2>¿Qué tipos de deudas con cooperativas se pueden incluir?</h2>
+
+<p>Las deudas con cooperativas que pueden ingresar al proceso de insolvencia incluyen:</p>
+
+<ul>
+  <li><strong>Créditos de consumo:</strong> préstamos personales otorgados por la cooperativa.</li>
+  <li><strong>Créditos de libre inversión:</strong> montos desembolsados sin destinación específica.</li>
+  <li><strong>Créditos de vivienda:</strong> financiaciones para compra o mejora de inmueble.</li>
+  <li><strong>Créditos solidarios o de emergencia:</strong> préstamos especiales para asociados en dificultad.</li>
+  <li><strong>Líneas de crédito rotativo:</strong> similares a tarjetas de crédito que ofrecen algunas cooperativas.</li>
+</ul>
+
+<p>Lo que <strong>no puede incluirse</strong> en insolvencia son las cuotas de sostenimiento o aportes sociales a la cooperativa como entidad asociativa — esos son obligaciones de membresía, no deudas financieras.</p>
+
+<h2>¿Qué pasa con mis ahorros en la cooperativa durante el proceso?</h2>
+
+<p>Este es el punto que más genera dudas. Cuando tienes una deuda con una cooperativa y también tienes ahorros depositados en ella, la cooperativa puede haber retenido o embargado esos ahorros como garantía. Al iniciar el proceso de insolvencia:</p>
+
+<ul>
+  <li>Los embargos sobre tus ahorros en la cooperativa quedan suspendidos desde la radicación.</li>
+  <li>La retención previa de ahorros que ya ocurrió antes de la radicación es más compleja y depende del momento exacto y los estatutos de la cooperativa.</li>
+  <li>Tu abogado puede evaluar si existe compensación indebida y cómo reclamarla dentro del proceso.</li>
+</ul>
+
+<h2>¿Las cooperativas asisten a la audiencia de negociación?</h2>
+
+<p>Sí. La Ley 2445 de 2025 obliga a todos los acreedores incluidos en el proceso — incluyendo cooperativas — a participar en la audiencia de conciliación. Si la mayoría de los acreedores (en valor de deuda) aprueba el acuerdo, este es obligatorio para todos, incluyendo la cooperativa, aunque esta haya votado en contra.</p>
+
+<p>En la práctica, las cooperativas suelen ser más flexibles que los bancos en la negociación, porque sus estructuras internas las incentivan a llegar a acuerdos que protejan a sus asociados.</p>
+
+<h2>¿Qué ocurre con mi membresía en la cooperativa?</h2>
+
+<p>El proceso de insolvencia no cancela automáticamente tu condición de asociado. Sin embargo, algunos estatutos cooperativos prevén la exclusión por mora grave. Tu abogado puede revisar los estatutos específicos de tu cooperativa y asesorarte sobre cómo proteger tu membresía durante el proceso.</p>
+
+<h2>Cooperativas más comunes en procesos de insolvencia en Colombia</h2>
+
+<p>Entre las cooperativas cuyos asociados acuden frecuentemente al proceso de insolvencia están Cotrafa, Coogranada, Coofinanacoop, JFK Cooperativa, Fincomercio, entre otras. Todas ellas participan regularmente en procesos de negociación de deudas ante los Centros de Conciliación autorizados por el Ministerio de Justicia y la Superintendencia de Sociedades.</p>
+
+<h2>Pasos para incluir una deuda cooperativa en insolvencia</h2>
+
+<ol>
+  <li><strong>Diagnóstico:</strong> identifica el saldo exacto de tu deuda con la cooperativa a la fecha de solicitud. Solicita un extracto actualizado.</li>
+  <li><strong>Listado de acreedores:</strong> tu abogado elabora el inventario completo de deudas — bancos, cooperativas, personas naturales, etc.</li>
+  <li><strong>Radicación:</strong> se presenta la solicitud formal ante el Centro de Conciliación. Desde este momento, la cooperativa no puede seguir cobrando ni embargando.</li>
+  <li><strong>Audiencia de negociación:</strong> la cooperativa recibe citación oficial y debe asistir o designar apoderado.</li>
+  <li><strong>Acuerdo:</strong> se pactan las nuevas condiciones de pago con todos los acreedores simultáneamente.</li>
+</ol>
+
+<blockquote>Si tienes deudas con cooperativas y estás siendo presionado para pagar, la insolvencia de persona natural te da protección legal inmediata desde el primer día. No es necesario esperar a que te embargen para actuar.</blockquote>
+    `,
+  },
+  {
+    slug: 'deudas-bancarias-insolvencia-davivienda-bancolombia',
+    title: 'Deudas con Davivienda, Bancolombia o Banco de Bogotá: cómo funciona la insolvencia',
+    description: 'Los bancos son los principales acreedores en los procesos de insolvencia. Aprende cómo se negocian créditos hipotecarios, tarjetas y préstamos de consumo bancario bajo la Ley 2445 de 2025.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Guías',
+    readTime: '7 min',
+    about: ['Deudas bancarias insolvencia Colombia', 'Negociación con bancos insolvencia', 'Ley 2445 de 2025'],
+    mentions: ['Davivienda', 'Bancolombia', 'Banco de Bogotá', 'Superintendencia Financiera de Colombia', 'Superintendencia de Sociedades'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> Las deudas con bancos como Davivienda, Bancolombia o Banco de Bogotá se pueden incluir en el proceso de insolvencia de persona natural bajo la Ley 2445 de 2025. Esto incluye tarjetas de crédito, créditos de consumo, préstamos de libre inversión y créditos hipotecarios. Desde la radicación, los bancos no pueden seguir cobrando ni ejecutar nuevos embargos.</p>
+
+<p>Los bancos son el tipo de acreedor más frecuente en los procesos de insolvencia en Colombia. Davivienda, Bancolombia, Banco de Bogotá, BBVA, Scotiabank Colpatria y otros participan regularmente en audiencias de negociación ante la Superintendencia de Sociedades y Centros de Conciliación autorizados por el Ministerio de Justicia.</p>
+
+<h2>¿Qué deudas bancarias se pueden incluir?</h2>
+
+<ul>
+  <li><strong>Tarjetas de crédito:</strong> saldo total a la fecha de radicación, incluyendo capital, intereses corrientes y mora. Los intereses futuros se congelan.</li>
+  <li><strong>Créditos de libre inversión:</strong> préstamos personales sin destinación específica.</li>
+  <li><strong>Créditos de consumo:</strong> incluyendo créditos para electrodomésticos, vehículos (si no tienen prenda activa) y educación.</li>
+  <li><strong>Créditos hipotecarios:</strong> pueden incluirse; esto no significa que pierdas tu vivienda — significa que la deuda entra a negociarse.</li>
+  <li><strong>Cartera cedida o vendida:</strong> si el banco vendió tu deuda a una empresa de cartera o agencia de cobro, esa empresa hereda la posición de acreedor y debe participar en el proceso.</li>
+</ul>
+
+<h2>¿Qué pasa con mi crédito hipotecario?</h2>
+
+<p>Este es el punto más sensible para la mayoría de personas. Al incluir una hipoteca en el proceso de insolvencia:</p>
+
+<ul>
+  <li>El banco no puede iniciar ni continuar el proceso de remate de tu vivienda mientras el proceso esté activo.</li>
+  <li>Puedes negociar un plan de pago ajustado a tu capacidad real, incluyendo una posible reducción de intereses de mora.</li>
+  <li>Si tienes <em>afectación a vivienda de familia</em> registrada, tu inmueble tiene protecciones adicionales.</li>
+  <li>Si la deuda hipotecaria es impagable incluso con acuerdo, existe la figura de dación en pago dentro del proceso, que te permite entregar el inmueble al banco y que la deuda quede saldada.</li>
+</ul>
+
+<h2>¿Cómo reaccionan los bancos ante el proceso?</h2>
+
+<p>Los bancos grandes tienen apoderados legales especializados en procesos de insolvencia. En general:</p>
+
+<ul>
+  <li><strong>Participan en la audiencia</strong> a través de sus apoderados, generalmente sin presencia física del cliente bancario.</li>
+  <li><strong>Evalúan el plan de pagos propuesto</strong> en función del saldo adeudado, la capacidad de pago demostrada y las garantías existentes.</li>
+  <li><strong>Votan el acuerdo</strong> con base en el valor de su acreencia. Si su voto es positivo y suma mayoría, el acuerdo es aprobado.</li>
+  <li>Si votan en contra pero la mayoría aprueba, el acuerdo igualmente les es oponible.</li>
+</ul>
+
+<p>En la práctica, bancos como Davivienda y Bancolombia tienen equipos de gestión de cartera que prefieren un acuerdo viable a un proceso de liquidación prolongado.</p>
+
+<h2>¿Qué pasa con mi historial en Datacrédito durante el proceso?</h2>
+
+<p>Al momento de radicar la solicitud de insolvencia, tu estado en Datacrédito y Cifin refleja la situación de insolvencia — esto es normal y esperado. Al cumplir el acuerdo y extinguir las deudas, la Ley 2445 de 2025 establece plazos para la normalización del historial. El proceso de insolvencia no te deja reportado indefinidamente: al finalizar, puedes reconstruir tu perfil crediticio.</p>
+
+<h2>¿Qué pasa si el banco ya cedió mi deuda a una agencia de cobro?</h2>
+
+<p>Si tu deuda fue vendida o cedida a una empresa de cartera (como Recuperaciones Universal, Cartera Activa u otras), esa empresa pasa a ser tu acreedor. Debes incluirla en el proceso de insolvencia, no al banco original. Tu abogado verificará quién tiene hoy la titularidad legal de cada deuda a través de la documentación requerida en la radicación.</p>
+
+<h2>¿Puedo incluir deudas con varios bancos al mismo tiempo?</h2>
+
+<p>Sí, y esa es precisamente una de las ventajas del proceso de insolvencia: todos los acreedores bancarios se negocian en <strong>una sola audiencia</strong>, de forma simultánea. No tienes que negociar con Davivienda, luego con Bancolombia, luego con Banco de Bogotá por separado. El conciliador convoca a todos al mismo tiempo, y el acuerdo que se logra aplica para todos.</p>
+
+<blockquote>Los bancos hacen parte del sistema legal colombiano y deben respetar el proceso de insolvencia. Desde la radicación, ningún banco puede continuar cobros coercitivos, embargos ni procesos ejecutivos contra ti. Eso es un derecho constitucional.</blockquote>
+    `,
+  },
+  {
+    slug: 'rapicredit-prestamos-alto-costo-insolvencia',
+    title: 'Rapicredit y préstamos de alto costo: cómo salir legalmente con insolvencia',
+    description: 'Los créditos de Rapicredit, FGA y otros prestamistas de alto costo se pueden incluir en el proceso de insolvencia de persona natural. Conoce tus derechos y cómo protegerte del acoso de cobranza.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Derechos del Deudor',
+    readTime: '6 min',
+    about: ['Rapicredit insolvencia', 'Préstamos alto costo Colombia', 'Acoso cobranza derechos deudor'],
+    mentions: ['Rapicredit', 'Superintendencia de Industria y Comercio', 'Superintendencia de Sociedades', 'Defensoría del Consumidor Financiero'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> Sí, los créditos de Rapicredit y otros prestamistas de alto costo pueden incluirse en el proceso de insolvencia de persona natural bajo la Ley 2445 de 2025. Desde la radicación, el acoso de cobranza cesa por mandato legal y los intereses de mora se congelan, sin importar la tasa que te estén cobrando.</p>
+
+<p>En Colombia, los créditos de Rapicredit, FGA (Fondo de Garantías de Antioquia), Liberate, Lineru y empresas similares se han multiplicado en los últimos años. Ofrecen dinero rápido con tasas de interés muy elevadas, lo que puede convertir una deuda pequeña en una carga impagable en pocos meses. Muchos deudores terminan en un ciclo de refinanciación permanente.</p>
+
+<h2>¿Qué son los préstamos de alto costo?</h2>
+
+<p>Se consideran préstamos de alto costo aquellos cuya tasa de interés efectiva anual supera significativamente la tasa de usura certificada por la Superintendencia Financiera de Colombia. En Colombia, la tasa de usura se certifica mensualmente: cobrar por encima de ella es un delito penal.</p>
+
+<p>Si alguna de tus deudas fue otorgada a una tasa que supera la tasa de usura vigente al momento del desembolso, tu abogado puede solicitar la reliquidación de esa deuda dentro del proceso de insolvencia, eliminando los intereses cobrados en exceso.</p>
+
+<h2>¿Rapicredit puede participar en el proceso de insolvencia?</h2>
+
+<p>Sí. Rapicredit es una entidad financiera regulada en Colombia. Al igual que cualquier otro acreedor, debe:</p>
+
+<ul>
+  <li>Recibir la notificación oficial del proceso de insolvencia.</li>
+  <li>Presentarse a la audiencia de negociación o enviar apoderado.</li>
+  <li>Acatar el acuerdo de pago que apruebe la mayoría de acreedores.</li>
+  <li>Suspender inmediatamente cualquier cobro coercitivo desde la radicación.</li>
+</ul>
+
+<p>Si Rapicredit o cualquier empresa de cobro continúa llamándote o contactando a tus referencias después de la radicación del proceso, eso constituye una violación legal que puede denunciarse ante la Superintendencia de Industria y Comercio (SIC).</p>
+
+<h2>El ciclo de la deuda de alto costo</h2>
+
+<p>El problema con Rapicredit y similares no es solo la tasa: es la dinámica de refinanciación. Cuando no puedes pagar, te ofrecen "renovar" el crédito — pero cada renovación suma nuevos intereses y comisiones. En 6 meses, una deuda de $2 millones puede crecer a $6 o $7 millones sin que hayas recibido dinero nuevo.</p>
+
+<p>El proceso de insolvencia interrumpe este ciclo definitivamente:</p>
+
+<ul>
+  <li>La deuda se congela a su valor a la fecha de radicación.</li>
+  <li>No se acumulan más intereses de mora.</li>
+  <li>Se negocia el saldo real, no el saldo inflado por refinanciaciones abusivas.</li>
+</ul>
+
+<h2>¿Qué pasa con los "gota a gota" y prestamistas informales?</h2>
+
+<p>Los préstamos informales — conocidos como "gota a gota" — son ilegales en Colombia. Si tienes deudas con prestamistas informales, estas también pueden declararse en el proceso de insolvencia. Sin embargo, dado que estos créditos no tienen respaldo legal formal, la situación es más compleja y requiere asesoría especializada.</p>
+
+<p>Lo más importante: si un "gota a gota" te amenaza o ejerce violencia o intimidación para cobrar, eso es un delito de extorsión. Debes denunciarlo ante la Fiscalía General de la Nación. El proceso de insolvencia no protege frente a amenazas penales, pero sí elimina la obligación civil de pagar esas deudas.</p>
+
+<h2>Tus derechos frente al acoso de cobranza</h2>
+
+<p>La Ley colombiana y la normativa de la SIC prohíben expresamente:</p>
+
+<ul>
+  <li>Llamar a tu trabajo o a tus familiares para cobrar.</li>
+  <li>Enviarte mensajes amenazantes o humillantes.</li>
+  <li>Llamarte más de 3 veces al día.</li>
+  <li>Publicar información sobre tu deuda en redes sociales.</li>
+  <li>Contactar a tus referencias personales con fines de presión.</li>
+</ul>
+
+<p>Si Rapicredit o cualquier empresa de cobro viola estas normas, puedes presentar queja ante la SIC en línea, de forma gratuita. La SIC puede imponer multas millonarias a las entidades infractoras.</p>
+
+<h2>Cómo salir del ciclo definitivamente</h2>
+
+<p>La denuncia ante la SIC es un remedio temporal. La solución definitiva es el proceso de insolvencia de persona natural, que:</p>
+
+<ul>
+  <li>Extingue legalmente la deuda al cumplir el acuerdo.</li>
+  <li>Protege tu salario de embargos desde el primer día.</li>
+  <li>Negocia todas tus deudas — bancos, cooperativas, Rapicredit — en un solo proceso.</li>
+  <li>Te da un nuevo comienzo financiero respaldado por la ley.</li>
+</ul>
+
+<blockquote>Si tienes deudas con Rapicredit u otros prestamistas de alto costo y el acoso no te deja vivir, tienes derechos. La Ley 2445 de 2025 fue diseñada exactamente para situaciones como la tuya. En Deuda OFF la primera consulta es gratuita.</blockquote>
+    `,
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
