@@ -5,12 +5,55 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Deuda OFF — Elimina tus Deudas Legalmente en Colombia',
   description: 'Acógete a la Ley de Insolvencia de Persona Natural. Protege tu patrimonio, frena embargos y recupera tu tranquilidad financiera. +750 casos resueltos. Núcleo Jurídico.',
-  keywords: 'insolvencia persona natural colombia, eliminar deudas legalmente, proceso insolvencia colombia, ley 1564, no puedo pagar mis deudas',
+  keywords: 'insolvencia persona natural colombia, eliminar deudas legalmente, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia',
+  alternates: {
+    canonical: 'https://deudaoff.com',
+    languages: {
+      'es-CO': 'https://deudaoff.com',
+    },
+  },
   openGraph: {
     title: 'Deuda OFF — Elimina tus Deudas Legalmente',
     description: '+750 casos resueltos. Primera consulta gratuita. Respaldados por Núcleo Jurídico.',
+    url: 'https://deudaoff.com',
+    siteName: 'Deuda OFF',
     locale: 'es_CO',
     type: 'website',
+  },
+}
+
+const schemaOrganization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Deuda OFF — Núcleo Jurídico SAS',
+  url: 'https://deudaoff.com',
+  logo: 'https://deudaoff.com/logo.png',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+57-300-355-2751',
+    contactType: 'customer service',
+    areaServed: 'CO',
+    availableLanguage: 'Spanish',
+  },
+  sameAs: [],
+}
+
+const schemaLegalService = {
+  '@context': 'https://schema.org',
+  '@type': 'LegalService',
+  name: 'Deuda OFF — Insolvencia de Persona Natural',
+  description: 'Servicio legal especializado en insolvencia de persona natural en Colombia. Acógete a la Ley 2445 de 2025. Protege tu patrimonio y frena embargos.',
+  url: 'https://deudaoff.com',
+  telephone: '+57-300-355-2751',
+  priceRange: 'Consulta gratuita',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Colombia',
+  },
+  serviceType: 'Insolvencia de Persona Natural',
+  provider: {
+    '@type': 'Organization',
+    name: 'Núcleo Jurídico SAS',
   },
 }
 
@@ -28,6 +71,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KKN72FRX');`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLegalService) }}
         />
         <link
           rel="stylesheet"
