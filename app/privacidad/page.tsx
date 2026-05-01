@@ -86,7 +86,7 @@ export default function Privacidad() {
             <p>
               Para cualquier consulta sobre esta política escríbenos a{' '}
               <a href="mailto:info@deudaoff.com" className="text-primary hover:underline">info@deudaoff.com</a>{' '}
-              o por WhatsApp al +57 300 355 2751.
+              o por WhatsApp al +57 305 239 6052.
             </p>
           </section>
 

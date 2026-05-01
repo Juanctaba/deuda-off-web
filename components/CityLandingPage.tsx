@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import ContactForm from '@/components/ContactForm'
-
-const WA_URL = 'https://wa.me/573003552751?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proceso%20de%20insolvencia%20de%20persona%20natural'
+import CRMForm from '@/components/CRMForm'
+import { WA_URL } from '@/lib/constants'
 
 const STEPS = [
   { n: '1', title: 'Diagnóstico Gratuito', desc: 'Evaluamos tu situación financiera sin costo y sin compromiso desde cualquier ciudad.' },
@@ -28,7 +27,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
     name: `Deuda OFF — Insolvencia de Persona Natural en ${city}`,
     description: `La insolvencia de persona natural en ${city}, ${department} es un proceso legal bajo la Ley 2445 de 2025 que permite a ciudadanos colombianos reorganizar o liquidar sus deudas de forma oficial. ${intro}`,
     url: `https://deudaoff.com/${slug}`,
-    telephone: '+57-300-355-2751',
+    telephone: '+57-305-239-6052',
     priceRange: 'Consulta gratuita — honorarios según el caso',
     areaServed: {
       '@type': 'City',
@@ -99,18 +98,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-outline-variant/40 px-5 flex justify-between items-center h-16">
-        <Link href="/" className="flex flex-col">
-          <span className="font-manrope font-bold text-primary text-xl">Deuda OFF</span>
-          <span className="text-[10px] uppercase tracking-wider text-outline font-bold">Una marca de Núcleo Jurídico</span>
-        </Link>
-        <a href="#formulario" className="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all">
-          Consulta Gratis
-        </a>
-      </header>
-
-      <main className="pt-16">
+      <main>
 
         {/* Hero */}
         <section className="min-h-[70vh] flex items-center px-5 py-16 max-w-5xl mx-auto">
@@ -201,7 +189,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
               </div>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-form border border-outline-variant/30">
-              <ContactForm />
+              <CRMForm />
             </div>
           </div>
         </section>

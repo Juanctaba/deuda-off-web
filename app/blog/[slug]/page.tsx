@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { BLOG_POSTS, getBlogPost } from '@/lib/blog-posts'
 import { BlogContent } from '@/components/BlogContent'
+import { WA_URL } from '@/lib/constants'
 
 interface Props {
   params: { slug: string }
@@ -137,7 +138,7 @@ export default function BlogPost({ params }: Props) {
                 Consulta Gratuita
               </Link>
               <a
-                href="https://wa.me/573003552751?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proceso%20de%20insolvencia%20de%20persona%20natural"
+                href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-secondary text-secondary px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-secondary/5 transition-all"

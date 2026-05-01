@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import ContactForm from '@/components/ContactForm'
-
-const WA_URL = 'https://wa.me/573003552751?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proceso%20de%20insolvencia%20de%20persona%20natural'
+import CRMForm from '@/components/CRMForm'
+import { WA_URL } from '@/lib/constants'
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -120,31 +119,7 @@ const FAQS = [
 export default function Home() {
   return (
     <>
-      {/* ── HEADER ──────────────────────────────────── */}
-      <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-outline-variant/40 px-5 flex justify-between items-center h-16">
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Deuda OFF" width={120} height={36} className="h-8 w-auto" priority />
-          </div>
-          <span className="text-[10px] uppercase tracking-wider text-outline font-bold">Una marca de Núcleo Jurídico</span>
-        </div>
-        <nav className="hidden md:flex items-center gap-8">
-          {[
-            { label: 'Cómo Funciona', href: '#como-funciona' },
-            { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
-            { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
-            { label: 'Blog', href: '/blog' },
-          ].map(item => (
-            <a key={item.label} href={item.href} className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">{item.label}</a>
-          ))}
-        </nav>
-        <a href={`#formulario`}
-          className="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all">
-          Consulta Gratis
-        </a>
-      </header>
-
-      <main className="pt-16">
+      <main>
 
         {/* ── HERO ────────────────────────────────────── */}
         <section className="min-h-[85vh] flex items-center px-5 py-16 max-w-7xl mx-auto">
@@ -348,7 +323,7 @@ export default function Home() {
 
             {/* Right — form */}
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-form border border-outline-variant/30">
-              <ContactForm />
+              <CRMForm />
             </div>
           </div>
         </section>
@@ -426,7 +401,7 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <p className="font-bold text-white text-sm uppercase tracking-wider">Contacto</p>
               <p className="text-sm text-white/60">
-                <strong className="text-white">WhatsApp:</strong> +57 300 355 2751
+                <strong className="text-white">WhatsApp:</strong> +57 305 239 6052
               </p>
               <a href="#formulario"
                 className="bg-secondary text-primary px-4 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-all text-center">

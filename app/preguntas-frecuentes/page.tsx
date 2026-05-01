@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { WA_URL_FAQ } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Preguntas Frecuentes sobre Insolvencia de Persona Natural | Deuda OFF',
@@ -180,7 +181,7 @@ export default function PreguntasFrecuentes() {
                 Consulta Gratuita
               </Link>
               <a
-                href="https://wa.me/573003552751?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20insolvencia%20de%20persona%20natural"
+                href={WA_URL_FAQ}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white/40 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-all"
