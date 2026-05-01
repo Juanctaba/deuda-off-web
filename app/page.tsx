@@ -349,7 +349,7 @@ export default function Home() {
       <footer className="bg-inverse-surface border-t border-white/10 py-16 px-5">
         <div className="max-w-7xl mx-auto">
           {/* Top section — 4 columns */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             {/* Column 1: Logo & Description */}
             <div className="flex flex-col gap-4">
               <Image src="/logo.png" alt="Deuda OFF" width={120} height={36} className="h-8 w-auto brightness-0 invert opacity-80" />
@@ -372,6 +372,7 @@ export default function Home() {
                   { label: 'Cómo Funciona', href: '#como-funciona' },
                   { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
                   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+                  { label: 'Casos de Éxito', href: '/casos-de-exito' },
                   { label: 'Blog', href: '/blog' },
                 ].map(item => (
                   <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
@@ -381,7 +382,25 @@ export default function Home() {
               </nav>
             </div>
 
-            {/* Column 3: Legal */}
+            {/* Column 3: Ciudades */}
+            <div className="flex flex-col gap-4">
+              <p className="font-bold text-white text-sm uppercase tracking-wider">Ciudades</p>
+              <nav className="flex flex-col gap-2">
+                {[
+                  { label: 'Insolvencia Bogotá', href: '/insolvencia-bogota' },
+                  { label: 'Insolvencia Medellín', href: '/insolvencia-medellin' },
+                  { label: 'Insolvencia Cali', href: '/insolvencia-cali' },
+                  { label: 'Insolvencia Barranquilla', href: '/insolvencia-barranquilla' },
+                  { label: 'Insolvencia Bucaramanga', href: '/insolvencia-bucaramanga' },
+                ].map(item => (
+                  <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            {/* Column 4: Legal */}
             <div className="flex flex-col gap-4">
               <p className="font-bold text-white text-sm uppercase tracking-wider">Legal</p>
               <nav className="flex flex-col gap-2">
