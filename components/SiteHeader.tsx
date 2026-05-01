@@ -13,7 +13,7 @@ export default function SiteHeader() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-outline-variant/40 px-5 flex justify-between items-center h-16">
       <Link href="/" className="flex flex-col">
-        <Image src="/logo.png" alt="Deuda OFF" width={120} height={36} className="h-8 w-auto" priority />
+        <Image src="/logo.png" alt="Deuda OFF" width={120} height={36} className="h-8 w-auto object-contain" priority />
         <span className="text-[10px] uppercase tracking-wider text-outline font-bold">Una marca de Núcleo Jurídico</span>
       </Link>
 
