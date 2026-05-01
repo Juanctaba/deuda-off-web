@@ -33,16 +33,16 @@ const TESTIMONIALS = [
 ]
 
 const BENEFITS = [
-  { icon: 'balance',   title: 'Expertos en Ley 1564',  desc: 'Abogados especializados únicamente en insolvencia de persona natural.' },
+  { icon: 'balance',   title: 'Ley 2445 de 2025',      desc: 'Abogados especializados en la nueva Ley de Insolvencia de Persona Natural vigente desde 2025.' },
   { icon: 'verified',  title: '100% Legal',             desc: 'Procedimientos avalados por la Constitución y la Superintendencia de Sociedades.' },
   { icon: 'payments',  title: 'Sin Costo Inicial',      desc: 'Primera consultoría totalmente gratuita para diagnóstico de tu caso.' },
-  { icon: 'public',    title: 'Atención Nacional',      desc: 'Cubrimos todo el territorio colombiano con atención virtual y presencial.' },
+  { icon: 'public',    title: 'Atención Nacional',      desc: 'Cubrimos todo el territorio colombiano con atención 100% virtual.' },
 ]
 
 const FAQS = [
   {
     q: '¿Qué es el Procedimiento de Insolvencia de Persona Natural?',
-    a: 'Es un proceso legal establecido en la Ley 1564 de 2012 que permite a personas naturales no comerciantes reorganizar o liquidar sus deudas de forma oficial, con respaldo de un juez o conciliador.',
+    a: 'Es un proceso legal que permite a personas naturales no comerciantes reorganizar o liquidar sus deudas de forma oficial, con respaldo de un juez o conciliador. La Ley 2445 de 2025 modernizó y amplió este derecho para todos los colombianos.',
   },
   {
     q: '¿Cuánto cuesta el proceso?',
@@ -123,7 +123,7 @@ export default function Home() {
               <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-secondary-container/30 rounded-2xl blur-3xl" />
               <img
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=640&h=520&fit=crop&crop=faces"
-                alt="Profesional colombiano tranquilo"
+                alt="Abogado especialista en insolvencia de persona natural en Colombia asesorando a cliente"
                 className="w-full h-[500px] object-cover rounded-2xl shadow-form border-8 border-white"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-card-lg flex items-center gap-4">
@@ -166,11 +166,11 @@ export default function Home() {
                 El Procedimiento de Insolvencia Persona Natural es tu salida legal
               </h2>
               <p className="text-on-surface-variant mt-3 text-lg">
-                Un proceso estructurado bajo la Ley 1564 de 2012 para que vuelvas a empezar de cero.
+                Un proceso estructurado bajo la Ley 2445 de 2025 para que vuelvas a empezar de cero.
               </p>
             </div>
             <span className="text-secondary font-bold flex items-center gap-2 shrink-0">
-              <span className="material-symbols-outlined">verified</span> Ley 1564 de 2012
+              <span className="material-symbols-outlined">verified</span> Ley 2445 de 2025
             </span>
           </div>
           <div className="relative">
@@ -349,9 +349,13 @@ export default function Home() {
             <div className="flex flex-col gap-4">
               <p className="font-bold text-white text-sm uppercase tracking-wider">Legal</p>
               <nav className="flex flex-col gap-2">
-                {['Términos y Condiciones', 'Política de Privacidad', 'Aviso Legal'].map(item => (
-                  <a key={item} href="#" className="text-sm text-white/60 hover:text-white transition-colors">
-                    {item}
+                {[
+                  { label: 'Términos y Condiciones', href: '/terminos' },
+                  { label: 'Política de Privacidad', href: '/privacidad' },
+                  { label: 'Aviso Legal', href: '/aviso-legal' },
+                ].map(item => (
+                  <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
+                    {item.label}
                   </a>
                 ))}
               </nav>
@@ -394,6 +398,25 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* ── Schema FAQPage ──────────────────────────── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: FAQS.map(f => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: f.a,
+              },
+            })),
+          }),
+        }}
+      />
 
       {/* ── WhatsApp flotante ────────────────────────── */}
       <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-float" aria-label="WhatsApp">
