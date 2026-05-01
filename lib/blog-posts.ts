@@ -650,6 +650,307 @@ export const BLOG_POSTS: BlogPost[] = [
 <blockquote>Si tienes deudas con Rapicredit u otros prestamistas de alto costo y el acoso no te deja vivir, tienes derechos. La Ley 2445 de 2025 fue diseñada exactamente para situaciones como la tuya. En Deuda OFF la primera consulta es gratuita.</blockquote>
     `,
   },
+  {
+    slug: 'insolvencia-pequeno-comerciante-colombia-2025',
+    title: 'Insolvencia para pequeños comerciantes en Colombia: lo que cambió con la Ley 2445 de 2025',
+    description: 'Desde 2025, los pequeños comerciantes en Colombia pueden acogerse al proceso de insolvencia. Descubre si calificas, qué activos se protegen y cómo funciona el proceso. Consulta gratuita.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Legislación',
+    readTime: '7 min',
+    about: ['Insolvencia pequeño comerciante Colombia', 'Ley 2445 de 2025', 'Insolvencia persona natural comerciante'],
+    mentions: ['Superintendencia de Sociedades', 'Ministerio de Justicia Colombia', 'DIAN', 'Núcleo Jurídico SAS'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> Desde 2025, los pequeños comerciantes con activos totales menores a 1.000 SMMLV (aproximadamente $1.160 millones COP) pueden acogerse al proceso de insolvencia de persona natural bajo la Ley 2445 de 2025. Antes de esta ley, este segmento estaba completamente excluido. Si tienes un negocio pequeño con deudas que no puedes pagar, hoy tienes opciones legales que antes no existían.</p>
+
+<p>Durante años, los comerciantes —tenderos, dueños de restaurantes, talleristas, microempresarios— quedaban en un limbo legal cuando sus negocios colapsaban: no podían acceder al régimen de insolvencia de persona natural (reservado para no comerciantes) ni al régimen empresarial (diseñado para sociedades formales y grandes empresas). La Ley 2445 de 2025 cerró esa brecha por primera vez en la historia jurídica colombiana.</p>
+
+<h2>¿Qué es un pequeño comerciante según la Ley 2445?</h2>
+
+<p>La ley define al pequeño comerciante como la persona natural que ejerce actividad mercantil de forma habitual y cuyos activos totales no superan los <strong>1.000 salarios mínimos mensuales legales vigentes</strong> (SMMLV). A 2025, esto equivale aproximadamente a $1.160 millones de pesos colombianos.</p>
+
+<p>Para ese cálculo de activos se excluyen expresamente:</p>
+<ul>
+  <li>La vivienda de habitación principal (aunque sea de propiedad del comerciante).</li>
+  <li>El vehículo de trabajo indispensable para la actividad económica (moto de domicilios, camión de carga, etc.).</li>
+</ul>
+
+<p>Esto significa que un tendero que tiene su local en arriendo y una moto para distribución puede calificar aunque su negocio tenga mercancía y equipos por valor considerable, siempre que el total —sin contar vivienda y vehículo— esté por debajo del límite.</p>
+
+<p><strong>Ejemplos de pequeños comerciantes que pueden acceder:</strong></p>
+<ul>
+  <li>Tendero o propietario de minimercado.</li>
+  <li>Dueño de restaurante, cafetería o negocio de comidas.</li>
+  <li>Propietario de taller de mecánica, modistería o servicios técnicos.</li>
+  <li>Vendedor informal con registro de actividad comercial.</li>
+  <li>Microempresario o emprendedor con negocio unipersonal.</li>
+</ul>
+
+<h2>¿Cuáles son los requisitos para acogerse?</h2>
+
+<p>Además de ser pequeño comerciante según la definición anterior, debes cumplir:</p>
+
+<ul>
+  <li><strong>Mora con dos o más acreedores</strong> por más de 90 días.</li>
+  <li><strong>Deuda en mora igual o superior al 30%</strong> del total de tu pasivo.</li>
+  <li>Ser persona natural —no una sociedad ni empresa constituida como persona jurídica.</li>
+  <li>No tener en curso otro proceso de insolvencia activo.</li>
+</ul>
+
+<h3>¿Qué deudas cuentan?</h3>
+<p>Pueden incluirse deudas con bancos, cooperativas de ahorro y crédito, proveedores de mercancía, obligaciones de leasing, créditos de fomento empresarial (Bancóldex, Fondo Nacional de Garantías), arrendamientos comerciales vencidos y deudas con personas naturales. Las cuotas alimentarias y ciertas obligaciones tributarias tienen restricciones específicas.</p>
+
+<h3>¿Qué pasa con las deudas de la empresa vs. las personales?</h3>
+<p>En una persona natural comerciante no hay separación patrimonial — el dueño responde con todo su patrimonio, tanto el del negocio como el personal. Eso significa que las deudas comerciales (con proveedores, arrendador del local) y las personales (tarjeta de crédito del banco, cooperativa) entran todas al mismo proceso de insolvencia.</p>
+
+<h2>¿Qué procedimientos aplican para el pequeño comerciante?</h2>
+
+<p>La Ley 2445 ofrece tres vías:</p>
+
+<ul>
+  <li><strong>Negociación de deudas:</strong> el camino más común. Un conciliador convoca a todos los acreedores, se propone un plan de pagos ajustado a la capacidad real y, si la mayoría aprueba, el acuerdo es obligatorio para todos.</li>
+  <li><strong>Convalidación de acuerdo privado:</strong> si ya llegaste a un arreglo informal con tus acreedores, este procedimiento le da validez legal para que sea oponible a todos.</li>
+  <li><strong>Liquidación patrimonial:</strong> cuando los activos no alcanzan para ningún acuerdo viable. Se liquida el patrimonio de forma ordenada y las deudas restantes quedan extinguidas.</li>
+</ul>
+
+<h3>¿Hay diferencias con el proceso de persona natural no comerciante?</h3>
+<p>El procedimiento es sustancialmente el mismo. La principal diferencia es que el pequeño comerciante puede incluir deudas derivadas de su actividad mercantil (proveedores, arriendo comercial, leasing) que antes solo tenían acceso al régimen empresarial. Los plazos y la estructura de audiencias son equivalentes.</p>
+
+<h2>Beneficios inmediatos al iniciar el proceso</h2>
+
+<p>Desde el momento en que se radica la solicitud ante el Centro de Conciliación autorizado:</p>
+
+<ul>
+  <li><strong>Suspensión de embargos</strong> — incluyendo cuentas bancarias del negocio y personales.</li>
+  <li><strong>Cese del acoso cobratorio</strong> — bancos, proveedores y agencias de cobro deben dejar de presionarte.</li>
+  <li><strong>Protección frente a procesos ejecutivos</strong> — ningún acreedor puede iniciar ni continuar demandas de cobro.</li>
+  <li><strong>Congelamiento de intereses de mora</strong> — la deuda no sigue creciendo.</li>
+  <li>El proceso <strong>no aparece en el registro mercantil</strong> ni afecta la matrícula comercial del negocio.</li>
+</ul>
+
+<h2>¿Cuánto tiempo tarda y cuánto cuesta?</h2>
+
+<p>El proceso de negociación tiene un término legal de <strong>60 días hábiles</strong> desde la audiencia de apertura, prorrogable hasta 90 días por acuerdo entre las partes. En la práctica, con la preparación previa y la gestión del conciliador, el proceso completo —desde diagnóstico hasta acuerdo firmado— suele tomar entre 3 y 6 meses.</p>
+
+<p>El costo de los honorarios se pacta según las características de cada caso y generalmente se estructura dentro del mismo plan de pagos acordado. <strong>La primera consulta con Deuda OFF es completamente gratuita.</strong> El proceso es 100% virtual: no necesitas ir a ningún juzgado ni desplazarte.</p>
+
+<h2>Caso tipo: Daniel, propietario de una papelería en Bogotá</h2>
+
+<p>Daniel tiene una papelería y útiles escolares en el barrio Chapinero que abrió en 2019. Durante la pandemia acumuló deudas con su proveedor de papelería ($18 millones), un banco por crédito de capital de trabajo ($45 millones) y la cooperativa de su barrio ($22 millones). En total: $85 millones que no puede pagar con las ventas actuales.</p>
+
+<p>Al acogerse al proceso de insolvencia bajo la Ley 2445 de 2025, Daniel logró suspender el embargo que el banco había iniciado sobre su cuenta corriente, y en la audiencia de negociación acordó pagar el 40% de su deuda total en cuotas mensuales durante 4 años —un monto compatible con sus ventas reales. Hoy su papelería sigue abierta y sus deudas están bajo control legal.</p>
+
+<h2>Preguntas frecuentes del pequeño comerciante</h2>
+
+<p><strong>¿Puedo seguir operando mi negocio durante el proceso?</strong><br/>Sí. El proceso de insolvencia no obliga a cerrar el negocio. Puedes continuar tu actividad comercial mientras se desarrolla la negociación con los acreedores.</p>
+
+<p><strong>¿Los proveedores pueden demandarme mientras estoy en insolvencia?</strong><br/>No. Desde la radicación, queda suspendido cualquier proceso ejecutivo o de cobro contra ti, incluyendo demandas de proveedores. Si alguno intenta demandar, tu abogado puede solicitar la suspensión inmediata.</p>
+
+<p><strong>¿Afecta el proceso a mi historial en centrales de riesgo?</strong><br/>Durante el proceso tu estado en Datacrédito refleja la situación de insolvencia. Al cumplir el acuerdo y extinguirse las deudas, el historial se actualiza. La Ley 2445 establece plazos razonables para la normalización.</p>
+
+<p><strong>¿Puedo incluir deudas con la DIAN?</strong><br/>Las obligaciones tributarias tienen un tratamiento especial en insolvencia. Algunas pueden incluirse, otras tienen prioridad de pago garantizada por ley. Tu abogado debe revisar el estado exacto de tus obligaciones con la DIAN antes de la radicación.</p>
+
+<blockquote>Si tienes un negocio pequeño con deudas que no puedes pagar, la Ley 2445 de 2025 te reconoce por primera vez el mismo derecho que siempre tuvieron los asalariados: un proceso legal para reorganizar tus deudas y proteger tu patrimonio. En Deuda OFF — Núcleo Jurídico SAS, la primera consulta es gratuita.</blockquote>
+    `,
+  },
+  {
+    slug: 'insolvencia-familiar-conjunta-colombia-ley-2445',
+    title: 'Insolvencia familiar conjunta en Colombia: cómo funciona y cuánto ahorran',
+    description: '¿Tú y tu pareja tienen deudas? La Ley 2445 de 2025 permite iniciar el proceso de insolvencia en familia. El segundo proceso cuesta 50% menos. Consulta gratuita.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Guías',
+    readTime: '6 min',
+    about: ['Insolvencia familiar conjunta Colombia', 'Insolvencia pareja Colombia', 'Ley 2445 de 2025'],
+    mentions: ['Superintendencia de Sociedades', 'Ministerio de Justicia Colombia', 'Núcleo Jurídico SAS'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> La Ley 2445 de 2025 introdujo por primera vez en Colombia la posibilidad de que cónyuges, compañeros permanentes y parientes hasta segundo grado de consanguineidad del mismo núcleo familiar inicien el proceso de insolvencia de forma conjunta. El segundo proceso cuesta el 50% del primero. Si tú y tu pareja tienen deudas que no pueden pagar, pueden acogerse juntos en una sola solicitud, con una sola audiencia y un solo acuerdo.</p>
+
+<p>En muchos hogares colombianos las deudas no son de una sola persona: son del hogar. Un crédito de vivienda firmado por los dos, tarjetas de crédito individuales que pagaban con el mismo ingreso familiar, un negocio que ambos respaldaban como codeudores. La Ley 2445 reconoce esta realidad y crea un mecanismo legal diseñado específicamente para ella.</p>
+
+<h2>¿Qué es la insolvencia familiar conjunta?</h2>
+
+<p>Es la posibilidad de que dos o más miembros del mismo núcleo familiar presenten una sola solicitud de insolvencia, compartan la audiencia de negociación y lleguen a un acuerdo unificado con sus acreedores. Pueden solicitarla conjuntamente:</p>
+
+<ul>
+  <li><strong>Cónyuges</strong> — casados por lo civil o por matrimonio religioso con efectos civiles.</li>
+  <li><strong>Compañeros permanentes</strong> — unión marital de hecho debidamente reconocida.</li>
+  <li><strong>Parientes hasta segundo grado de consanguineidad del mismo núcleo familiar</strong> — padres e hijos, hermanos que conviven juntos.</li>
+</ul>
+
+<p>Requisito fundamental: cada miembro del grupo familiar debe cumplir <strong>individualmente</strong> los criterios de cesación de pagos (mora con dos o más acreedores por más de 90 días, deuda en mora ≥ 30% del pasivo total).</p>
+
+<h2>¿Cuánto se ahorra con el proceso conjunto?</h2>
+
+<p>Este es el beneficio más concreto y medible: <strong>el segundo proceso cuesta el 50% del primero.</strong></p>
+
+<p>Ejemplo numérico: si el proceso individual de una persona tiene un costo de honorarios de $4 millones de pesos, el proceso familiar conjunto para dos personas cuesta $4 millones (el primero) + $2 millones (el segundo al 50%) = <strong>$6 millones en total, en lugar de $8 millones por separado.</strong> Un ahorro del 25% en honorarios totales.</p>
+
+<p>Además del ahorro económico, el proceso conjunto tiene ventajas operativas significativas:</p>
+<ul>
+  <li>Un solo conciliador gestiona ambos casos.</li>
+  <li>Una sola audiencia con los acreedores comunes.</li>
+  <li>Un solo acuerdo de pago que contempla la capacidad económica real del hogar como unidad.</li>
+  <li>Menor carga administrativa y de documentación.</li>
+</ul>
+
+<h2>¿Cuándo conviene hacerlo de forma conjunta?</h2>
+
+<h3>Cuando tienen acreedores en común</h3>
+<p>Si ambos firmaron como titulares o codeudores de un crédito de vivienda, un préstamo vehicular o una tarjeta de crédito, ese acreedor será parte de ambos procesos. Gestionarlo de forma conjunta evita duplicar la negociación y asegura que el acuerdo sea consistente para los dos.</p>
+
+<h3>Cuando los ingresos del hogar son insuficientes para los pagos de ambos</h3>
+<p>Si el plan de pagos de cualquiera de los dos depende del ingreso conjunto del hogar, tiene sentido que el proceso refleje esa realidad económica. Un conciliador que ve los dos casos juntos puede diseñar un acuerdo más realista y sostenible.</p>
+
+<h3>Cuando uno es fiador o codeudor del otro</h3>
+<p>Si firmaste como codeudor de la deuda de tu pareja, eres legalmente responsable de esa obligación. Al incluirla en el proceso conjunto, ambos quedan protegidos por el acuerdo.</p>
+
+<h3>Cuándo NO conviene hacerlo de forma conjunta</h3>
+<p>Si uno de los dos tiene capacidad real de pago y el otro no, puede ser más eficiente que solo el que necesita protección inicie el proceso. Hacer un proceso innecesario puede afectar el historial crediticio del que sí podía pagar. En la consulta gratuita evaluamos cuál es la estrategia correcta para cada caso.</p>
+
+<h2>¿Cómo funciona el proceso paso a paso para una familia?</h2>
+
+<ol>
+  <li><strong>Diagnóstico conjunto gratuito:</strong> revisamos la situación de cada uno, identificamos las deudas individuales y compartidas, y determinamos si ambos califican.</li>
+  <li><strong>Revisión de elegibilidad individual:</strong> cada miembro debe cumplir independientemente los requisitos de cesación de pagos.</li>
+  <li><strong>Preparación de la solicitud:</strong> inventario completo de activos, pasivos e ingresos del núcleo familiar.</li>
+  <li><strong>Radicación única:</strong> se presenta una sola solicitud ante el Centro de Conciliación o la Superintendencia de Sociedades.</li>
+  <li><strong>Audiencia conjunta:</strong> los acreedores de ambos son convocados a la misma audiencia. Los comunes negocian una sola vez.</li>
+  <li><strong>Acuerdo unificado:</strong> se pactan condiciones de pago que reflejan la capacidad económica real del hogar.</li>
+  <li><strong>Fresh start:</strong> al cumplir el acuerdo, las deudas de ambos quedan legalmente extintas.</li>
+</ol>
+
+<h2>¿Qué pasa con las deudas que son solo de uno?</h2>
+
+<p>Las deudas que son exclusivamente de uno de los miembros van al proceso del titular. Los acreedores de esas deudas no pueden perseguir al otro cónyuge o compañero por obligaciones que no firmó. Las deudas compartidas se negocian en conjunto. El acuerdo final distingue claramente qué obligaciones corresponden a cada titular.</p>
+
+<h2>Caso real: Claudia y Rodrigo, Medellín</h2>
+
+<p>Claudia y Rodrigo llevan 8 años de unión marital de hecho. Entre los dos acumularon $160 millones en deudas: $95 millones en el crédito de vivienda que firmaron juntos, $38 millones en tarjetas individuales de cada uno, y $27 millones en un préstamo de libre inversión que Rodrigo usó para el negocio que después cerró.</p>
+
+<p>Al iniciar el proceso de insolvencia familiar conjunta bajo la Ley 2445, lograron negociar las tres deudas en una sola audiencia. El banco del crédito hipotecario acordó una reestructuración a 10 años con cuota reducida. Las tarjetas se negociaron al 45% del saldo. Rodrigo quedó libre del préstamo a través de la liquidación de un activo del negocio cerrado. Total: un solo proceso, un solo acuerdo, y un ahorro del 25% en honorarios frente a hacerlo por separado.</p>
+
+<h2>Preguntas frecuentes sobre insolvencia familiar</h2>
+
+<p><strong>¿Qué pasa si estamos separados de hecho pero no de derecho?</strong><br/>La separación de hecho no disuelve la sociedad conyugal ni la unión marital. Si aún existe vínculo legal, pueden acceder al proceso conjunto. Si ya se formalizó la separación, cada uno debe iniciar su proceso individualmente.</p>
+
+<p><strong>¿Pueden los hijos adultos incluirse en el proceso familiar?</strong><br/>Sí, si son parientes hasta segundo grado de consanguineidad del mismo núcleo familiar (esto incluye hijos que conviven con los padres) y cumplen individualmente los requisitos de cesación de pagos.</p>
+
+<p><strong>¿El proceso afecta la custodia de menores de edad?</strong><br/>No. El proceso de insolvencia es un procedimiento civil-comercial que no tiene ninguna implicación sobre la custodia ni los derechos de los hijos menores. Las cuotas alimentarias tampoco pueden incluirse en el proceso.</p>
+
+<p><strong>¿Podemos hacer el proceso si uno está reportado en Datacrédito y el otro no?</strong><br/>Sí. El estado en centrales de riesgo no es un requisito de elegibilidad para el proceso. Lo que determina si calificas es la situación de mora con los acreedores, no el reporte en Datacrédito.</p>
+
+<blockquote>Si en tu hogar las deudas superan la capacidad de pago de toda la familia, la insolvencia conjunta puede ser la salida más eficiente: un solo proceso, un solo acuerdo y un ahorro real en honorarios. En Deuda OFF la primera consulta es gratuita y sin compromiso.</blockquote>
+    `,
+  },
+  {
+    slug: 'como-salir-de-datacredito-despues-insolvencia-colombia',
+    title: '¿Cómo salir de Datacrédito después de la insolvencia? Guía 2025',
+    description: 'Después de la insolvencia en Colombia, tu historial en Datacrédito se actualiza. Conoce los plazos exactos, tus derechos y qué hacer para recuperar tu puntaje crediticio.',
+    date: '2026-05-01',
+    dateModified: '2026-05-01',
+    category: 'Educación Financiera',
+    readTime: '8 min',
+    about: ['Salir de Datacrédito Colombia', 'Historial crediticio insolvencia', 'Limpiar historial crediticio Colombia'],
+    mentions: ['Datacrédito', 'TransUnion Colombia', 'CIFIN', 'Superintendencia de Industria y Comercio', 'Superintendencia de Sociedades'],
+    content: `
+<p class="definicion"><strong>Respuesta directa:</strong> Después de completar un proceso de insolvencia en Colombia, el reporte negativo en Datacrédito no puede mantenerse indefinidamente. La Ley 1266 de 2008 (Habeas Data) establece que el período máximo de permanencia es el doble del tiempo que estuviste en mora, con un tope de 4 años desde que la deuda quedó extinta o pagada. Una vez extinguidas tus deudas por el proceso de insolvencia, el reloj de esos plazos empieza a correr.</p>
+
+<p>Uno de los mayores miedos al declararse insolvente es quedar "marcado para siempre" en Datacrédito. Es un temor comprensible pero que no corresponde a la realidad legal. Colombia tiene una ley específica que establece plazos máximos, derechos de corrección y un proceso claro para la actualización del historial. En esta guía te explicamos todo lo que necesitas saber.</p>
+
+<h2>¿Qué es Datacrédito y cómo funciona el reporte negativo?</h2>
+
+<p>En Colombia existen dos grandes centrales de riesgo crediticio:</p>
+<ul>
+  <li><strong>Datacrédito Experian</strong> — la más utilizada por bancos y entidades financieras.</li>
+  <li><strong>CIFIN / TransUnion Colombia</strong> — también consultada por muchas entidades del sistema financiero.</li>
+</ul>
+
+<p>Cuando no pagas una obligación financiera, el acreedor reporta la mora a estas centrales. El reporte negativo afecta tu score crediticio y puede impedir que accedas a nuevos créditos, arriendos o incluso algunos empleos.</p>
+
+<p>La regla general de permanencia del reporte negativo, según la Ley 1266 de 2008, es:</p>
+<ul>
+  <li><strong>Tiempo en mora de 0 a 2 años:</strong> el reporte negativo permanece el doble de ese tiempo desde que se paga o extingue la deuda (máximo 4 años).</li>
+  <li><strong>Tiempo en mora superior a 2 años:</strong> el reporte negativo permanece máximo 4 años desde que se paga o extingue la deuda, independientemente de cuánto tiempo lleves en mora.</li>
+  <li><strong>Regla de oro:</strong> ningún reporte negativo puede permanecer más de 4 años después de extinguida la obligación.</li>
+</ul>
+
+<h3>¿Qué información reportan los bancos y cooperativas?</h3>
+<p>Reportan el tipo de obligación, el monto, el número de cuotas en mora, la fecha de vencimiento y el estado de la deuda. Durante el proceso de insolvencia, el estado cambia a "proceso de reestructuración" o similar, lo que detiene la acumulación de mora adicional.</p>
+
+<h2>¿Qué le pasa a tu reporte durante el proceso de insolvencia?</h2>
+
+<p>El proceso de insolvencia tiene un efecto directo sobre tus reportes en centrales de riesgo en cada etapa:</p>
+
+<ul>
+  <li><strong>Al iniciar el proceso (radicación):</strong> los acreedores reciben notificación oficial. A partir de ese momento no pueden continuar reportando mora adicional. El estado de la deuda cambia.</li>
+  <li><strong>Durante la negociación:</strong> las deudas quedan "congeladas" en el monto a la fecha de radicación. Los intereses de mora se suspenden y no se suman nuevas moras.</li>
+  <li><strong>Al firmar el acuerdo:</strong> la deuda pasa a estado "reestructurada" o "en acuerdo de pago". Esto es diferente de un reporte negativo activo.</li>
+  <li><strong>Al cumplir el acuerdo o completar la liquidación:</strong> la deuda queda legalmente extinta. Es desde este momento que empiezan a correr los plazos de permanencia del reporte.</li>
+</ul>
+
+<h3>¿Pueden seguir reportándome negativamente mientras estoy en el proceso?</h3>
+<p>No. Desde la radicación de la solicitud de insolvencia, los acreedores incluidos en el proceso no pueden continuar reportando moras crecientes. Si algún acreedor lo hace, constituye una violación que puedes denunciar ante la Superintendencia de Industria y Comercio (SIC).</p>
+
+<h2>¿Cuánto tiempo tarda en borrarse el reporte después del proceso?</h2>
+
+<p>Una vez que el acuerdo de pago queda cumplido y las deudas se extinguen legalmente, aplican los plazos de la Ley 1266 de 2008:</p>
+
+<ul>
+  <li>Si estuviste en mora <strong>menos de 1 año</strong> antes de iniciar el proceso → el reporte negativo puede permanecer máximo <strong>2 años</strong> desde la extinción.</li>
+  <li>Si estuviste en mora <strong>entre 1 y 2 años</strong> → el reporte puede permanecer máximo <strong>el doble de ese tiempo</strong> desde la extinción (entre 2 y 4 años).</li>
+  <li>Si estuviste en mora <strong>más de 2 años</strong> → el reporte puede permanecer máximo <strong>4 años</strong> desde la extinción, sin importar cuánto tiempo lleves en mora.</li>
+</ul>
+
+<p><strong>Caso práctico:</strong> si acumulaste 18 meses de mora antes de iniciar el proceso de insolvencia, y el proceso tardó 5 meses (durante los cuales la mora se congeló), al extinguirse la deuda el reporte negativo puede permanecer máximo 36 meses (el doble de los 18 meses de mora real). Después de esos 36 meses, el dato debe borrarse automáticamente.</p>
+
+<h3>¿Puedo pedir que me borren antes del plazo?</h3>
+<p>Puedes solicitarlo si el dato es incorrecto o si el plazo legal ya venció. No puedes exigir la eliminación antes de que venza el plazo si el dato es correcto. Sin embargo, sí puedes pedir que se actualice el estado de la deuda (de "en mora" a "extinta por insolvencia") en cualquier momento después de que se complete el proceso.</p>
+
+<h2>Tus derechos frente a Datacrédito — lo que la ley te garantiza</h2>
+
+<ul>
+  <li><strong>Derecho de consulta gratuita:</strong> puedes consultar tu reporte completo en Datacrédito una vez al mes sin costo en el portal oficial.</li>
+  <li><strong>Derecho de corrección:</strong> si el dato es incorrecto (monto equivocado, fecha de extinción no registrada), puedes solicitar corrección y el acreedor tiene 15 días hábiles para responder.</li>
+  <li><strong>Derecho de actualización:</strong> una vez extinguida la deuda por insolvencia, tienes derecho a que el estado de la obligación se actualice en el reporte.</li>
+  <li><strong>Derecho de caducidad:</strong> una vez vencidos los plazos legales, el dato negativo debe eliminarse automáticamente, sin necesidad de que lo solicites.</li>
+</ul>
+
+<h3>¿Qué hacer si el banco no actualiza tu reporte después del proceso?</h3>
+<ol>
+  <li>Reúne la documentación del proceso: acta de acuerdo, certificación de cumplimiento o sentencia de liquidación.</li>
+  <li>Presenta una solicitud formal de actualización ante el acreedor (banco, cooperativa), aportando esa documentación.</li>
+  <li>Si en 15 días hábiles no hay respuesta, presenta queja ante la SIC a través de su portal en línea.</li>
+  <li>La SIC puede ordenar la corrección y sancionar al acreedor que no cumpla.</li>
+</ol>
+
+<h2>¿Cómo reconstruir tu historial crediticio después de la insolvencia?</h2>
+
+<p>Durante el período de transición —mientras el reporte negativo aún está vigente— puedes empezar a construir historial positivo con productos diseñados para ese propósito:</p>
+
+<ul>
+  <li><strong>Tarjeta de crédito garantizada:</strong> depositas un monto como garantía y recibes una tarjeta con ese cupo. Cada pago a tiempo mejora tu score.</li>
+  <li><strong>Microcrédito en cooperativa:</strong> algunas cooperativas de ahorro y crédito otorgan créditos pequeños a personas con historial negativo, especialmente si demuestras capacidad de pago actual.</li>
+  <li><strong>Cuenta de ahorros activa:</strong> mantener movimientos regulares en cuenta de ahorros crea historial positivo en el sistema financiero.</li>
+  <li><strong>Pagar todo en fecha:</strong> cualquier obligación nueva —arriendo, servicios públicos en modalidad de crédito— que pagues puntualmente contribuye a reconstruir el perfil.</li>
+</ul>
+
+<h3>¿Cuándo podré pedir un crédito normal de nuevo?</h3>
+<p>Muchos de nuestros clientes logran acceder a créditos formales nuevamente entre 2 y 3 años después de completar el proceso de insolvencia. El momento exacto depende de cuánto tiempo permanezca el reporte negativo (según los plazos de mora descritos arriba) y qué tan activamente trabajes en reconstruir tu historial durante ese período.</p>
+
+<h2>Preguntas frecuentes — Datacrédito e insolvencia</h2>
+
+<p><strong>¿Me afecta el reporte para conseguir trabajo?</strong><br/>Algunos empleadores, especialmente en cargos financieros o de manejo de dinero, consultan las centrales de riesgo. Sin embargo, la ley colombiana prohíbe discriminar laboralmente por reporte negativo en la mayoría de cargos. Si el cargo no implica manejo de recursos, el reporte en Datacrédito no puede ser motivo de rechazo.</p>
+
+<p><strong>¿Mi codeudor también queda reportado?</strong><br/>Si eres codeudor de una deuda que entra al proceso de insolvencia del titular, tu reporte como codeudor también se actualiza en función del estado de la obligación. Si el proceso extingue la deuda, el reporte del codeudor también debe actualizarse en los mismos plazos.</p>
+
+<p><strong>¿Puedo abrir cuenta de ahorros mientras estoy reportado?</strong><br/>Sí. Estar reportado en Datacrédito no impide abrir una cuenta de ahorros básica. Lo que puede afectarse es el acceso a créditos, tarjetas o productos financieros que requieren consulta de centrales de riesgo como requisito.</p>
+
+<p><strong>¿Qué pasa con el reporte si la insolvencia no llega a acuerdo?</strong><br/>Si el proceso de insolvencia termina sin acuerdo (fracaso de la negociación), el deudor puede pasar directamente a liquidación patrimonial. Al completarse la liquidación y extinguirse las deudas, los plazos de caducidad del reporte empiezan a correr de la misma forma.</p>
+
+<blockquote>Declararse insolvente no significa quedar marcado de por vida. La ley colombiana establece plazos claros, derechos concretos y un camino real para recuperar tu historial crediticio. El primer paso es extinguir la deuda legalmente — y eso es exactamente lo que hace el proceso de insolvencia. En Deuda OFF la primera consulta es gratuita.</blockquote>
+    `,
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
