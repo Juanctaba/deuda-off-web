@@ -25,7 +25,7 @@ const CASES = [
   {
     initials: 'M.G.',
     city: 'Medellín, Antioquia',
-    debtTotal: '$48 millones',
+    debtTotal: '$85 millones',
     debtType: 'Cooperativa + crédito de consumo',
     result: 'Extinción por liquidación patrimonial',
     time: '6 meses',
@@ -37,7 +37,7 @@ const CASES = [
   {
     initials: 'J.T.',
     city: 'Cali, Valle del Cauca',
-    debtTotal: '$67 millones',
+    debtTotal: '$110 millones',
     debtType: 'Crédito hipotecario + libre inversión',
     result: 'Cuota mensual reducida en un 60%',
     time: '4 meses',
@@ -49,7 +49,7 @@ const CASES = [
   {
     initials: 'A.P.',
     city: 'Barranquilla, Atlántico',
-    debtTotal: '$29 millones',
+    debtTotal: '$82 millones',
     debtType: 'Tarjetas de crédito + Rapicredit',
     result: 'Suspensión de embargos + acuerdo de pago',
     time: '3 meses',
@@ -73,7 +73,7 @@ const CASES = [
   {
     initials: 'R.V.',
     city: 'Bogotá, D.C.',
-    debtTotal: '$38 millones',
+    debtTotal: '$88 millones',
     debtType: 'Préstamos gota a gota + banco',
     result: 'Acuerdo + inicio proceso limpieza Datacrédito',
     time: '4 meses',
@@ -86,7 +86,7 @@ const CASES = [
 
 const STATS = [
   { value: '+750', label: 'Casos resueltos', icon: 'check_circle' },
-  { value: '$52M', label: 'Deuda promedio negociada', icon: 'payments' },
+  { value: '+$80M', label: 'Deuda promedio negociada', icon: 'payments' },
   { value: '4–6 meses', label: 'Tiempo promedio de proceso', icon: 'schedule' },
   { value: '5 ciudades', label: 'Atención directa + todo Colombia virtual', icon: 'location_on' },
 ]
