@@ -107,18 +107,32 @@ export default function PreguntasFrecuentes() {
     })),
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://deudaoff.com' },
+      { '@type': 'ListItem', position: 2, name: 'Preguntas Frecuentes sobre Insolvencia en Colombia', item: 'https://deudaoff.com/preguntas-frecuentes' },
+    ],
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="min-h-screen bg-surface">
         {/* Header */}
         <div className="bg-primary text-white py-16 px-5">
           <div className="max-w-3xl mx-auto">
-            <Link href="/" className="text-white/60 hover:text-white text-sm mb-6 inline-block">← Deuda OFF</Link>
-            <h1 className="font-manrope text-4xl font-bold mb-3">Preguntas Frecuentes</h1>
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/50 text-xs mb-6">
+              <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
+              <span>›</span>
+              <span className="text-white/70">Preguntas Frecuentes</span>
+            </nav>
+            <h1 className="font-manrope text-4xl font-bold mb-3">Preguntas Frecuentes sobre Insolvencia de Persona Natural en Colombia</h1>
             <p className="text-blue-200 text-lg">
-              Todo lo que necesitas saber sobre la insolvencia de persona natural en Colombia.
+              Respuestas claras y directas sobre el proceso de insolvencia, la Ley 2445 de 2025, costos, tiempos y tus derechos como deudor.
             </p>
           </div>
         </div>

@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog — Insolvencia de Persona Natural en Colombia | Deuda OFF',
-  description: 'Guías, artículos y recursos sobre insolvencia de persona natural, Ley 2445 de 2025 y cómo salir de deudas legalmente en Colombia.',
+  title: 'Blog sobre Insolvencia de Persona Natural en Colombia — Ley 2445 de 2025 | Deuda OFF',
+  description: 'Guías, artículos y recursos sobre insolvencia de persona natural en Colombia: Ley 2445 de 2025, requisitos, proceso paso a paso, cómo evitar embargos y tus derechos como deudor.',
   alternates: { canonical: 'https://deudaoff.com/blog' },
 }
 
@@ -19,18 +19,59 @@ function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': 'https://deudaoff.com/blog',
+  name: 'Blog sobre Insolvencia de Persona Natural en Colombia',
+  description: 'Guías y artículos sobre insolvencia de persona natural, Ley 2445 de 2025 y derechos del deudor en Colombia.',
+  url: 'https://deudaoff.com/blog',
+  inLanguage: 'es-CO',
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://deudaoff.com/#organization',
+    name: 'Deuda OFF — Núcleo Jurídico SAS',
+  },
+  blogPost: BLOG_POSTS.map(p => ({
+    '@type': 'BlogPosting',
+    headline: p.title,
+    description: p.description,
+    url: `https://deudaoff.com/blog/${p.slug}`,
+    datePublished: p.date,
+    dateModified: p.dateModified,
+    keywords: p.about.join(', '),
+  })),
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://deudaoff.com' },
+    { '@type': 'ListItem', position: 2, name: 'Blog — Insolvencia de Persona Natural en Colombia', item: 'https://deudaoff.com/blog' },
+  ],
+}
+
 export default function BlogIndex() {
   const [featured, ...rest] = BLOG_POSTS
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
     <div className="min-h-screen bg-surface">
       {/* Header */}
       <div className="bg-primary text-white py-20 px-5">
         <div className="max-w-5xl mx-auto">
-          <Link href="/" className="text-white/60 hover:text-white text-sm mb-6 inline-block">← Deuda OFF</Link>
-          <h1 className="font-manrope text-4xl md:text-5xl font-bold mb-4">Blog & Recursos</h1>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-white/50 text-xs mb-6">
+            <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
+            <span>›</span>
+            <span className="text-white/70">Blog</span>
+          </nav>
+          <h1 className="font-manrope text-4xl md:text-5xl font-bold mb-4">Blog: Insolvencia de Persona Natural en Colombia</h1>
           <p className="text-blue-200 text-lg max-w-2xl">
-            Todo lo que necesitas saber sobre insolvencia de persona natural, la Ley 2445 de 2025 y tus derechos como deudor en Colombia.
+            Todo lo que necesitas saber sobre la Ley 2445 de 2025, el proceso de insolvencia paso a paso y tus derechos como deudor en Colombia.
           </p>
         </div>
       </div>
@@ -96,5 +137,6 @@ export default function BlogIndex() {
         </div>
       </div>
     </div>
+    </>
   )
 }

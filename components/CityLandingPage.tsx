@@ -24,14 +24,63 @@ export default function CityLandingPage({ city, department, slug, headline, intr
   const citySchema = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
+    '@id': `https://deudaoff.com/${slug}#legalservice`,
     name: `Deuda OFF — Insolvencia de Persona Natural en ${city}`,
-    description: intro,
+    description: `La insolvencia de persona natural en ${city}, ${department} es un proceso legal bajo la Ley 2445 de 2025 que permite a ciudadanos colombianos reorganizar o liquidar sus deudas de forma oficial. ${intro}`,
     url: `https://deudaoff.com/${slug}`,
     telephone: '+57-300-355-2751',
-    areaServed: { '@type': 'City', name: city, containedInPlace: { '@type': 'State', name: department } },
+    priceRange: 'Consulta gratuita — honorarios según el caso',
+    areaServed: {
+      '@type': 'City',
+      name: city,
+      containedInPlace: { '@type': 'State', name: department, containedInPlace: { '@type': 'Country', name: 'Colombia' } },
+    },
     serviceType: 'Insolvencia de Persona Natural',
-    priceRange: 'Consulta gratuita',
-    provider: { '@type': 'Organization', name: 'Núcleo Jurídico SAS' },
+    knowsAbout: [
+      `Insolvencia de persona natural en ${city}`,
+      'Ley 2445 de 2025 Colombia',
+      'Suspensión de embargos de salario',
+      'Negociación de deudas con acreedores',
+      'Liquidación patrimonial persona natural',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Servicios de insolvencia en ${city}`,
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Consulta gratuita de diagnóstico',
+            description: `Evaluación sin costo de tu situación financiera en ${city} y elegibilidad para el proceso de insolvencia.`,
+          },
+          price: '0',
+          priceCurrency: 'COP',
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Procedimiento de negociación de deudas',
+            description: `Proceso legal bajo la Ley 2445 de 2025 para reorganizar tus deudas con todos los acreedores, disponible para personas en ${city} y ${department}.`,
+          },
+        },
+      ],
+    },
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://deudaoff.com/#organization',
+      name: 'Núcleo Jurídico SAS',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://deudaoff.com' },
+      { '@type': 'ListItem', position: 2, name: `Insolvencia de Persona Natural en ${city}`, item: `https://deudaoff.com/${slug}` },
+    ],
   }
 
   const faqSchema = {
@@ -47,6 +96,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Header */}
