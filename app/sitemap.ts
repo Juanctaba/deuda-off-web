@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: base, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/preguntas-frecuentes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/por-que-deuda-off`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/casos-de-exito`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/insolvencia-bogota`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/insolvencia-medellin`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/insolvencia-cali`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
