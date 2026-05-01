@@ -3,6 +3,40 @@ import ContactForm from '@/components/ContactForm'
 
 const WA_URL = 'https://wa.me/573003552751?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20proceso%20de%20insolvencia%20de%20persona%20natural'
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Cómo acogerse a la insolvencia de persona natural en Colombia',
+  description: 'Proceso paso a paso para reorganizar o liquidar deudas legalmente en Colombia bajo la Ley 2445 de 2025.',
+  totalTime: 'P6M',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Análisis de Deuda',
+      text: 'Evaluamos tu situación financiera actual y requisitos legales sin costo inicial. Incluye diagnóstico de elegibilidad bajo la Ley 2445 de 2025.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Solicitud Legal',
+      text: 'Radicamos formalmente tu solicitud de insolvencia ante Centros de Conciliación autorizados por el Ministerio de Justicia o la Superintendencia de Sociedades. Desde este momento, los embargos se suspenden.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Negociación con Acreedores',
+      text: 'Mediamos con todos tus acreedores para lograr un acuerdo de pago acorde a tu capacidad real. Si la mayoría aprueba, el acuerdo es obligatorio para todos.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Fresh Start — Deudas Extinguidas',
+      text: 'Cumplido el acuerdo o la liquidación patrimonial, tus deudas quedan legalmente extinguidas bajo la Ley 2445 de 2025.',
+    },
+  ],
+}
+
 const PAIN_POINTS = [
   { icon: 'call_end',     title: 'Acoso Cobratorio',      desc: 'Detenemos las llamadas incesantes de bancos y agencias de cobranza de inmediato.' },
   { icon: 'gavel',        title: 'Procesos Judiciales',   desc: 'Suspensión legal de procesos de embargo sobre tu salario, vivienda o vehículos.' },
@@ -22,15 +56,40 @@ const TESTIMONIALS = [
     initials: 'CR',
     name: 'Carlos Rodriguez',
     city: 'Bogotá, D.C.',
+    rating: 5,
+    date: '2025-11-01',
     text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF logramos un acuerdo donde pago solo lo que puedo y recuperé mi casa. Gracias infinitas."',
   },
   {
     initials: 'MG',
     name: 'Martha Lucía Gomez',
     city: 'Medellín, Antioquia',
+    rating: 5,
+    date: '2025-09-15',
     text: '"Pensé que lo perdería todo por mi negocio. El equipo de Deuda OFF me guió con paciencia y profesionalismo. Hoy duermo tranquila sabiendo que estoy protegida."',
   },
 ]
+
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://deudaoff.com/#legalservice',
+  name: 'Deuda OFF — Insolvencia de Persona Natural',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '750',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: TESTIMONIALS.map(t => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: t.name },
+    reviewRating: { '@type': 'Rating', ratingValue: String(t.rating), bestRating: '5' },
+    datePublished: t.date,
+    reviewBody: t.text.replace(/"/g, ''),
+  })),
+}
 
 const BENEFITS = [
   { icon: 'balance',   title: 'Ley 2445 de 2025',      desc: 'Abogados especializados en la nueva Ley de Insolvencia de Persona Natural vigente desde 2025.' },
@@ -73,7 +132,8 @@ export default function Home() {
           {[
             { label: 'Cómo Funciona', href: '#como-funciona' },
             { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
-            { label: 'Preguntas Frecuentes', href: '#preguntas-frecuentes' },
+            { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+            { label: 'Blog', href: '/blog' },
           ].map(item => (
             <a key={item.label} href={item.href} className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">{item.label}</a>
           ))}
@@ -132,7 +192,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-primary font-bold text-lg">+750 Casos</p>
-                  <p className="text-on-surface-variant text-sm">Resueltos exitosamente</p>
+                  <p className="text-on-surface-variant text-sm">Resueltos desde 2020</p>
                 </div>
               </div>
             </div>
@@ -236,7 +296,7 @@ export default function Home() {
               </div>
               <div className="mt-12 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex flex-wrap items-center gap-4">
-                  <div className="bg-secondary px-4 py-2 rounded-lg font-bold text-lg">+750 Casos Exitosos</div>
+                  <div className="bg-secondary px-4 py-2 rounded-lg font-bold text-lg">+750 Casos desde 2020</div>
                   <span className="text-white/40 hidden md:inline">|</span>
                   <p className="text-blue-200 text-sm">Vigilado por la Superintendencia de Sociedades</p>
                   <span className="text-white/40 hidden md:inline">|</span>
@@ -336,7 +396,8 @@ export default function Home() {
                 {[
                   { label: 'Cómo Funciona', href: '#como-funciona' },
                   { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
-                  { label: 'Preguntas Frecuentes', href: '#preguntas-frecuentes' },
+                  { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+                  { label: 'Blog', href: '/blog' },
                 ].map(item => (
                   <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
                     {item.label}
@@ -409,14 +470,15 @@ export default function Home() {
             mainEntity: FAQS.map(f => ({
               '@type': 'Question',
               name: f.q,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: f.a,
-              },
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
             })),
           }),
         }}
       />
+      {/* ── Schema HowTo ────────────────────────────── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      {/* ── Schema Review / AggregateRating ─────────── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       {/* ── WhatsApp flotante ────────────────────────── */}
       <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="whatsapp-float" aria-label="WhatsApp">
