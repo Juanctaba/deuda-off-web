@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import SiteHeader from '@/components/SiteHeader'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Deuda OFF — Elimina tus Deudas Legalmente en Colombia',
   description: 'Acógete a la Ley de Insolvencia de Persona Natural. Protege tu patrimonio, frena embargos y recupera tu tranquilidad financiera. +750 casos resueltos desde 2020. Núcleo Jurídico.',
   keywords: 'insolvencia persona natural colombia, eliminar deudas legalmente, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   alternates: {
     canonical: 'https://deudaoff.com',
     languages: { 'es-CO': 'https://deudaoff.com' },
@@ -57,7 +63,7 @@ const schemaOrganization = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+57-300-355-2751',
+    telephone: '+57-305-239-6052',
     contactType: 'customer service',
     areaServed: 'CO',
     availableLanguage: 'Spanish',
@@ -81,7 +87,7 @@ const schemaLegalService = {
   name: 'Deuda OFF — Insolvencia de Persona Natural en Colombia',
   description: 'Servicio legal especializado en insolvencia de persona natural en Colombia. Acógete a la Ley 2445 de 2025: suspende embargos, negocia tus deudas y empieza de nuevo.',
   url: 'https://deudaoff.com',
-  telephone: '+57-300-355-2751',
+  telephone: '+57-305-239-6052',
   priceRange: 'Consulta gratuita — honorarios según el caso',
   currenciesAccepted: 'COP',
   paymentAccepted: 'Efectivo, transferencia bancaria',
@@ -173,7 +179,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {children}
+        <SiteHeader />
+        <div className="pt-16">{children}</div>
       </body>
     </html>
   )
