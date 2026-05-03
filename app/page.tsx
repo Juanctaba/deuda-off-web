@@ -258,7 +258,7 @@ export default function Home() {
         {/* ── BENEFICIOS (dark) ────────────────────────── */}
         <section id="ley-insolvencia" className="py-20 px-5">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-primary rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
+            <div className="bg-primary rounded-3xl p-6 sm:p-10 md:p-14 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -mr-32 -mt-32" />
               <div className="relative z-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {BENEFITS.map(b => (
@@ -352,7 +352,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             {/* Column 1: Logo & Description */}
             <div className="flex flex-col gap-4">
-              <Image src="/logo.png" alt="Deuda OFF" width={120} height={36} className="h-8 w-auto brightness-0 invert opacity-80" />
+              <Image src="/logo.png" alt="Deuda OFF" width={130} height={50} className="h-8 w-auto object-contain brightness-0 invert opacity-80" />
               <p className="text-[10px] uppercase tracking-wider text-white/40 font-bold">Una marca de Núcleo Jurídico</p>
               <p className="text-sm text-white/60 leading-relaxed">
                 Líderes en Derecho de Insolvencia. Más de 750 casos resueltos exitosamente.
