@@ -258,7 +258,7 @@ export default function Home() {
         {/* ── BENEFICIOS (dark) ────────────────────────── */}
         <section id="ley-insolvencia" className="py-20 px-5">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-primary rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
+            <div className="bg-primary rounded-3xl p-6 sm:p-10 md:p-14 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -mr-32 -mt-32" />
               <div className="relative z-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {BENEFITS.map(b => (

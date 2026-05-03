@@ -120,7 +120,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
                 WhatsApp
               </a>
             </div>
-            <div className="flex items-center gap-6 pt-4 text-sm text-on-surface-variant">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-on-surface-variant">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-secondary inline-block" /> +750 casos resueltos
               </span>

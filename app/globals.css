@@ -13,6 +13,9 @@
 
 html { scroll-behavior: smooth; }
 
+:target,
+section[id] { scroll-margin-top: 5rem; }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f7fafc;
@@ -43,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 28px;
   right: 24px;
-  z-index: 50;
+  z-index: 40;
   width: 56px;
   height: 56px;
   border-radius: 9999px;
