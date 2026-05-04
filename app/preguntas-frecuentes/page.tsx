@@ -21,8 +21,8 @@ const FAQS = [
         a: 'La fase de preparación y radicación toma entre 2 y 4 semanas. La audiencia de negociación con los acreedores se realiza entre 1 y 3 meses después de la radicación. La ejecución del acuerdo (pago de las cuotas) puede durar de 1 a 5 años según lo pactado. Lo importante: desde el día de la radicación tienes protección legal inmediata contra embargos y cobros coercitivos.',
       },
       {
-        q: '¿Tengo que ir a un juzgado?',
-        a: 'No necesariamente. La mayoría de los procesos se tramitan ante Centros de Conciliación autorizados por el Ministerio de Justicia, sin necesidad de ir a un juzgado. Además, en Deuda OFF manejamos todo 100% de forma virtual — videollamadas, firma electrónica y canales digitales. Atendemos a colombianos en todo el país.',
+        q: '¿Tengo que desplazarme?',
+        a: 'No. En Deuda OFF manejamos todo 100% de forma virtual — videollamadas, firma electrónica y canales digitales. La mayoría de los procesos se tramitan ante Centros de Conciliación autorizados por el Ministerio de Justicia, y atendemos a colombianos en todo el país sin que tengas que desplazarte.',
       },
       {
         q: '¿Qué pasa si un acreedor no acepta el acuerdo?',

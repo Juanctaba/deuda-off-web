@@ -15,7 +15,7 @@ export default function InsolvenciaMedellin() {
       department="Antioquia"
       slug="insolvencia-medellin"
       headline="¿Deudas sin salida en Medellín? La insolvencia de persona natural es tu solución legal"
-      intro="En Medellín y el área metropolitana, miles de personas enfrentan deudas que superan su capacidad de pago. Con la Ley 2445 de 2025, puedes reorganizar tus obligaciones de forma legal: suspende embargos, detén el acoso cobratorio y logra un acuerdo de pago real con todos tus acreedores."
+      intro="En Medellín y el área metropolitana, miles de personas enfrentan deudas que superan su capacidad de pago. Con la Ley 2445 de 2025, puedes reorganizar tus obligaciones de forma legal: suspende embargos, detén las llamadas incesantes de cobranza y logra un acuerdo de pago real con todos tus acreedores."
       localContext="Medellín y su área metropolitana — Bello, Itagüí, Envigado, Sabaneta, La Estrella — tienen una fuerte cultura financiera con alto uso de crédito de consumo y cooperativas. Las cooperativas financieras son especialmente activas en Antioquia, por lo que muchos deudores tienen obligaciones mixtas con bancos y cooperativas simultáneamente. Deuda OFF opera 100% virtual, lo que significa que podemos atender a cualquier persona en Medellín o el Valle de Aburrá sin importar su ubicación."
       cityFaqs={[
         {
