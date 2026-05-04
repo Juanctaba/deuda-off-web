@@ -37,7 +37,7 @@ const howToSchema = {
 }
 
 const PAIN_POINTS = [
-  { icon: 'call_end',     title: 'Acoso Cobratorio',      desc: 'Detenemos las llamadas incesantes de bancos y agencias de cobranza de inmediato.' },
+  { icon: 'call_end',     title: 'Llamadas Incesantes',   desc: 'Detenemos las llamadas incesantes de bancos y agencias de cobranza de inmediato.' },
   { icon: 'gavel',        title: 'Procesos Judiciales',   desc: 'Suspensión legal de procesos de embargo sobre tu salario, vivienda o vehículos.' },
   { icon: 'heart_broken', title: 'Estrés Familiar',       desc: 'Recupera la paz en tu hogar eliminando la carga psicológica de la insolvencia.' },
   { icon: 'block',        title: 'Reportes Negativos',    desc: 'Inicia el camino legal para limpiar tu historial en centrales de riesgo.' },
@@ -92,7 +92,7 @@ const reviewSchema = {
 
 const BENEFITS = [
   { icon: 'balance',   title: 'Ley 2445 de 2025',      desc: 'Abogados especializados en la nueva Ley de Insolvencia de Persona Natural vigente desde 2025.' },
-  { icon: 'verified',  title: '100% Legal',             desc: 'Procedimientos avalados por la Constitución y la Superintendencia de Sociedades.' },
+  { icon: 'verified',  title: '100% Legal',             desc: 'Procedimientos avalados por la Constitución y la Ley.' },
   { icon: 'payments',  title: 'Sin Costo Inicial',      desc: 'Primera consultoría totalmente gratuita para diagnóstico de tu caso.' },
   { icon: 'public',    title: 'Atención Nacional',      desc: 'Cubrimos todo el territorio colombiano con atención 100% virtual.' },
 ]
@@ -111,7 +111,7 @@ const FAQS = [
     a: 'El proceso de reorganización puede tardar entre 3 y 8 meses. Lo importante es que desde el momento en que se radica, tienes protección legal frente a los acreedores.',
   },
   {
-    q: '¿Tengo que ir a un juzgado?',
+    q: '¿Tengo que desplazarme?',
     a: 'No. Manejamos el proceso 100% virtual. Toda la asesoría y gestión se realiza por videollamada y canales digitales. Atendemos en todo Colombia.',
   },
 ]

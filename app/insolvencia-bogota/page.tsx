@@ -15,7 +15,7 @@ export default function InsolvenciaBogota() {
       department="D.C."
       slug="insolvencia-bogota"
       headline="¿Deudas que no puedes pagar en Bogotá? La ley colombiana te protege"
-      intro="Si vives en Bogotá y estás abrumado por deudas con bancos, cooperativas o tarjetas de crédito, puedes acogerte a la Ley de Insolvencia de Persona Natural. Suspendemos embargos, frenamos el acoso cobratorio y negociamos un acuerdo de pago que sí puedas cumplir."
+      intro="Si vives en Bogotá y estás abrumado por deudas con bancos, cooperativas o tarjetas de crédito, puedes acogerte a la Ley de Insolvencia de Persona Natural. Suspendemos embargos, frenamos las llamadas incesantes de cobranza y negociamos un acuerdo de pago que sí puedas cumplir."
       localContext="Bogotá concentra el mayor volumen de crédito de consumo en Colombia, lo que convierte a sus habitantes en los más expuestos a situaciones de sobreendeudamiento. Muchos bogotanos enfrentan deudas con múltiples bancos, cooperativas del sur y oeste de la ciudad, y entidades de microcrédito. La buena noticia: el proceso de insolvencia de persona natural bajo la Ley 2445 de 2025 está disponible para todos los bogotanos y se gestiona 100% de forma virtual — sin necesidad de acudir a ninguna oficina en la ciudad."
       cityFaqs={[
         {
