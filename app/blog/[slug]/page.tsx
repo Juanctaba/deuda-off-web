@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { BLOG_POSTS, getBlogPost } from '@/lib/blog-posts'
 import { BlogContent } from '@/components/BlogContent'
+import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
 
 interface Props {
@@ -134,9 +135,9 @@ export default function BlogPost({ params }: Props) {
               Habla con un especialista en insolvencia de persona natural. La consulta inicial es gratuita y confidencial.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/#formulario" className="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-all">
+              <a href="#formulario" className="bg-primary text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-all">
                 Consulta Gratuita
-              </Link>
+              </a>
               <a
                 href={WA_URL}
                 target="_blank"
@@ -156,6 +157,24 @@ export default function BlogPost({ params }: Props) {
               </span>
             ))}
           </div>
+
+          {/* Formulario embebido */}
+          <section id="formulario" className="mt-12 mb-12 scroll-mt-20">
+            <div className="bg-white rounded-2xl shadow-card border border-outline-variant/30 p-5 sm:p-8">
+              <div className="text-center mb-6">
+                <span className="inline-block px-3 py-1 rounded-full bg-secondary-container text-[#00522f] text-[11px] font-bold uppercase tracking-wider mb-3">
+                  Consulta Gratuita
+                </span>
+                <h2 className="font-manrope text-2xl sm:text-3xl font-bold text-primary leading-tight">
+                  Cuéntanos tu caso
+                </h2>
+                <p className="text-on-surface-variant text-sm sm:text-base mt-2 max-w-md mx-auto">
+                  Un especialista en insolvencia de persona natural te contactará. Sin costo y sin compromiso.
+                </p>
+              </div>
+              <CRMForm />
+            </div>
+          </section>
 
           {/* Related posts */}
           {related.length > 0 && (
