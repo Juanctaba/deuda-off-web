@@ -42,24 +42,3 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 28px;
-  right: 24px;
-  z-index: 40;
-  width: 56px;
-  height: 56px;
-  border-radius: 9999px;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
-  animation: wa-pulse 2.8s ease-out infinite;
-}
-
-@keyframes wa-pulse {
-  0%   { box-shadow: 0 0 0 0   rgba(37,211,102,0.55); }
-  70%  { box-shadow: 0 0 0 16px rgba(37,211,102,0);   }
-  100% { box-shadow: 0 0 0 0   rgba(37,211,102,0);    }
-}
