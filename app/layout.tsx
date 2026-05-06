@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import SiteHeader from '@/components/SiteHeader'
+import ConditionalHeader from '@/components/ConditionalHeader'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -179,8 +179,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <SiteHeader />
-        <div className="pt-16">{children}</div>
+        <ConditionalHeader>{children}</ConditionalHeader>
       </body>
     </html>
   )
