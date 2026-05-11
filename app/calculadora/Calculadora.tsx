@@ -1,7 +1,24 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FormEvent } from 'react'
 import { WA_URL } from '@/lib/constants'
+
+const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/lRtKBuPMTNYmQnYj81H6/webhook-trigger/b183ec9a-1657-48df-9204-e5fc41998747'
+
+const COUNTRIES = [
+  { code: '+57', name: 'Colombia' },
+  { code: '+52', name: 'México' },
+  { code: '+54', name: 'Argentina' },
+  { code: '+56', name: 'Chile' },
+  { code: '+51', name: 'Perú' },
+  { code: '+593', name: 'Ecuador' },
+  { code: '+58', name: 'Venezuela' },
+  { code: '+591', name: 'Bolivia' },
+  { code: '+595', name: 'Paraguay' },
+  { code: '+598', name: 'Uruguay' },
+  { code: '+34', name: 'España' },
+  { code: '+1', name: 'EE.UU. / Canadá' },
+]
 
 type StepOption = { value: string; title: string; desc: string }
 type Step =
@@ -116,7 +133,7 @@ function calcScore(answers: Answers) {
 }
 
 function getLevel(score: number): 'qualify' | 'partial' | 'no' {
-  return score >= 70 ? 'qualify' : score >= 40 ? 'partial' : 'no'
+  return score >= 70 ? 'qualify' : score >= 50 ? 'partial' : 'no'
 }
 
 type Criterion = { status: 'pass' | 'fail' | 'warn'; text: string }
@@ -167,7 +184,43 @@ const STATUS_BADGE: Record<Criterion['status'], { bg: string; text: string; icon
 const RESULT_THEME = {
   qualify: { ring: 'bg-secondary-container text-[#00522f]', title: 'text-secondary', fill: 'bg-secondary', icon: 'celebration' },
   partial: { ring: 'bg-amber-100 text-amber-800', title: 'text-amber-700', fill: 'bg-amber-500', icon: 'search' },
-  no: { ring: 'bg-red-50 text-red-700', title: 'text-red-700', fill: 'bg-red-500', icon: 'chat' },
+  no: { ring: 'bg-red-50 text-red-700', title: 'text-red-700', fill: 'bg-red-500', icon: 'block' },
+}
+
+const TITLES = {
+  qualify: '¡Muy probablemente calificas!',
+  partial: 'Tu caso necesita una revisión a detalle',
+  no: 'En este momento no calificas',
+}
+
+function moraLabel(v: unknown) {
+  switch (v) {
+    case 'mas_90': return '+90 días en mora'
+    case 'entre_30': return '30–90 días en mora'
+    case 'al_dia': return 'Al día pero sin poder pagar'
+    case 'pagando': return 'Pagando sin problema'
+    default: return ''
+  }
+}
+function tipoLabel(v: unknown) {
+  switch (v) {
+    case 'empleado': return 'Empleado'
+    case 'independiente': return 'Independiente'
+    case 'pensionado': return 'Pensionado/rentista'
+    case 'comerciante': return 'Pequeño comerciante'
+    case 'empresa': return 'Empresa / Sociedad'
+    default: return ''
+  }
+}
+function procesoLabel(v: unknown) {
+  switch (v) {
+    case 'embargo_sueldo': return 'Embargo de salario activo'
+    case 'embargo_bien': return 'Embargo de cuenta o bien'
+    case 'proceso_jud': return 'Proceso judicial en curso'
+    case 'solo_cobros': return 'Solo llamadas de cobranza'
+    case 'nada': return 'Ninguno todavía'
+    default: return ''
+  }
 }
 
 export default function Calculadora() {
@@ -175,29 +228,57 @@ export default function Calculadora() {
   const [answers, setAnswers] = useState<Answers>({})
   const [disqualified, setDisqualified] = useState(false)
   const [disqualifyMsg, setDisqualifyMsg] = useState('')
+
+  // Form / lead capture
+  const [nombre, setNombre] = useState('')
+  const [pais, setPais] = useState('+57')
+  const [telefono, setTelefono] = useState('')
+  const [formError, setFormError] = useState<string | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
+  // Attribution
+  const [utm, setUtm] = useState<Record<string, string>>({})
+  const [pageMeta, setPageMeta] = useState<{ url?: string; referrer?: string }>({})
+
   const [animatedScore, setAnimatedScore] = useState(0)
 
-  const isResult = currentStep === STEPS.length || disqualified
-  const step = !isResult ? STEPS[currentStep] : null
-  const pct = Math.round((currentStep / STEPS.length) * 100)
-  const score = !disqualified && isResult ? calcScore(answers) : 0
+  const quizDone = currentStep === STEPS.length && !disqualified
+  const score = quizDone ? calcScore(answers) : 0
   const level = getLevel(score)
-  const criteria = !disqualified && isResult ? buildCriteria(answers) : []
-  const urgent = answers['proceso_activo'] === 'embargo_sueldo' || answers['proceso_activo'] === 'embargo_bien'
+  const needsForm = quizDone && level === 'qualify' && !formSubmitted
+  const showResult = quizDone && (level !== 'qualify' || formSubmitted)
+  const isQuiz = !disqualified && !quizDone
+  const step = isQuiz ? STEPS[currentStep] : null
+
   const dt = (answers['deuda_total'] as number) ?? 0
+  const na = (answers['num_acreedores'] as number) ?? 0
+  const urgent = answers['proceso_activo'] === 'embargo_sueldo' || answers['proceso_activo'] === 'embargo_bien'
 
   useEffect(() => {
-    if (!isResult || disqualified) return
-    const target = calcScore(answers)
+    if (typeof window === 'undefined') return
+    const params = new URLSearchParams(window.location.search)
+    const captured: Record<string, string> = {}
+    params.forEach((v, k) => {
+      if (k.startsWith('utm_') || ['gclid', 'fbclid', 'msclkid', 'ttclid', 'wbraid', 'gbraid'].includes(k)) {
+        captured[k] = v
+      }
+    })
+    setUtm(captured)
+    setPageMeta({ url: window.location.href, referrer: document.referrer || '' })
+  }, [])
+
+  useEffect(() => {
+    if (!showResult) return
     setAnimatedScore(0)
     let cur = 0
     const t = setInterval(() => {
-      cur = Math.min(cur + 2, target)
+      cur = Math.min(cur + 2, score)
       setAnimatedScore(cur)
-      if (cur >= target) clearInterval(t)
+      if (cur >= score) clearInterval(t)
     }, 16)
     return () => clearInterval(t)
-  }, [isResult, disqualified, answers])
+  }, [showResult, score])
 
   function selectOption(id: string, value: string) {
     setAnswers(a => ({ ...a, [id]: value }))
@@ -222,6 +303,7 @@ export default function Calculadora() {
       return { ...a, [id]: arr }
     })
   }
+
   function nextStep() {
     if (!step) return
     const a = { ...answers }
@@ -234,34 +316,87 @@ export default function Calculadora() {
     if (step.type === 'counter' && step.disqualify && step.disqualify(a[step.id] as number)) {
       setDisqualified(true); setDisqualifyMsg(step.disqualifyMsg ?? ''); return
     }
-    if (currentStep < STEPS.length - 1) {
-      setCurrentStep(currentStep + 1)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else {
-      setCurrentStep(STEPS.length)
-    }
+    setCurrentStep(currentStep + 1)
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   function prevStep() { if (currentStep > 0) setCurrentStep(currentStep - 1) }
   function restart() {
     setCurrentStep(0); setAnswers({}); setDisqualified(false); setDisqualifyMsg('')
+    setNombre(''); setTelefono(''); setPais('+57'); setFormSubmitted(false); setFormError(null)
   }
 
-  const titles = {
-    qualify: '¡Muy probablemente calificas!',
-    partial: 'Posiblemente calificas — necesitas consulta',
-    no: 'En este momento es difícil calificar',
+  async function submitForm(e: FormEvent) {
+    e.preventDefault()
+    const cleanName = nombre.trim()
+    const cleanPhone = telefono.replace(/[^\d]/g, '')
+    if (cleanName.length < 2) { setFormError('Ingresa tu nombre completo'); return }
+    if (cleanPhone.length < 7) { setFormError('Ingresa un teléfono válido'); return }
+    setFormError(null)
+    setSubmitting(true)
+
+    const criterios = buildCriteria(answers)
+    const payload = {
+      nombre: cleanName,
+      codigo_pais: pais,
+      telefono_local: cleanPhone,
+      telefono_e164: `${pais}${cleanPhone}`,
+      whatsapp: `${pais.replace('+', '')}${cleanPhone}`,
+      score,
+      nivel: level,
+      urgente: urgent,
+      deuda_total_millones: dt,
+      deuda_formato: fmtMoney(dt),
+      num_acreedores: na,
+      mora: answers['mora'] ?? null,
+      mora_label: moraLabel(answers['mora']),
+      tipo: answers['tipo'] ?? null,
+      tipo_label: tipoLabel(answers['tipo']),
+      proceso_activo: answers['proceso_activo'] ?? null,
+      proceso_label: procesoLabel(answers['proceso_activo']),
+      tipos_deuda: answers['deuda_tipos'] ?? [],
+      respuestas: answers,
+      criterios,
+      utm,
+      url: pageMeta.url,
+      referrer: pageMeta.referrer,
+      user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      fecha: new Date().toISOString(),
+    }
+
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+    } catch (err) {
+      // Fire-and-forget — don't block the user if the webhook fails
+      // (CORS / network); the lead UX continues.
+      console.warn('Webhook envío falló:', err)
+    }
+    setSubmitting(false)
+    setFormSubmitted(true)
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-  const ctaText = {
-    qualify: urgent ? 'Agenda mi consulta urgente — GRATIS' : 'Quiero mi consulta gratuita',
-    partial: 'Consultar mi caso gratis',
-    no: 'Explorar otras opciones',
-  }
-  const waMsg = encodeURIComponent(
-    level === 'qualify'
-      ? `Hola, hice la calculadora de Deuda OFF y califiqué. Tengo deudas por ${fmtMoney(dt)} con ${answers['num_acreedores']} acreedores. Quiero hablar con un especialista.`
-      : 'Hola, hice la calculadora de Deuda OFF. Quiero consultar mi situación.'
-  )
+
   const waBase = WA_URL.split('?')[0]
+  const waMsgPartial = encodeURIComponent(
+    `Hola, hice la calculadora de Deuda OFF y mi caso necesita revisión a detalle.\n\n` +
+    `• Deudas: ${fmtMoney(dt)} COP\n` +
+    `• Acreedores: ${na}\n` +
+    `• Mora: ${moraLabel(answers['mora'])}\n` +
+    `• Procesos: ${procesoLabel(answers['proceso_activo'])}\n\n` +
+    `Quiero que revisen mi caso.`
+  )
+  const waMsgQualify = encodeURIComponent(
+    `Hola${nombre ? ', soy ' + nombre.trim() : ''}. Hice la calculadora de Deuda OFF y califiqué (puntaje ${score}/100).\n\n` +
+    `• Deudas: ${fmtMoney(dt)} COP\n` +
+    `• Acreedores: ${na}\n` +
+    `• Mora: ${moraLabel(answers['mora'])}\n\n` +
+    `Quiero hablar con un especialista.`
+  )
+
+  const pct = Math.round((currentStep / STEPS.length) * 100)
 
   return (
     <div className="bg-surface min-h-screen">
@@ -282,11 +417,10 @@ export default function Calculadora() {
               </p>
             </div>
 
-            {/* Steps tracker */}
             <ol className="relative flex lg:flex-col gap-1 lg:gap-0 overflow-x-auto lg:overflow-visible -mx-2 px-2 lg:mx-0 lg:px-0">
               {STEPS.map((s, i) => {
-                const isDone = i < currentStep
-                const isActive = i === currentStep && !disqualified
+                const isDone = i < currentStep || quizDone
+                const isActive = i === currentStep && isQuiz
                 return (
                   <li key={s.id} className="flex lg:flex-row flex-col items-center lg:items-start gap-3 lg:gap-3 min-w-[90px] lg:min-w-0 lg:py-3 relative">
                     {i !== STEPS.length - 1 && (
@@ -329,7 +463,8 @@ export default function Calculadora() {
 
           {/* Content */}
           <main className="flex flex-col">
-            {disqualified ? (
+            {/* === Disqualified (early bail) === */}
+            {disqualified && (
               <div className="bg-white rounded-3xl shadow-card-lg border border-outline-variant/30 overflow-hidden">
                 <div className="px-6 sm:px-10 pt-10 pb-6 text-center">
                   <div className="w-20 h-20 rounded-full bg-red-50 text-red-600 flex items-center justify-center mx-auto mb-5">
@@ -338,57 +473,156 @@ export default function Calculadora() {
                   <h2 className="font-manrope text-2xl sm:text-3xl font-bold text-red-700 leading-tight mb-3">No califica en este momento</h2>
                   <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed max-w-md mx-auto">{disqualifyMsg}</p>
                 </div>
-                <div className="border-t border-outline-variant/30 px-6 sm:px-10 py-6 flex flex-col gap-3">
-                  <a
-                    href={`${waBase}?text=Hola%2C%20tengo%20dudas%20sobre%20mi%20situaci%C3%B3n%20de%20deudas`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="h-14 bg-[#25D366] text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all"
-                  >
-                    <span className="material-symbols-outlined">chat</span>
-                    Hablar con un especialista
-                  </a>
-                  <button onClick={restart} className="h-12 border border-outline-variant text-on-surface-variant rounded-xl font-semibold hover:bg-surface-container transition-colors">
+                <div className="border-t border-outline-variant/30 px-6 sm:px-10 py-6">
+                  <button onClick={restart} className="h-12 w-full border border-outline-variant text-on-surface-variant rounded-xl font-semibold hover:bg-surface-container transition-colors">
                     ← Volver a intentar
                   </button>
+                  <p className="text-xs text-on-surface-variant text-center mt-4 leading-relaxed">
+                    Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad.
+                  </p>
                 </div>
               </div>
-            ) : isResult ? (
+            )}
+
+            {/* === Lead form (only for qualify, before showing result) === */}
+            {needsForm && (
+              <div className="bg-white rounded-3xl shadow-card-lg border border-outline-variant/30 overflow-hidden">
+                <div className="px-6 sm:px-10 pt-8 pb-5 border-b border-outline-variant/30">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-[#00522f] text-[11px] font-bold uppercase tracking-wider mb-3">
+                    <span className="material-symbols-outlined text-sm">check_circle</span> Tu perfil califica
+                  </span>
+                  <h2 className="font-manrope text-2xl sm:text-3xl font-bold text-primary leading-tight">
+                    Un último paso para ver tu resultado
+                  </h2>
+                  <p className="text-on-surface-variant text-sm sm:text-base mt-2 leading-relaxed">
+                    Déjanos tus datos y un especialista en insolvencia revisará tu caso. Sin costo y sin compromiso.
+                  </p>
+                </div>
+                <form onSubmit={submitForm} className="px-6 sm:px-10 py-7 flex flex-col gap-4">
+                  <div>
+                    <label htmlFor="nombre" className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1.5">Nombre completo</label>
+                    <input
+                      id="nombre"
+                      type="text"
+                      autoComplete="name"
+                      value={nombre}
+                      onChange={e => setNombre(e.target.value)}
+                      placeholder="Ej. Juan Pérez"
+                      className="w-full h-12 px-4 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface placeholder:text-outline focus:border-primary focus:outline-none transition-colors"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="telefono" className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1.5">Teléfono (WhatsApp)</label>
+                    <div className="flex gap-2">
+                      <select
+                        aria-label="País"
+                        value={pais}
+                        onChange={e => setPais(e.target.value)}
+                        className="h-12 px-3 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface focus:border-primary focus:outline-none transition-colors min-w-[110px]"
+                      >
+                        {COUNTRIES.map(c => (
+                          <option key={c.code} value={c.code}>{c.code} {c.name}</option>
+                        ))}
+                      </select>
+                      <input
+                        id="telefono"
+                        type="tel"
+                        inputMode="numeric"
+                        autoComplete="tel"
+                        value={telefono}
+                        onChange={e => setTelefono(e.target.value)}
+                        placeholder="3052396052"
+                        className="flex-1 h-12 px-4 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface placeholder:text-outline focus:border-primary focus:outline-none transition-colors"
+                        required
+                      />
+                    </div>
+                    <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                      Usa el número con el que recibes WhatsApp. Te contactaremos en menos de 24 horas.
+                    </p>
+                  </div>
+
+                  {formError && (
+                    <div className="flex items-start gap-2 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl px-3 py-2.5">
+                      <span className="material-symbols-outlined text-base shrink-0 mt-px">error</span>
+                      <p>{formError}</p>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="h-14 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-card flex items-center justify-center gap-2"
+                  >
+                    {submitting ? (
+                      <>
+                        <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        Ver mi resultado
+                        <span className="material-symbols-outlined">arrow_forward</span>
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-on-surface-variant text-center leading-relaxed">
+                    <span className="material-symbols-outlined text-sm align-middle text-secondary">lock</span>{' '}
+                    Tu información es confidencial y solo será usada para tu consulta.
+                  </p>
+                </form>
+              </div>
+            )}
+
+            {/* === Result (qualify post-form OR partial OR no) === */}
+            {showResult && (
               <div className="bg-white rounded-3xl shadow-card-lg border border-outline-variant/30 overflow-hidden">
                 <div className="px-6 sm:px-10 pt-10 pb-6 text-center">
                   <div className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5 ${RESULT_THEME[level].ring}`}>
                     <span className="material-symbols-outlined text-4xl">{RESULT_THEME[level].icon}</span>
                   </div>
-                  <h2 className={`font-manrope text-2xl sm:text-3xl font-bold leading-tight mb-3 ${RESULT_THEME[level].title}`}>{titles[level]}</h2>
+                  <h2 className={`font-manrope text-2xl sm:text-3xl font-bold leading-tight mb-3 ${RESULT_THEME[level].title}`}>{TITLES[level]}</h2>
                   <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed max-w-md mx-auto">
                     {level === 'qualify' ? (
                       <>
                         Basado en tus respuestas, tu perfil cumple los criterios clave de la Ley 2445 de 2025.{' '}
                         {urgent
                           ? <strong className="text-red-600">Tienes embargos activos — actúa hoy.</strong>
-                          : 'El siguiente paso es una consulta gratuita para confirmar tu caso.'}
+                          : 'Un especialista te contactará pronto para confirmar tu caso.'}
                       </>
                     ) : level === 'partial' ? (
-                      'Algunos criterios se cumplen pero hay puntos a revisar. Una consulta gratuita te dará claridad sobre tus opciones.'
+                      'Tu situación cumple algunos criterios pero hay puntos que un especialista debe revisar uno a uno antes de confirmar tu elegibilidad. Escríbenos para hacer ese análisis a detalle.'
                     ) : (
-                      'Tu situación actual no cumple los criterios principales. Podemos orientarte hacia otras alternativas.'
+                      'Basado en tus respuestas, tu perfil no cumple los criterios mínimos del proceso de insolvencia en este momento.'
                     )}
                   </p>
                 </div>
-                <div className="border-t border-outline-variant/30 px-6 sm:px-10 py-6">
-                  <div className="bg-surface-container-low rounded-2xl p-5 mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Puntaje de calificación</span>
-                      <span className="font-manrope text-xl font-bold text-primary">{animatedScore}/100</span>
-                    </div>
-                    <div className="h-2.5 bg-outline-variant/30 rounded-full overflow-hidden">
-                      <div className={`h-full rounded-full transition-all duration-300 ease-out ${RESULT_THEME[level].fill}`} style={{ width: `${animatedScore}%` }} />
+
+                {level !== 'no' && (
+                  <div className="border-t border-outline-variant/30 px-6 sm:px-10 py-6">
+                    <div className="bg-surface-container-low rounded-2xl p-5 mb-6">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-on-surface-variant">Puntaje de calificación</span>
+                        <span className="font-manrope text-xl font-bold text-primary">{animatedScore}/100</span>
+                      </div>
+                      <div className="h-2.5 bg-outline-variant/30 rounded-full overflow-hidden">
+                        <div className={`h-full rounded-full transition-all duration-300 ease-out ${RESULT_THEME[level].fill}`} style={{ width: `${animatedScore}%` }} />
+                      </div>
                     </div>
                   </div>
+                )}
 
-                  <p className="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">Análisis de criterios</p>
+                <div className={`${level === 'no' ? 'border-t' : ''} border-outline-variant/30 px-6 sm:px-10 ${level === 'no' ? 'py-6' : 'pt-0 pb-6'}`}>
+                  <p className="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">
+                    {level === 'no' ? 'Criterios que no se cumplen' : 'Análisis de criterios'}
+                  </p>
                   <ul className="space-y-2 mb-6">
-                    {criteria.map((c, i) => (
+                    {(level === 'no'
+                      ? buildCriteria(answers).filter(c => c.status === 'fail')
+                      : buildCriteria(answers)
+                    ).map((c, i) => (
                       <li key={i} className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium ${STATUS_BADGE[c.status].bg} ${STATUS_BADGE[c.status].text}`}>
                         <span className="material-symbols-outlined text-lg shrink-0">{STATUS_BADGE[c.status].icon}</span>
                         <span>{c.text}</span>
@@ -396,29 +630,39 @@ export default function Calculadora() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-col gap-3">
+                  {level === 'qualify' && (
                     <a
-                      href={`${waBase}?text=${waMsg}`}
+                      href={`${waBase}?text=${waMsgQualify}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="h-14 bg-[#25D366] text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all text-base"
                     >
                       <span className="material-symbols-outlined">chat</span>
-                      {ctaText[level]}
+                      {urgent ? 'Escríbenos ahora — caso urgente' : 'Hablar con un especialista por WhatsApp'}
                     </a>
+                  )}
+
+                  {level === 'partial' && (
                     <a
-                      href="https://deudaoff.com/#formulario"
-                      className="h-12 border border-outline-variant text-on-surface-variant rounded-xl font-semibold flex items-center justify-center hover:bg-surface-container transition-colors"
+                      href={`${waBase}?text=${waMsgPartial}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-14 bg-[#25D366] text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all text-base"
                     >
-                      Prefiero el formulario en línea
+                      <span className="material-symbols-outlined">chat</span>
+                      Escríbenos por WhatsApp para revisar tu caso
                     </a>
-                  </div>
+                  )}
+
                   <p className="text-xs text-on-surface-variant text-center mt-4 leading-relaxed">
-                    Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad. Consulta gratuita y confidencial.
+                    Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad.
                   </p>
                 </div>
               </div>
-            ) : step && (
+            )}
+
+            {/* === Quiz === */}
+            {isQuiz && step && (
               <div className="bg-white rounded-3xl shadow-card border border-outline-variant/30 overflow-hidden">
                 <div className="px-6 sm:px-10 pt-7 pb-5 border-b border-outline-variant/30 flex items-start justify-between gap-4">
                   <div>
