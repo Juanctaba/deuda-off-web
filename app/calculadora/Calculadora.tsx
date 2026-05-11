@@ -899,7 +899,7 @@ export default function Calculadora() {
                           <span>{fmtMoney(step.max)}</span>
                         </div>
                         <div className={`flex items-center gap-2 mt-4 px-4 py-2.5 rounded-xl text-sm font-semibold ${toneClasses}`}>
-                          <span className="material-symbols-outlined text-lg">{tone === 'ok' ? 'check_circle' : tone === 'warn' ? 'error' : 'cancel'}</span>
+                          <span className="material-symbols-outlined text-lg">{tone === 'ok' ? 'check_circle' : 'cancel'}</span>
                           {tl}
                         </div>
                       </>
