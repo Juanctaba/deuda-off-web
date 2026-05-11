@@ -233,9 +233,14 @@ export default function Calculadora() {
   const [nombre, setNombre] = useState('')
   const [pais, setPais] = useState('+57')
   const [telefono, setTelefono] = useState('')
+  const [caso, setCaso] = useState('')
   const [formError, setFormError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
+
+  // Empresa branch (early disqualification, captured as lead)
+  const [empresaFlow, setEmpresaFlow] = useState(false)
+  const [empresaSubmitted, setEmpresaSubmitted] = useState(false)
 
   // Attribution
   const [utm, setUtm] = useState<Record<string, string>>({})
@@ -243,12 +248,12 @@ export default function Calculadora() {
 
   const [animatedScore, setAnimatedScore] = useState(0)
 
-  const quizDone = currentStep === STEPS.length && !disqualified
+  const quizDone = currentStep === STEPS.length && !disqualified && !empresaFlow
   const score = quizDone ? calcScore(answers) : 0
   const level = getLevel(score)
   const needsForm = quizDone && level === 'qualify' && !formSubmitted
   const showResult = quizDone && (level !== 'qualify' || formSubmitted)
-  const isQuiz = !disqualified && !quizDone
+  const isQuiz = !disqualified && !empresaFlow && !quizDone
   const step = isQuiz ? STEPS[currentStep] : null
 
   const dt = (answers['deuda_total'] as number) ?? 0
@@ -311,6 +316,11 @@ export default function Calculadora() {
     if (step.type === 'counter' && a[step.id] == null) a[step.id] = 3
     setAnswers(a)
     if (step.type === 'options' && step.disqualify && step.disqualify.includes(a[step.id] as string)) {
+      if (step.id === 'tipo' && a[step.id] === 'empresa') {
+        setEmpresaFlow(true)
+        if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+        return
+      }
       setDisqualified(true); setDisqualifyMsg(step.disqualifyMsg ?? ''); return
     }
     if (step.type === 'counter' && step.disqualify && step.disqualify(a[step.id] as number)) {
@@ -322,7 +332,55 @@ export default function Calculadora() {
   function prevStep() { if (currentStep > 0) setCurrentStep(currentStep - 1) }
   function restart() {
     setCurrentStep(0); setAnswers({}); setDisqualified(false); setDisqualifyMsg('')
-    setNombre(''); setTelefono(''); setPais('+57'); setFormSubmitted(false); setFormError(null)
+    setNombre(''); setTelefono(''); setPais('+57'); setCaso('')
+    setFormSubmitted(false); setFormError(null)
+    setEmpresaFlow(false); setEmpresaSubmitted(false)
+  }
+
+  async function sendToWebhook(payload: Record<string, unknown>) {
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+    } catch (err) {
+      // Fire-and-forget — don't block the user if the webhook fails
+      // (CORS / network); the lead UX continues.
+      console.warn('Webhook envío falló:', err)
+    }
+  }
+
+  async function submitEmpresaForm(e: FormEvent) {
+    e.preventDefault()
+    const cleanName = nombre.trim()
+    const cleanPhone = telefono.replace(/[^\d]/g, '')
+    const cleanCaso = caso.trim()
+    if (cleanName.length < 2) { setFormError('Ingresa tu nombre completo'); return }
+    if (cleanPhone.length < 7) { setFormError('Ingresa un teléfono válido'); return }
+    if (cleanCaso.length < 10) { setFormError('Cuéntanos brevemente tu caso (mínimo 10 caracteres)'); return }
+    setFormError(null)
+    setSubmitting(true)
+    await sendToWebhook({
+      nombre: cleanName,
+      codigo_pais: pais,
+      telefono_local: cleanPhone,
+      telefono_e164: `${pais}${cleanPhone}`,
+      whatsapp: `${pais.replace('+', '')}${cleanPhone}`,
+      caso: cleanCaso,
+      nivel: 'empresa',
+      tipo: 'empresa',
+      tipo_label: 'Empresa / Sociedad',
+      respuestas: answers,
+      utm,
+      url: pageMeta.url,
+      referrer: pageMeta.referrer,
+      user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      fecha: new Date().toISOString(),
+    })
+    setSubmitting(false)
+    setEmpresaSubmitted(true)
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   async function submitForm(e: FormEvent) {
@@ -334,8 +392,7 @@ export default function Calculadora() {
     setFormError(null)
     setSubmitting(true)
 
-    const criterios = buildCriteria(answers)
-    const payload = {
+    await sendToWebhook({
       nombre: cleanName,
       codigo_pais: pais,
       telefono_local: cleanPhone,
@@ -355,25 +412,13 @@ export default function Calculadora() {
       proceso_label: procesoLabel(answers['proceso_activo']),
       tipos_deuda: answers['deuda_tipos'] ?? [],
       respuestas: answers,
-      criterios,
+      criterios: buildCriteria(answers),
       utm,
       url: pageMeta.url,
       referrer: pageMeta.referrer,
       user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
       fecha: new Date().toISOString(),
-    }
-
-    try {
-      await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-    } catch (err) {
-      // Fire-and-forget — don't block the user if the webhook fails
-      // (CORS / network); the lead UX continues.
-      console.warn('Webhook envío falló:', err)
-    }
+    })
     setSubmitting(false)
     setFormSubmitted(true)
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -478,6 +523,127 @@ export default function Calculadora() {
                     ← Volver a intentar
                   </button>
                   <p className="text-xs text-on-surface-variant text-center mt-4 leading-relaxed">
+                    Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* === Empresa branch — capture lead and route to specialists === */}
+            {empresaFlow && !empresaSubmitted && (
+              <div className="bg-white rounded-3xl shadow-card-lg border border-outline-variant/30 overflow-hidden">
+                <div className="px-6 sm:px-10 pt-8 pb-5 border-b border-outline-variant/30">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold uppercase tracking-wider mb-3">
+                    <span className="material-symbols-outlined text-sm">info</span> Asesoría especializada
+                  </span>
+                  <h2 className="font-manrope text-2xl sm:text-3xl font-bold text-primary leading-tight">
+                    Tu caso no aplica al proceso de insolvencia de persona natural
+                  </h2>
+                  <p className="text-on-surface-variant text-sm sm:text-base mt-2 leading-relaxed">
+                    Para empresas y sociedades existe un régimen de insolvencia separado. Déjanos tus datos y cuéntanos brevemente tu situación — un especialista te contactará.
+                  </p>
+                </div>
+                <form onSubmit={submitEmpresaForm} className="px-6 sm:px-10 py-7 flex flex-col gap-4">
+                  <div>
+                    <label htmlFor="empresa-nombre" className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1.5">Nombre completo</label>
+                    <input
+                      id="empresa-nombre"
+                      type="text"
+                      autoComplete="name"
+                      value={nombre}
+                      onChange={e => setNombre(e.target.value)}
+                      placeholder="Ej. Juan Pérez"
+                      className="w-full h-12 px-4 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface placeholder:text-outline focus:border-primary focus:outline-none transition-colors"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="empresa-telefono" className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1.5">Teléfono (WhatsApp)</label>
+                    <div className="flex gap-2">
+                      <select
+                        aria-label="País"
+                        value={pais}
+                        onChange={e => setPais(e.target.value)}
+                        className="h-12 px-3 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface focus:border-primary focus:outline-none transition-colors min-w-[110px]"
+                      >
+                        {COUNTRIES.map(c => (
+                          <option key={c.code} value={c.code}>{c.code} {c.name}</option>
+                        ))}
+                      </select>
+                      <input
+                        id="empresa-telefono"
+                        type="tel"
+                        inputMode="numeric"
+                        autoComplete="tel"
+                        value={telefono}
+                        onChange={e => setTelefono(e.target.value)}
+                        placeholder="3052396052"
+                        className="flex-1 h-12 px-4 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface placeholder:text-outline focus:border-primary focus:outline-none transition-colors"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="empresa-caso" className="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1.5">Cuéntanos tu caso</label>
+                    <textarea
+                      id="empresa-caso"
+                      value={caso}
+                      onChange={e => setCaso(e.target.value)}
+                      placeholder="Tipo de sociedad, monto aproximado, situación actual, urgencia..."
+                      rows={5}
+                      className="w-full px-4 py-3 rounded-xl border-2 border-outline-variant/40 bg-white text-on-surface placeholder:text-outline focus:border-primary focus:outline-none transition-colors resize-y"
+                      required
+                    />
+                  </div>
+
+                  {formError && (
+                    <div className="flex items-start gap-2 bg-red-50 border border-red-200 text-red-700 text-sm rounded-xl px-3 py-2.5">
+                      <span className="material-symbols-outlined text-base shrink-0 mt-px">error</span>
+                      <p>{formError}</p>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="h-14 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-card flex items-center justify-center gap-2"
+                  >
+                    {submitting ? (
+                      <>
+                        <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        Enviar a un especialista
+                        <span className="material-symbols-outlined">arrow_forward</span>
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-on-surface-variant text-center leading-relaxed">
+                    <span className="material-symbols-outlined text-sm align-middle text-secondary">lock</span>{' '}
+                    Tu información es confidencial y solo será usada para tu consulta.
+                  </p>
+                </form>
+              </div>
+            )}
+
+            {empresaFlow && empresaSubmitted && (
+              <div className="bg-white rounded-3xl shadow-card-lg border border-outline-variant/30 overflow-hidden">
+                <div className="px-6 sm:px-10 pt-10 pb-8 text-center">
+                  <div className="w-20 h-20 rounded-full bg-secondary-container text-[#00522f] flex items-center justify-center mx-auto mb-5">
+                    <span className="material-symbols-outlined text-4xl">check_circle</span>
+                  </div>
+                  <h2 className="font-manrope text-2xl sm:text-3xl font-bold text-secondary leading-tight mb-3">
+                    ¡Gracias! Te contactaremos pronto
+                  </h2>
+                  <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed max-w-md mx-auto">
+                    Nuestro grupo de especialistas revisará tu caso y se pondrá en contacto contigo en menos de 24 horas.
+                  </p>
+                </div>
+                <div className="border-t border-outline-variant/30 px-6 sm:px-10 py-5">
+                  <p className="text-xs text-on-surface-variant text-center leading-relaxed">
                     Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad.
                   </p>
                 </div>
