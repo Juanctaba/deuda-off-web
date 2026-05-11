@@ -46,7 +46,7 @@ const STEPS: Step[] = [
     id: 'deuda_total', label: 'Monto de deuda', sublabel: '¿Cuánto debes en total?', type: 'slider',
     question: '¿Cuánto sumas en total entre todas tus deudas?',
     hint: 'Incluye tarjetas de crédito, créditos bancarios, microcréditos, deudas con cooperativas y personas particulares.',
-    min: 60, max: 500, step: 5, unit: 'M COP',
+    min: 5, max: 500, step: 5, unit: 'M COP',
   },
   {
     id: 'num_acreedores', label: 'Nº de acreedores', sublabel: '¿Cuántos acreedores tienes?', type: 'counter',
@@ -147,13 +147,11 @@ function buildCriteria(answers: Answers): Criterion[] {
   const dt2 = (answers['deuda_tipos'] as string[]) ?? []
   items.push({ status: tipo !== 'empresa' ? 'pass' : 'fail', text: tipo !== 'empresa' ? 'Eres persona natural — proceso aplica' : 'Persona jurídica — proceso no aplica' })
   items.push({
-    status: dt >= 60 ? 'pass' : dt >= 30 ? 'warn' : 'fail',
+    status: dt >= 60 ? 'pass' : 'fail',
     text:
       dt >= 60
-        ? `Deuda de ${fmtMoney(dt)} — supera el umbral de $60M`
-        : dt >= 30
-        ? `Deuda de ${fmtMoney(dt)} — cerca del umbral, puede calificar`
-        : `Deuda de ${fmtMoney(dt)} — bajo el umbral recomendado ($60M)`,
+        ? `Deuda de ${fmtMoney(dt)} — cumple el umbral de $60M`
+        : `Deuda de ${fmtMoney(dt)} — bajo el umbral mínimo de $60M`,
   })
   items.push({ status: na >= 2 ? 'pass' : 'fail', text: na >= 2 ? `${na} acreedores — cumple el mínimo legal (2+)` : `${na} acreedor — se necesitan al menos 2` })
   items.push({
@@ -873,13 +871,13 @@ export default function Calculadora() {
 
                   {step.type === 'slider' && (() => {
                     const val = (answers[step.id] as number) ?? 80
-                    let tone: 'ok' | 'warn' | 'bad' = 'bad'
-                    let tl = 'Menos de $30M: difícil calificación'
-                    if (val >= 60) { tone = 'ok'; tl = '+ de $60M: califica para Deuda OFF' }
-                    else if (val >= 30) { tone = 'warn'; tl = '+ de $30M: puede calificar según el caso' }
+                    const qualifies = val >= 60
+                    const tone: 'ok' | 'bad' = qualifies ? 'ok' : 'bad'
+                    const tl = qualifies
+                      ? '$60M o más: monto que califica para el proceso'
+                      : 'Menos de $60M: no califica para el proceso'
                     const toneClasses = {
                       ok: 'bg-secondary-container text-[#00522f]',
-                      warn: 'bg-amber-100 text-amber-800',
                       bad: 'bg-red-50 text-red-700',
                     }[tone]
                     return (
