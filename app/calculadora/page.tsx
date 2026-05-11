@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Calculadora from './Calculadora'
 
 export const metadata: Metadata = {
   title: '¿Califico para Insolvencia? — Calculadora Deuda OFF',
@@ -17,6 +18,10 @@ export const metadata: Metadata = {
 export default function CalculadoraPage() {
   return (
     <>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -104,6 +109,7 @@ export default function CalculadoraPage() {
         .chk.checked .chk-box { background: var(--navy); border-color: var(--navy); }
         .chk-box svg { opacity: 0; transition: opacity 0.15s; }
         .chk.checked .chk-box svg { opacity: 1; }
+        .chk-title { font-weight: 600; font-size: 0.93rem; color: var(--navy); }
         .num-wrap { display: flex; gap: 12px; align-items: center; }
         .num-btn { width: 44px; height: 44px; border-radius: 10px; border: 2px solid var(--border); background: var(--off); font-size: 1.4rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; color: var(--navy); user-select: none; }
         .num-btn:hover { border-color: var(--navy); background: #EEF2FF; }
@@ -144,7 +150,7 @@ export default function CalculadoraPage() {
         .score-label-text { font-size: 0.85rem; font-weight: 600; color: var(--muted); }
         .score-val { font-family: var(--font-d); font-size: 1.5rem; font-weight: 900; color: var(--navy); }
         .score-track { height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
-        .score-fill { height: 100%; border-radius: 5px; transition: width 1s cubic-bezier(0.4,0,0.2,1) 0.3s; }
+        .score-fill { height: 100%; border-radius: 5px; transition: width 0.4s cubic-bezier(0.4,0,0.2,1); }
         .score-fill.qualify { background: linear-gradient(90deg, #40C057, #2F9E44); }
         .score-fill.partial { background: linear-gradient(90deg, #FCC419, #F59F00); }
         .score-fill.no { background: linear-gradient(90deg, #FA5252, #E03131); }
@@ -170,344 +176,7 @@ export default function CalculadoraPage() {
           .sidebar { padding: 20px 16px; }
         }
       `}</style>
-
-      <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-      />
-
-      <div className="page" id="calc-root">
-        <header className="topbar">
-          <a href="https://deudaoff.com" className="topbar-logo">Deuda<span>OFF</span></a>
-          <span className="topbar-badge">Verificación confidencial · Ley 2445 de 2025</span>
-        </header>
-
-        <div className="main">
-          <aside className="sidebar">
-            <div>
-              <h1 className="sidebar-title">¿Puedo eliminar mis deudas <em>legalmente?</em></h1>
-              <p className="sidebar-sub">Responde 6 preguntas y en 2 minutos sabrás si calificas para acogerte a la Ley de Insolvencia.</p>
-            </div>
-            <div className="steps-track" id="sidebarSteps"></div>
-            <div className="sidebar-footer">
-              <div className="trust-row">
-                {[
-                  'Proceso avalado por Ley 2445 de 2025',
-                  'Tus datos son 100% confidenciales',
-                  '+750 casos resueltos desde 2020',
-                  'Sin costo, sin compromiso',
-                ].map((t) => (
-                  <div key={t} className="trust-item">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {t}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </aside>
-          <main className="content" id="contentArea"></main>
-        </div>
-      </div>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-const STEPS = [
-  {
-    id: 'tipo', label: 'Tipo de persona', sublabel: '¿Eres persona natural?', type: 'options',
-    question: '¿Cuál es tu situación laboral o económica?',
-    hint: 'El proceso aplica para personas naturales. Si tienes empresa registrada como S.A.S. o similar, existe un proceso separado.',
-    options: [
-      { value: 'empleado',     title: 'Empleado',              desc: 'Tienes contrato laboral fijo o indefinido' },
-      { value: 'independiente',title: 'Independiente',         desc: 'Trabajas por cuenta propia o prestación de servicios' },
-      { value: 'pensionado',   title: 'Pensionado/rentista',   desc: 'Recibes pensión u otros ingresos fijos' },
-      { value: 'comerciante',  title: 'Pequeño comerciante',   desc: 'Negocio no registrado como empresa (tendero, restaurante, taller)' },
-      { value: 'empresa',      title: 'Empresa / Sociedad',    desc: 'SAS, LTDA, SA u otra figura jurídica registrada' },
-    ],
-    disqualify: ['empresa'],
-    disqualifyMsg: 'Este proceso es para personas naturales. Para empresas existe el régimen de insolvencia empresarial. Te recomendamos consultar con un especialista.',
-  },
-  {
-    id: 'deuda_total', label: 'Monto de deuda', sublabel: '¿Cuánto debes en total?', type: 'slider',
-    question: '¿Cuánto sumas en total entre todas tus deudas?',
-    hint: 'Incluye tarjetas de crédito, créditos bancarios, microcréditos, deudas con cooperativas y personas particulares.',
-    min: 5, max: 500, step: 5, unit: 'M COP',
-  },
-  {
-    id: 'num_acreedores', label: 'Nº de acreedores', sublabel: '¿Cuántos acreedores tienes?', type: 'counter',
-    question: '¿Con cuántos acreedores diferentes tienes deudas?',
-    hint: 'Cuenta banco por banco, cooperativa por cooperativa. Para el proceso se necesitan mínimo 2 acreedores distintos.',
-    min: 1, max: 20,
-    disqualify: function(v){ return v < 2; },
-    disqualifyMsg: 'La Ley de Insolvencia requiere mínimo 2 acreedores diferentes. Con un solo acreedor te recomendamos negociar directamente o explorar otras opciones.',
-  },
-  {
-    id: 'mora', label: 'Estado de mora', sublabel: '¿Cuánto llevas sin pagar?', type: 'options',
-    question: '¿Cuál es tu situación de pago actual?',
-    hint: 'Esta información es estrictamente confidencial y determina qué tipo de proceso es más adecuado para ti.',
-    options: [
-      { value: 'mas_90',   title: '+90 días en mora',              desc: 'Llevas más de 3 meses sin pagar al menos 2 deudas' },
-      { value: 'entre_30', title: '30–90 días en mora',            desc: 'Estás en mora pero reciente' },
-      { value: 'al_dia',   title: 'Al día pero sin poder pagar',   desc: 'Pagas con dificultad extrema o sabes que pararás pronto' },
-      { value: 'pagando',  title: 'Pagando sin problema',          desc: 'Actualmente puedes cumplir tus obligaciones' },
-    ],
-    disqualify: ['pagando'],
-    disqualifyMsg: 'Si actualmente puedes pagar tus deudas sin dificultad, no es el momento de acogerte a insolvencia. Si tu situación cambia, contáctanos.',
-  },
-  {
-    id: 'deuda_tipos', label: 'Tipo de deudas', sublabel: '¿Qué tipo de deudas tienes?', type: 'multicheck',
-    question: '¿Qué tipos de deudas tienes? (selecciona todas las que apliquen)',
-    hint: 'Deudas de alimentos y multas judiciales no se incluyen. El resto generalmente sí aplica.',
-    options: [
-      { value: 'banco',        title: 'Créditos bancarios',     desc: 'Libre inversión, consumo, hipotecario' },
-      { value: 'tarjeta',      title: 'Tarjetas de crédito',    desc: 'Cualquier banco o entidad' },
-      { value: 'cooperativa',  title: 'Cooperativas / cajas',   desc: 'Ahorro y crédito, cajas de compensación' },
-      { value: 'microcredito', title: 'Microcréditos',          desc: 'Rapicredit, Juancho, etc.' },
-      { value: 'vehiculo',     title: 'Crédito vehicular',      desc: 'Leasing o crédito de carro/moto' },
-      { value: 'particular',   title: 'Deudas con personas',    desc: 'Préstamos de familiares, amigos o conocidos' },
-      { value: 'alimentos',    title: 'Cuotas de alimentos',    desc: 'Obligación alimentaria a hijos o cónyuge' },
-      { value: 'multas',       title: 'Multas o sanciones',     desc: 'Impuestas por autoridades judiciales' },
-    ],
-    note: '⚠️ Las deudas de alimentos y multas NO se pueden incluir en el proceso, pero las demás sí.',
-  },
-  {
-    id: 'proceso_activo', label: 'Procesos activos', sublabel: '¿Tienes juicios activos?', type: 'options',
-    question: '¿Tienes actualmente alguno de estos procesos?',
-    hint: 'Esta información nos ayuda a priorizar y definir la urgencia de tu caso.',
-    options: [
-      { value: 'embargo_sueldo', title: 'Embargo de salario activo', desc: 'Descuentan directamente de tu nómina' },
-      { value: 'embargo_bien',   title: 'Embargo de cuenta o bien',  desc: 'Cuentas bloqueadas o bienes embargados' },
-      { value: 'proceso_jud',    title: 'Proceso judicial en curso', desc: 'Hay demanda activa en tu contra' },
-      { value: 'solo_cobros',    title: 'Solo llamadas de cobranza', desc: 'No hay procesos formales aún' },
-      { value: 'nada',           title: 'Ninguno todavía',           desc: 'No hay procesos activos' },
-    ],
-  },
-];
-
-let currentStep = 0, answers = {}, disqualified = false, disqualifyMsg = '';
-
-function fmtMoney(v){if(v>=1000)return'$'+(v/1000).toFixed(v%1000===0?0:1)+' B';return'$'+v+'M';}
-
-function renderSidebar(){
-  const el=document.getElementById('sidebarSteps');
-  if(!el)return;
-  el.innerHTML=STEPS.map((s,i)=>{
-    const isDone=i<currentStep,isActive=i===currentStep;
-    return '<div class="step-track-item'+(isDone?' done':'')+(isActive?' active':'')+'">'+
-      '<div class="step-dot">'+(isDone?'✓':i+1)+'</div>'+
-      '<div class="step-track-info">'+
-        '<div class="step-track-label">'+s.label+'</div>'+
-        '<div class="step-track-sub">'+s.sublabel+'</div>'+
-      '</div></div>';
-  }).join('');
-}
-
-function renderStep(){
-  const step=STEPS[currentStep];
-  const pct=Math.round((currentStep/STEPS.length)*100);
-  const area=document.getElementById('contentArea');
-  if(!area)return;
-  let bodyHTML='';
-
-  if(step.type==='options'){
-    const sel=answers[step.id];
-    bodyHTML='<div class="q-label">'+step.question+'</div><div class="q-hint">'+step.hint+'</div>'+
-      '<div class="options">'+step.options.map(o=>
-        '<div class="opt'+(sel===o.value?' selected':'')+'" onclick="selectOption(\\''+step.id+'\\',\\''+o.value+'\\')">'+
-          '<div class="opt-radio"></div>'+
-          '<div class="opt-info"><div class="opt-title">'+o.title+'</div><div class="opt-desc">'+o.desc+'</div></div>'+
-        '</div>').join('')+'</div>';
-
-  } else if(step.type==='slider'){
-    const val=answers[step.id]??80;
-    const pf=((val-step.min)/(step.max-step.min))*100;
-    let tc='bad',tl='Menos de $30M: Difícil calificación';
-    if(val>=60){tc='ok';tl='+ de $60M: Califica para Deuda OFF';}
-    else if(val>=30){tc='warn';tl='+ de $30M: Puede calificar según el caso';}
-    bodyHTML='<div class="q-label">'+step.question+'</div><div class="q-hint">'+step.hint+'</div>'+
-      '<div class="slider-display" id="sliderDisplay">'+fmtMoney(val)+' <span>COP</span></div>'+
-      '<input type="range" min="'+step.min+'" max="'+step.max+'" step="'+step.step+'" value="'+val+'" oninput="updateSlider(this.value)"'+
-        ' style="background:linear-gradient(to right,#0B1F3A 0%,#0B1F3A '+pf+'%,#DEE2E6 '+pf+'%,#DEE2E6 100%)">'+
-      '<div class="slider-marks"><span>'+fmtMoney(step.min)+'</span><span>'+fmtMoney(step.max)+'</span></div>'+
-      '<div class="slider-threshold '+tc+'" id="sliderThreshold">'+
-        '<span>'+(tc==='ok'?'✓':tc==='warn'?'~':'✗')+'</span><span>'+tl+'</span></div>';
-
-  } else if(step.type==='counter'){
-    const val=answers[step.id]??3;
-    bodyHTML='<div class="q-label">'+step.question+'</div><div class="q-hint">'+step.hint+'</div>'+
-      '<div class="num-wrap">'+
-        '<button class="num-btn" onclick="changeCounter(-1)">−</button>'+
-        '<div class="num-val" id="counterVal">'+val+'</div>'+
-        '<button class="num-btn" onclick="changeCounter(1)">+</button>'+
-      '</div>'+
-      '<div class="num-label">'+(val<2?'⚠️ Se requieren mínimo 2 acreedores':val+' acreedores')+'</div>';
-
-  } else if(step.type==='multicheck'){
-    const sel=answers[step.id]??[];
-    bodyHTML='<div class="q-label">'+step.question+'</div><div class="q-hint">'+step.hint+'</div>'+
-      '<div class="checks">'+step.options.map(o=>
-        '<div class="chk'+(sel.includes(o.value)?' checked':'')+'" onclick="toggleCheck(\\''+step.id+'\\',\\''+o.value+'\\')">'+
-          '<div class="chk-box"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'+
-          '<div class="opt-info"><div class="chk-title">'+o.title+'</div><div class="opt-desc">'+o.desc+'</div></div>'+
-        '</div>').join('')+'</div>'+
-      (step.note?'<p style="margin-top:14px;font-size:0.8rem;color:var(--muted);background:var(--off);padding:10px 14px;border-radius:8px;">'+step.note+'</p>':'');
-  }
-
-  const isLast=currentStep===STEPS.length-1;
-  const hasAns=hasValidAnswer(step);
-  area.innerHTML='<div class="card step-enter">'+
-    '<div class="card-header">'+
-      '<div><div class="card-step-label">Pregunta '+(currentStep+1)+' de '+STEPS.length+'</div>'+
-        '<div class="card-step-title">'+step.label+'</div></div>'+
-      '<div class="card-step-num">0'+(currentStep+1)+'</div>'+
-    '</div>'+
-    '<div style="padding:0 0 12px;"><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:'+pct+'%"></div></div></div>'+
-    '<div class="card-body">'+bodyHTML+'</div>'+
-    '<div class="card-footer">'+
-      (currentStep>0?'<button class="btn btn--ghost" onclick="prevStep()">← Anterior</button>':'<div></div>')+
-      '<button class="btn btn--primary" id="nextBtn" onclick="nextStep()"'+(hasAns?'':' disabled')+'>'+
-        (isLast?'Ver mi resultado →':'Continuar →')+'</button>'+
-    '</div></div>';
-}
-
-function hasValidAnswer(step){
-  if(step.type==='slider'||step.type==='counter')return true;
-  if(step.type==='multicheck')return(answers[step.id]??[]).length>0;
-  return!!answers[step.id];
-}
-function selectOption(id,value){answers[id]=value;renderStep();}
-function updateSlider(val){
-  val=parseInt(val);answers['deuda_total']=val;
-  const d=document.getElementById('sliderDisplay');
-  const t=document.getElementById('sliderThreshold');
-  const i=document.querySelector('input[type=range]');
-  const pct=((val-5)/(500-5))*100;
-  if(d)d.innerHTML=fmtMoney(val)+' <span>COP</span>';
-  if(i)i.style.background='linear-gradient(to right,#0B1F3A 0%,#0B1F3A '+pct+'%,#DEE2E6 '+pct+'%,#DEE2E6 100%)';
-  if(t){t.className='slider-threshold';
-    if(val>=60){t.classList.add('ok');t.innerHTML='<span>✓</span><span>+ de $60M: Califica para Deuda OFF</span>';}
-    else if(val>=30){t.classList.add('warn');t.innerHTML='<span>~</span><span>+ de $30M: Puede calificar según el caso</span>';}
-    else{t.classList.add('bad');t.innerHTML='<span>✗</span><span>Menos de $30M: Difícil calificación</span>';}}
-}
-function changeCounter(delta){
-  const step=STEPS[currentStep];
-  const nv=Math.max(step.min,Math.min(step.max,(answers[step.id]??3)+delta));
-  answers[step.id]=nv;
-  const el=document.getElementById('counterVal');
-  const lb=document.querySelector('.num-label');
-  if(el)el.textContent=nv;
-  if(lb)lb.textContent=nv<2?'⚠️ Se requieren mínimo 2 acreedores':nv+' acreedores';
-}
-function toggleCheck(id,value){
-  const arr=answers[id]??[];
-  const idx=arr.indexOf(value);
-  if(idx>=0)arr.splice(idx,1);else arr.push(value);
-  answers[id]=arr;renderStep();
-}
-function nextStep(){
-  const step=STEPS[currentStep];
-  if(step.type==='slider'&&!answers[step.id])answers[step.id]=80;
-  if(step.type==='counter'&&!answers[step.id])answers[step.id]=3;
-  if(step.disqualify){
-    let dq=typeof step.disqualify==='function'?step.disqualify(answers[step.id]):step.disqualify.includes(answers[step.id]);
-    if(dq){disqualified=true;disqualifyMsg=step.disqualifyMsg;renderResult();return;}
-  }
-  if(currentStep<STEPS.length-1){currentStep++;renderSidebar();renderStep();window.scrollTo({top:0,behavior:'smooth'});}
-  else renderResult();
-}
-function prevStep(){if(currentStep>0){currentStep--;renderSidebar();renderStep();}}
-
-function calcScore(){
-  let s=0;
-  const dt=answers['deuda_total']??0;
-  if(dt>=60)s+=40;else if(dt>=30)s+=20;else s+=5;
-  const na=answers['num_acreedores']??0;
-  if(na>=3)s+=20;else if(na===2)s+=15;
-  const m=answers['mora'];
-  if(m==='mas_90')s+=25;else if(m==='entre_30'||m==='al_dia')s+=15;
-  const p=answers['proceso_activo'];
-  if(p==='embargo_sueldo'||p==='embargo_bien')s+=15;
-  else if(p==='proceso_jud')s+=10;
-  else if(p==='solo_cobros')s+=7;else s+=3;
-  return Math.min(s,100);
-}
-function getLevel(score){return score>=70?'qualify':score>=40?'partial':'no';}
-
-function buildCriteria(){
-  const items=[];
-  const dt=answers['deuda_total']??0;
-  const na=answers['num_acreedores']??0;
-  const m=answers['mora'];
-  const tipo=answers['tipo'];
-  const dt2=answers['deuda_tipos']??[];
-  items.push({status:tipo!=='empresa'?'pass':'fail',icon:tipo!=='empresa'?'✓':'✗',text:tipo!=='empresa'?'Eres persona natural — proceso aplica':'Persona jurídica — proceso no aplica'});
-  items.push({status:dt>=60?'pass':dt>=30?'warn':'fail',icon:dt>=60?'✓':dt>=30?'~':'✗',text:dt>=60?'Deuda de '+fmtMoney(dt)+' — supera el umbral de $60M':dt>=30?'Deuda de '+fmtMoney(dt)+' — cerca del umbral, puede calificar':'Deuda de '+fmtMoney(dt)+' — bajo el umbral recomendado ($60M)'});
-  items.push({status:na>=2?'pass':'fail',icon:na>=2?'✓':'✗',text:na>=2?na+' acreedores — cumple el mínimo legal (2+)':na+' acreedor — se necesitan al menos 2'});
-  items.push({status:m==='mas_90'?'pass':m==='entre_30'||m==='al_dia'?'warn':'fail',icon:m==='mas_90'?'✓':m==='entre_30'||m==='al_dia'?'~':'✗',text:m==='mas_90'?'Mora mayor a 90 días — criterio legal cumplido':m==='entre_30'?'Mora de 30–90 días — criterio en desarrollo':m==='al_dia'?'Al día pero con dificultad — puede calificar por incumplimiento inminente':'Sin problemas de pago actuales'});
-  if(dt2.some(d=>!['alimentos','multas'].includes(d)))items.push({status:'pass',icon:'✓',text:'Tiene deudas incluibles en el proceso (bancos, tarjetas, cooperativas)'});
-  if(dt2.includes('alimentos')||dt2.includes('multas'))items.push({status:'warn',icon:'⚠',text:'Algunas deudas (alimentos/multas) no se incluyen, pero las demás sí'});
-  const p=answers['proceso_activo'];
-  if(p==='embargo_sueldo'||p==='embargo_bien')items.push({status:'warn',icon:'⚠',text:'URGENTE: Tiene embargo activo — la radicación detiene esto de inmediato'});
-  else if(p==='proceso_jud')items.push({status:'warn',icon:'⚠',text:'Proceso judicial activo — se suspende al radicar insolvencia'});
-  return items;
-}
-
-function renderResult(){
-  const area=document.getElementById('contentArea');
-  currentStep=STEPS.length;renderSidebar();
-  if(disqualified){
-    area.innerHTML='<div class="result-card"><div class="result-header">'+
-      '<div class="result-icon no">🚫</div>'+
-      '<div class="result-title no">No califica en este momento</div>'+
-      '<p class="result-sub">'+disqualifyMsg+'</p></div>'+
-      '<div class="result-body"><div class="result-divider"></div>'+
-      '<div class="result-ctas">'+
-        '<a href="https://wa.me/573052396052?text=Hola%2C%20tengo%20dudas%20sobre%20mi%20situaci%C3%B3n%20de%20deudas" class="btn btn--wa btn--full btn--lg" target="_blank">Hablar con un especialista</a>'+
-        '<button class="btn btn--ghost btn--full" onclick="restart()">← Volver a intentar</button>'+
-      '</div></div></div>';
-    return;
-  }
-  const score=calcScore();const level=getLevel(score);const criteria=buildCriteria();
-  const dt=answers['deuda_total']??0;
-  const p=answers['proceso_activo'];
-  const urgent=p==='embargo_sueldo'||p==='embargo_bien';
-  const titles={qualify:'¡Muy probablemente calificas!',partial:'Posiblemente calificas — necesitas consulta',no:'En este momento es difícil calificar'};
-  const subs={qualify:'Basado en tus respuestas, tu perfil cumple los criterios clave de la Ley 2445 de 2025.'+(urgent?' <strong style="color:#C92A2A">Tienes embargos activos — actúa hoy.</strong>':' El siguiente paso es una consulta gratuita para confirmar tu caso.'),partial:'Algunos criterios se cumplen pero hay puntos a revisar. Una consulta gratuita te dará claridad sobre tus opciones.',no:'Tu situación actual no cumple los criterios principales. Podemos orientarte hacia otras alternativas.'};
-  const ctaText={qualify:urgent?'🚨 Agenda mi consulta urgente — GRATIS':'Quiero mi consulta gratuita →',partial:'Consultar mi caso gratis →',no:'Explorar otras opciones →'};
-  const waMsg=encodeURIComponent(level==='qualify'?'Hola, hice la calculadora de Deuda OFF y califiqué. Tengo deudas por '+fmtMoney(dt)+' con '+answers['num_acreedores']+' acreedores. Quiero hablar con un especialista.':'Hola, hice la calculadora de Deuda OFF. Quiero consultar mi situación.');
-  area.innerHTML='<div class="result-card">'+
-    '<div class="result-header">'+
-      '<div class="result-icon '+level+'">'+(level==='qualify'?'🎉':level==='partial'?'🔍':'💬')+'</div>'+
-      '<div class="result-title '+level+'">'+titles[level]+'</div>'+
-      '<p class="result-sub">'+subs[level]+'</p></div>'+
-    '<div class="result-body">'+
-      '<div class="result-divider"></div>'+
-      '<div class="score-bar-wrap"><div class="score-label"><span class="score-label-text">Puntaje de calificación</span><span class="score-val" id="scoreVal">0</span></div>'+
-        '<div class="score-track"><div class="score-fill '+level+'" id="scoreFill" style="width:0%"></div></div></div>'+
-      '<div style="margin-bottom:8px;"><div style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:12px;">Análisis de criterios</div>'+
-        '<div class="criteria-list">'+criteria.map(c=>'<div class="criteria-item '+c.status+'"><span>'+c.icon+'</span><span>'+c.text+'</span></div>').join('')+'</div></div>'+
-      '<div class="result-ctas">'+
-        '<a href="https://wa.me/573052396052?text='+waMsg+'" class="btn btn--wa btn--full btn--lg" target="_blank">'+ctaText[level]+'</a>'+
-        '<a href="https://deudaoff.com#formulario" class="btn btn--ghost btn--full" style="justify-content:center;">Prefiero el formulario en línea</a>'+
-      '</div>'+
-      '<p class="result-disclaimer">Este análisis es orientativo, no constituye asesoría legal. Solo un abogado puede confirmar tu elegibilidad. Consulta gratuita y confidencial.</p>'+
-    '</div></div>';
-  setTimeout(()=>{
-    const f=document.getElementById('scoreFill');
-    const v=document.getElementById('scoreVal');
-    if(f)f.style.width=score+'%';
-    if(v){let cur=0;const t=setInterval(()=>{cur=Math.min(cur+2,score);v.textContent=cur+'/100';if(cur>=score)clearInterval(t);},16);}
-  },100);
-}
-function restart(){currentStep=0;answers={};disqualified=false;disqualifyMsg='';renderSidebar();renderStep();}
-
-renderSidebar();
-renderStep();
-          `,
-        }}
-      />
+      <Calculadora />
     </>
   )
 }
