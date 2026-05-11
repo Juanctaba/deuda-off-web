@@ -46,7 +46,7 @@ const STEPS: Step[] = [
     id: 'deuda_total', label: 'Monto de deuda', sublabel: '¿Cuánto debes en total?', type: 'slider',
     question: '¿Cuánto sumas en total entre todas tus deudas?',
     hint: 'Incluye tarjetas de crédito, créditos bancarios, microcréditos, deudas con cooperativas y personas particulares.',
-    min: 5, max: 500, step: 5, unit: 'M COP',
+    min: 60, max: 500, step: 5, unit: 'M COP',
   },
   {
     id: 'num_acreedores', label: 'Nº de acreedores', sublabel: '¿Cuántos acreedores tienes?', type: 'counter',
