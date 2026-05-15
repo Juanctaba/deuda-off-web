@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'Ley de Insolvencia', href: '/#ley-insolvencia' },
   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Recursos', href: '/recursos' },
   { label: 'Casos de Éxito', href: '/casos-de-exito' },
 ]
 
