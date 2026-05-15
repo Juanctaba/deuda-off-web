@@ -25,6 +25,7 @@ export default function SiteHeader() {
   }, [open])
 
   return (
+    <>
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-outline-variant/40 px-5 flex justify-between items-center h-16">
       <Link href="/" className="flex flex-col" onClick={() => setOpen(false)}>
         <Image src="/logo.png" alt="Deuda OFF" width={130} height={50} className="h-8 w-auto object-contain" priority />
@@ -72,14 +73,15 @@ export default function SiteHeader() {
           <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
         </button>
       </div>
+    </header>
 
-      {/* Mobile menu */}
-      <div
-        className={`md:hidden fixed inset-x-0 top-16 bottom-0 bg-white transition-opacity duration-200 ${
-          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-        aria-hidden={!open}
-      >
+    {/* Mobile menu — rendered outside <header> to avoid iOS backdrop-filter clipping */}
+    <div
+      className={`md:hidden fixed inset-x-0 top-16 bottom-0 z-40 bg-white transition-opacity duration-200 ${
+        open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}
+      aria-hidden={!open}
+    >
         <nav className="flex flex-col px-5 py-6 gap-1 overflow-y-auto h-full">
           {NAV_LINKS.map(item => (
             <a
@@ -114,7 +116,7 @@ export default function SiteHeader() {
             </a>
           </div>
         </nav>
-      </div>
-    </header>
+    </div>
+    </>
   )
 }
