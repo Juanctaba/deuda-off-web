@@ -115,7 +115,6 @@ export default function ConsultaGratuita() {
                   alt="Persona aliviada tras resolver sus deudas"
                   width={720}
                   height={520}
-                  priority
                   className="relative w-full h-[520px] object-cover rounded-3xl shadow-form border-8 border-white/10"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-card-lg flex items-center gap-3">

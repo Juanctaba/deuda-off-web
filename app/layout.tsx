@@ -166,9 +166,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${manrope.variable} ${inter.variable}`}>
       <head>
-        {/* Preconnect para dominios externos críticos */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://api.deudaoff.com" />
+        {/* Preconnect solo para Material Symbols — next/font ya gestiona fonts.gstatic.com */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 

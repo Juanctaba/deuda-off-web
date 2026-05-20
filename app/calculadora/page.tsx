@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import Calculadora from './Calculadora'
+import dynamic from 'next/dynamic'
+
+const Calculadora = dynamic(() => import('./Calculadora'), { ssr: false })
 
 export const metadata: Metadata = {
   title: '¿Califico para Insolvencia? — Calculadora Deuda OFF',
