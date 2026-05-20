@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Link from 'next/link'
-import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
+
+const CRMForm = dynamic(() => import('@/components/CRMForm'), { ssr: false })
 
 export const metadata: Metadata = {
   title: 'Consulta Gratuita — Insolvencia de Persona Natural | Deuda OFF',
@@ -107,10 +110,12 @@ export default function ConsultaGratuita() {
 
               <div className="relative hidden lg:block">
                 <div className="absolute -inset-4 bg-secondary/20 rounded-3xl blur-3xl" />
-                <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=720&h=620&fit=crop&fm=webp&q=75"
+                <Image
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=720&h=620&fit=crop&crop=faces"
                   alt="Persona aliviada tras resolver sus deudas"
-                  loading="eager"
+                  width={720}
+                  height={520}
+                  priority
                   className="relative w-full h-[520px] object-cover rounded-3xl shadow-form border-8 border-white/10"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-card-lg flex items-center gap-3">
