@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
+
+const CRMForm = dynamic(() => import('@/components/CRMForm'), { ssr: false })
 
 const STEPS = [
   { n: '1', title: 'Diagnóstico Gratuito', desc: 'Evaluamos tu situación financiera sin costo y sin compromiso desde cualquier ciudad.' },
