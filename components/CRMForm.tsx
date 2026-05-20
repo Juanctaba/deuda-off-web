@@ -20,7 +20,7 @@ export default function CRMForm() {
         data-layout-iframe-id="inline-9xUbgy9qQgjLrHgBnVy9"
         data-form-id="9xUbgy9qQgjLrHgBnVy9"
         title="Form Web"
-        loading="lazy"
+
       />
       <Script src="https://api.deudaoff.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
