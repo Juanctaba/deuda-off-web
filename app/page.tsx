@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
+
+const CRMForm = dynamic(() => import('@/components/CRMForm'), { ssr: false })
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -156,9 +158,12 @@ export default function Home() {
             {/* Right — image + badge */}
             <div className="relative hidden md:block">
               <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-secondary-container/30 rounded-2xl blur-3xl" />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=640&h=520&fit=crop&crop=faces"
                 alt="Abogado especialista en insolvencia de persona natural en Colombia asesorando a cliente"
+                width={640}
+                height={500}
+                priority
                 className="w-full h-[500px] object-cover rounded-2xl shadow-form border-8 border-white"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-card-lg flex items-center gap-4">

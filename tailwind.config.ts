@@ -30,8 +30,8 @@ const config: Config = {
         form:    '0 8px 40px rgba(26,54,93,0.18)',
       },
       fontFamily: {
-        manrope: ['Manrope', 'sans-serif'],
-        inter:   ['Inter', 'sans-serif'],
+        manrope: ['var(--font-manrope)', 'sans-serif'],
+        inter:   ['var(--font-inter)', 'sans-serif'],
       },
     },
   },
