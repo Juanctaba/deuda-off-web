@@ -412,6 +412,9 @@ export default function Home() {
                   <span className="material-symbols-outlined text-sm">calculate</span>
                   Calculadora
                 </a>
+                <a href="/herramientas/convertidor-tasas-interes" className="text-sm text-white/60 hover:text-white transition-colors">
+                  Convertidor de tasas
+                </a>
               </nav>
             </div>
 
