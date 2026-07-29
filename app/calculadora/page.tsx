@@ -5,7 +5,7 @@ const Calculadora = dynamic(() => import('./Calculadora'), { ssr: false })
 
 export const metadata: Metadata = {
   title: '¿Califico para Insolvencia? — Calculadora Deuda OFF',
-  description: 'Descubre en 2 minutos si calificas para eliminar tus deudas legalmente con la Ley de Insolvencia de Persona Natural (Ley 2445 de 2025). Gratuito y confidencial.',
+  description: 'Descubre en 2 minutos si calificas para el Procedimiento de Insolvencia de Persona Natural bajo la Ley 2445 de 2025. Gratuito y confidencial.',
   alternates: { canonical: 'https://deudaoff.com/calculadora' },
   robots: { index: false, follow: false },
   openGraph: {

@@ -399,7 +399,7 @@ export default function Home() {
               <nav className="flex flex-col gap-2">
                 {[
                   { label: 'Cómo Funciona', href: '#como-funciona' },
-                  { label: 'Ley de Insolvencia', href: '#ley-insolvencia' },
+                  { label: 'Ley 2445 de 2025', href: '/blog/ley-2445-de-2025-insolvencia-colombia' },
                   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
                   { label: 'Casos de Éxito', href: '/casos-de-exito' },
                   { label: 'Blog', href: '/blog' },
@@ -411,6 +411,9 @@ export default function Home() {
                 <a href="https://deudaoff.com/calculadora" className="text-sm text-secondary font-bold hover:text-white transition-colors flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-sm">calculate</span>
                   Calculadora
+                </a>
+                <a href="/herramientas/convertidor-tasas-interes" className="text-sm text-white/60 hover:text-white transition-colors">
+                  Convertidor de tasas
                 </a>
               </nav>
             </div>

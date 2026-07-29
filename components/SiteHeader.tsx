@@ -7,7 +7,7 @@ import { WA_URL } from '@/lib/constants'
 
 const NAV_LINKS = [
   { label: 'Cómo Funciona', href: '/#como-funciona' },
-  { label: 'Ley de Insolvencia', href: '/#ley-insolvencia' },
+  { label: 'Ley 2445 de 2025', href: '/blog/ley-2445-de-2025-insolvencia-colombia' },
   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
   { label: 'Blog', href: '/blog' },
   { label: 'Recursos', href: '/recursos' },
@@ -34,12 +34,12 @@ export default function SiteHeader() {
         <span className="text-[10px] uppercase tracking-wider text-outline font-bold">Una marca de Núcleo Jurídico</span>
       </Link>
 
-      <nav className="hidden md:flex items-center gap-8">
+      <nav className="hidden md:flex items-center gap-4 lg:gap-6">
         {NAV_LINKS.map(item => (
           <a
             key={item.label}
             href={item.href}
-            className="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors"
+            className="text-xs lg:text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap"
           >
             {item.label}
           </a>
