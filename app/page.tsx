@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: '¿Cuánto cuesta el proceso?',
-    a: 'El valor se pacta según las características de tu caso, generalmente como un porcentaje del valor de la deuda. La primera consulta es completamente gratuita y sin compromiso.',
+    a: 'Nuestros honorarios son del 10% del capital adeudado. Se calculan sobre el capital, no sobre el capital más los intereses acumulados. Según las características de cada caso el porcentaje puede ser menor. A eso se suman las expensas del trámite ante el centro de conciliación, que se explican desde el comienzo. La primera consulta es completamente gratuita y sin compromiso.',
   },
   {
     q: '¿Cuánto tiempo tarda?',
