@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Insolvencia de Persona Natural en Medellín — Deuda OFF',
   description: 'Proceso de insolvencia de persona natural en Medellín y el área metropolitana. Protege tu salario, frena embargos y negocia tus deudas legalmente. Consulta gratuita.',
   alternates: { canonical: 'https://deudaoff.com/insolvencia-medellin' },
-  keywords: 'insolvencia persona natural medellin, abogado insolvencia medellin, deudas medellin antioquia, proceso insolvencia medellin',
+  openGraph: {
+    title: 'Insolvencia de Persona Natural en Medellín — Deuda OFF',
+    description: 'Suspende embargos y reorganiza tus deudas en Medellín con la Ley 2445 de 2025. Consulta gratuita y atención virtual.',
+    url: 'https://deudaoff.com/insolvencia-medellin',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function InsolvenciaMedellin() {

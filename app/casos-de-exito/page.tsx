@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: 'Casos de Éxito en Insolvencia de Persona Natural — +750 Casos Resueltos | Deuda OFF',
   description: 'Historias reales de colombianos que lograron salir de sus deudas legalmente con Deuda OFF. Más de 750 casos resueltos desde 2020 bajo la Ley de Insolvencia de Persona Natural.',
   alternates: { canonical: 'https://deudaoff.com/casos-de-exito' },
+  openGraph: {
+    title: 'Casos de Éxito en Insolvencia de Persona Natural — +750 casos resueltos',
+    description: 'Historias reales de colombianos que resolvieron sus deudas con el procedimiento de insolvencia. +750 casos desde 2020.',
+    url: 'https://deudaoff.com/casos-de-exito',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 const CASES = [

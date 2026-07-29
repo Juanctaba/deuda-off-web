@@ -158,7 +158,7 @@ export default function Home() {
                 <span className="text-xs font-bold text-primary uppercase tracking-widest">Respaldo Legal de Núcleo Jurídico</span>
               </div>
               <h1 className="font-manrope text-4xl md:text-5xl font-bold text-primary leading-tight">
-                ¿Deudas que no puedes pagar? La ley colombiana te protege
+                Ley de Insolvencia en Colombia: la salida legal si no puedes pagar tus deudas
               </h1>
               <p className="text-lg text-on-surface-variant leading-relaxed max-w-lg">
                 Acógete a la Ley de Insolvencia de Persona Natural. Protege tu patrimonio, frena embargos y recupera tu tranquilidad financiera con expertos.

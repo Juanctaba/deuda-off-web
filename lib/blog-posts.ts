@@ -170,6 +170,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>El artículo 532 incorporó a la persona natural comerciante con activos totales inferiores a 1.000 salarios mínimos mensuales legales vigentes, <strong>excluido el valor de la vivienda de su familia y del vehículo que usa como instrumento de trabajo</strong>. La ley los denomina pequeños comerciantes. Puede acceder aunque no esté cumpliendo los deberes del artículo 19 del Código de Comercio, salvo el primero, que debe acreditar con la solicitud.</p>
 
+<p>Es una de las novedades de mayor alcance de la reforma: un grupo entero que antes quedaba fuera del régimen hoy tiene acceso. Lo desarrollamos en detalle en la guía sobre <a href="/blog/insolvencia-pequeno-comerciante-colombia-2025">insolvencia para pequeños comerciantes</a>.</p>
+
 <p>Quedan por fuera, según el parágrafo primero del artículo 532, las personas naturales controlantes de sociedades mercantiles que estén en insolvencia empresarial ante la Superintendencia de Sociedades: a ellas se les aplica la <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1116_2006.html" target="_blank" rel="noopener noreferrer nofollow">Ley 1116 de 2006</a>.</p>
 
 <h2>Los tres procedimientos que ofrece la ley</h2>
@@ -308,7 +310,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Proceso de Insolvencia Persona Natural: Guía Paso a Paso 2026',
     description: 'Conoce cada etapa del proceso de insolvencia de persona natural en Colombia: desde el diagnóstico inicial hasta el fresh start. Tiempos, costos y qué esperar.',
     date: '2026-04-15',
-    dateModified: '2026-05-01',
+    dateModified: '2026-07-29',
     category: 'Guías',
     readTime: '7 min',
     about: ['Proceso de insolvencia persona natural', 'Negociación de deudas Colombia', 'Ley 2445 de 2025'],
@@ -385,7 +387,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Requisitos para Acogerte a la Insolvencia de Persona Natural en Colombia',
     description: '¿Cumples los requisitos para la insolvencia de persona natural? Conoce quién puede aplicar, qué documentos necesitas y qué deudas se pueden incluir.',
     date: '2026-04-20',
-    dateModified: '2026-05-01',
+    dateModified: '2026-07-29',
     category: 'Guías',
     readTime: '6 min',
     about: ['Requisitos insolvencia persona natural Colombia', 'Ley 2445 de 2025', 'Elegibilidad insolvencia Colombia'],
@@ -881,7 +883,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Insolvencia para pequeños comerciantes en Colombia: lo que cambió con la Ley 2445 de 2025',
     description: 'Desde 2025, los pequeños comerciantes en Colombia pueden acogerse al proceso de insolvencia. Descubre si calificas, qué activos se protegen y cómo funciona el proceso. Consulta gratuita.',
     date: '2026-05-01',
-    dateModified: '2026-05-01',
+    dateModified: '2026-07-29',
     category: 'Legislación',
     readTime: '7 min',
     about: ['Insolvencia pequeño comerciante Colombia', 'Ley 2445 de 2025', 'Insolvencia persona natural comerciante'],
@@ -984,7 +986,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'Insolvencia familiar conjunta en Colombia: cómo funciona y cuánto ahorran',
     description: '¿Tú y tu pareja tienen deudas? La Ley 2445 de 2025 permite iniciar el proceso de insolvencia en familia. El segundo proceso cuesta 50% menos. Consulta gratuita.',
     date: '2026-05-01',
-    dateModified: '2026-05-01',
+    dateModified: '2026-07-29',
     category: 'Guías',
     readTime: '6 min',
     about: ['Insolvencia familiar conjunta Colombia', 'Insolvencia pareja Colombia', 'Ley 2445 de 2025'],
