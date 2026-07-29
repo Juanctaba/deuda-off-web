@@ -101,6 +101,14 @@ export default function ConsultaGratuita() {
                     WhatsApp
                   </a>
                 </div>
+                <a
+                  href="https://deudaoff.com/calculadora"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-white transition-colors group"
+                >
+                  <span className="material-symbols-outlined text-base">calculate</span>
+                  ¿No sabes si calificas? Usa la calculadora
+                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
                 <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-blue-100">
                   <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-secondary" /> +750 casos resueltos</span>
                   <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-secondary" /> Atención 100% virtual</span>
@@ -183,7 +191,14 @@ export default function ConsultaGratuita() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+              <a
+                href="https://deudaoff.com/calculadora"
+                className="inline-flex h-14 px-8 border-2 border-primary text-primary font-bold rounded-xl items-center justify-center gap-2 hover:bg-primary/5 transition-all"
+              >
+                <span className="material-symbols-outlined">calculate</span>
+                Calcular mi Deuda
+              </a>
               <a
                 href="#formulario"
                 className="inline-flex h-14 px-8 bg-primary text-white font-bold rounded-xl items-center justify-center gap-2 shadow-card-lg hover:opacity-90 transition-all"
@@ -307,6 +322,10 @@ export default function ConsultaGratuita() {
               <Link href="/terminos" className="hover:text-white transition-colors">Términos</Link>
               <Link href="/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
               <Link href="/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link>
+              <a href="https://deudaoff.com/calculadora" className="flex items-center gap-1 text-secondary/80 hover:text-secondary transition-colors font-semibold">
+                <span className="material-symbols-outlined text-xs">calculate</span>
+                Calculadora
+              </a>
             </div>
             <p className="text-xs text-white/40 mt-5">
               © 2025 Deuda OFF — Una marca de Núcleo Jurídico SAS.
