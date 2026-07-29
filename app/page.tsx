@@ -153,6 +153,12 @@ export default function Home() {
                   Hablar por WhatsApp
                 </a>
               </div>
+              <a href="https://deudaoff.com/calculadora"
+                className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors group">
+                <span className="material-symbols-outlined text-base">calculate</span>
+                ¿No sabes si calificas? Usa la calculadora
+                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
             </div>
 
             {/* Right — image + badge */}
@@ -282,10 +288,17 @@ export default function Home() {
                   <span className="text-white/40 hidden md:inline">|</span>
                   <p className="text-blue-100 font-semibold text-sm">Firma Núcleo Jurídico SAS</p>
                 </div>
-                <a href="#formulario"
-                  className="bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors shrink-0">
-                  Verificar mi Caso
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                  <a href="https://deudaoff.com/calculadora"
+                    className="flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition-colors">
+                    <span className="material-symbols-outlined text-base">calculate</span>
+                    Calcular mi Deuda
+                  </a>
+                  <a href="#formulario"
+                    className="bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors text-center">
+                    Verificar mi Caso
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -395,6 +408,10 @@ export default function Home() {
                     {item.label}
                   </a>
                 ))}
+                <a href="https://deudaoff.com/calculadora" className="text-sm text-secondary font-bold hover:text-white transition-colors flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-sm">calculate</span>
+                  Calculadora
+                </a>
               </nav>
             </div>
 
