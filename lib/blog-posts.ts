@@ -43,7 +43,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: '¿Cuánto cuesta el proceso de insolvencia de persona natural?',
-        a: 'El artículo 535 del CGP, modificado por el artículo 7 de la Ley 2445 de 2025, establece que los procedimientos de negociación de deudas y de convalidación de acuerdos son GRATUITOS ante centros de conciliación de consultorios jurídicos de facultades de derecho y de entidades públicas, servicio que debía implementarse a más tardar el 1 de enero de 2026. El solicitante asume únicamente las expensas (comunicaciones, remisión de expedientes y gastos secretariales); si no se pagan, se entiende desistida la solicitud. Los honorarios de abogado particular son aparte y se pactan libremente.',
+        a: 'Hay que distinguir tres conceptos. El trámite: el artículo 535 del CGP, modificado por el artículo 7 de la Ley 2445 de 2025, establece que los procedimientos de negociación de deudas y de convalidación de acuerdos son GRATUITOS ante centros de conciliación de consultorios jurídicos de facultades de derecho y de entidades públicas, servicio que debía implementarse a más tardar el 1 de enero de 2026. Las expensas: comunicaciones, remisión de expedientes y gastos secretariales, a cargo del solicitante; si no se pagan, se entiende desistida la solicitud. Y los honorarios de abogado, que son aparte y se pactan libremente: en Deuda OFF parten del 10% del total de la deuda, porcentaje que es la base y varía según las características de cada caso.',
       },
       {
         q: '¿Cuánto dura el proceso de negociación de deudas?',
@@ -242,6 +242,29 @@ export const BLOG_POSTS: BlogPost[] = [
 </ul>
 
 <p>Si varios miembros de un mismo núcleo familiar tramitan a la vez, el artículo 539A limita el valor de los servicios del conciliador: no puede exceder el 50% adicional al del caso de mayor pasivo y complejidad.</p>
+
+<h3>Cuánto cobramos en Deuda OFF</h3>
+
+<p>Como casi nadie publica esta cifra, la dejamos explícita: nuestros honorarios parten del <strong>10% del total de la deuda</strong>. Ese porcentaje es la base y varía según las características de cada caso.</p>
+
+<p>Tampoco exigimos grandes desembolsos iniciales: el esquema reconoce que estás precisamente en una situación de falta de liquidez, y los honorarios se estructuran dentro del plan de pagos acordado.</p>
+
+<div class="tabla-wrap">
+<table>
+  <thead>
+    <tr><th>Total de la deuda</th><th>Honorarios de referencia (10% base)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>$60.000.000</td><td>$6.000.000</td></tr>
+    <tr><td>$80.000.000</td><td>$8.000.000</td></tr>
+    <tr><td>$100.000.000</td><td>$10.000.000</td></tr>
+    <tr><td>$120.000.000</td><td>$12.000.000</td></tr>
+    <tr><td>$150.000.000</td><td>$15.000.000</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Son valores de referencia calculados sobre el 10% base. El porcentaje aplicable a tu caso se define en la consulta inicial, que no tiene costo.</p>
 
 <h2>Cuánto dura el proceso</h2>
 
@@ -928,14 +951,14 @@ export const BLOG_POSTS: BlogPost[] = [
   <li><strong>Cese del acoso cobratorio</strong> — bancos, proveedores y agencias de cobro deben dejar de presionarte.</li>
   <li><strong>Protección frente a procesos ejecutivos</strong> — ningún acreedor puede iniciar ni continuar demandas de cobro.</li>
   <li><strong>Congelamiento de intereses de mora</strong> — la deuda no sigue creciendo.</li>
-  <li>El proceso <strong>no aparece en el registro mercantil</strong> ni afecta la matrícula comercial del negocio.</li>
+  <li>Puedes <strong>seguir operando tu negocio</strong>: el proceso no obliga a cerrarlo ni cancela tu matrícula mercantil. Eso sí, el parágrafo primero del artículo 543 dispone que al aceptarse la negociación de deudas de una persona natural comerciante se ordena su <strong>inscripción inmediata en el registro mercantil</strong> de la cámara de comercio del domicilio.</li>
 </ul>
 
 <h2>¿Cuánto tiempo tarda y cuánto cuesta?</h2>
 
-<p>El proceso de negociación tiene un término legal de <strong>60 días hábiles</strong> desde la audiencia de apertura, prorrogable hasta 90 días por acuerdo entre las partes. En la práctica, con la preparación previa y la gestión del conciliador, el proceso completo —desde diagnóstico hasta acuerdo firmado— suele tomar entre 3 y 6 meses.</p>
+<p>El artículo 544 fija un término legal de <strong>60 días</strong> contados desde que queda en firme la aceptación de la solicitud, prorrogable por 30 días más a solicitud conjunta del deudor y de los acreedores con derechos ya conciliados; tratándose de deudor comerciante, hasta 90 días adicionales con voto favorable de la mayoría. En la práctica, con la preparación previa y la gestión del conciliador, el proceso completo —desde diagnóstico hasta acuerdo firmado— suele tomar entre 3 y 6 meses.</p>
 
-<p>El costo de los honorarios se pacta según las características de cada caso y generalmente se estructura dentro del mismo plan de pagos acordado. <strong>La primera consulta con Deuda OFF es completamente gratuita.</strong> El proceso es 100% virtual: no necesitas ir a ningún juzgado ni desplazarte.</p>
+<p>Nuestros honorarios parten del <strong>10% del total de la deuda</strong>; ese porcentaje es la base y varía según las características de cada caso. Se estructuran dentro del mismo plan de pagos acordado. <strong>La primera consulta con Deuda OFF es completamente gratuita.</strong> El proceso es 100% virtual: no necesitas ir a ningún juzgado ni desplazarte.</p>
 
 <h2>Caso tipo: Daniel, propietario de una papelería en Bogotá</h2>
 
@@ -985,9 +1008,11 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>¿Cuánto se ahorra con el proceso conjunto?</h2>
 
-<p>Este es el beneficio más concreto y medible: <strong>el segundo proceso cuesta el 50% del primero.</strong></p>
+<p>El ahorro está en la ley. El artículo 539A dispone que, cuando un mismo conciliador tramita coordinadamente los casos de varios deudores del mismo núcleo familiar, <strong>el valor de sus servicios no podrá exceder del 50% adicional</strong> al que corresponda al caso de mayor pasivo y complejidad. Es decir: dos procesos no cuestan el doble.</p>
 
-<p>Ejemplo numérico: si el proceso individual de una persona tiene un costo de honorarios de $4 millones de pesos, el proceso familiar conjunto para dos personas cuesta $4 millones (el primero) + $2 millones (el segundo al 50%) = <strong>$6 millones en total, en lugar de $8 millones por separado.</strong> Un ahorro del 25% en honorarios totales.</p>
+<p>Ejemplo numérico con nuestra tarifa. Si tú debes $80 millones y tu pareja $60 millones, los honorarios de Deuda OFF sobre el 10% base serían $8 millones y $6 millones por separado, es decir <strong>$14 millones</strong>. Tramitados de forma conjunta, el tope del artículo 539A aplicado a los servicios del conciliador reduce de forma significativa el costo total del trámite frente a llevarlos por separado.</p>
+
+<p>El porcentaje concreto de honorarios se define en la consulta inicial y puede ser menor según las características de cada caso.</p>
 
 <p>Además del ahorro económico, el proceso conjunto tiene ventajas operativas significativas:</p>
 <ul>

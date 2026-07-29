@@ -44,7 +44,7 @@ const TESTIMONIALS = [
     initials: 'CR',
     name: 'Carlos Rodriguez',
     city: 'Bogotá, D.C.',
-    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF logramos un acuerdo donde pago solo lo que puedo y recuperé mi casa. Gracias infinitas."',
+    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF el proceso avanzó ante el conciliador y pude conservar mi vivienda. Gracias infinitas."',
   },
   {
     initials: 'MG',
@@ -65,7 +65,7 @@ const FAQS = [
   },
   {
     q: '¿Cuánto cuesta Deuda OFF comparado con seguir pagando mis deudas?',
-    a: 'Seguir pagando solo los intereses de una deuda de $50 millones puede costar más de $2 millones mensuales indefinidamente, sin reducir el capital. El costo del proceso de insolvencia con Deuda OFF se pacta según tu caso y generalmente se incluye dentro del plan de pagos acordado, sin grandes desembolsos iniciales. La consulta inicial es completamente gratuita.',
+    a: 'Seguir pagando solo los intereses de una deuda de $60 millones puede costar más de $2 millones mensuales indefinidamente, sin reducir el saldo. Nuestros honorarios parten del 10% del total de la deuda; ese porcentaje es la base y varía según las características de cada caso. Sobre esa misma deuda de $60 millones serían del orden de $6 millones por todo el proceso, sin grandes desembolsos iniciales. La consulta inicial es completamente gratuita.',
   },
   {
     q: '¿Qué diferencia concretamente a Deuda OFF de otras firmas de insolvencia?',

@@ -30,7 +30,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
     description: `La insolvencia de persona natural en ${city}, ${department} es un proceso legal bajo la Ley 2445 de 2025 que permite a ciudadanos colombianos reorganizar o liquidar sus deudas de forma oficial. ${intro}`,
     url: `https://deudaoff.com/${slug}`,
     telephone: '+57-305-239-6052',
-    priceRange: 'Consulta gratuita — honorarios según el caso',
+    priceRange: 'Consulta gratuita — honorarios desde el 10% del total de la deuda',
     areaServed: {
       '@type': 'City',
       name: city,

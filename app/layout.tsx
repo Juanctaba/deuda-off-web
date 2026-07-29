@@ -19,9 +19,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Deuda OFF — Insolvencia de persona natural en Colombia',
+  title: 'Insolvencia de persona natural en Colombia — Deuda OFF',
   description: 'Acógete al Procedimiento de Insolvencia de Persona Natural bajo la Ley 2445 de 2025. Protege tu patrimonio, frena embargos y reorganiza tus deudas. +750 casos resueltos desde 2020. Núcleo Jurídico.',
-  keywords: 'insolvencia persona natural colombia, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia, negociacion de deudas, liquidacion patrimonial',
+  keywords: 'insolvencia persona natural colombia, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia, liquidacion patrimonial, cesacion de pagos',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     languages: { 'es-CO': 'https://deudaoff.com' },
   },
   openGraph: {
-    title: 'Deuda OFF — Insolvencia de persona natural en Colombia',
+    title: 'Insolvencia de persona natural en Colombia — Deuda OFF',
     description: '+750 casos resueltos desde 2020. Primera consulta gratuita. Respaldados por Núcleo Jurídico.',
     url: 'https://deudaoff.com',
     siteName: 'Deuda OFF',
@@ -103,7 +103,7 @@ const schemaLegalService = {
   description: 'Servicio legal especializado en insolvencia de persona natural en Colombia. Acógete a la Ley 2445 de 2025: suspende embargos, negocia tus deudas y empieza de nuevo.',
   url: 'https://deudaoff.com',
   telephone: '+57-305-239-6052',
-  priceRange: 'Consulta gratuita — honorarios según el caso',
+  priceRange: 'Consulta gratuita — honorarios desde el 10% del total de la deuda',
   currenciesAccepted: 'COP',
   paymentAccepted: 'Efectivo, transferencia bancaria',
   areaServed: [

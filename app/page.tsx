@@ -42,14 +42,36 @@ const PAIN_POINTS = [
   { icon: 'call_end',     title: 'Llamadas Incesantes',   desc: 'Detenemos las llamadas incesantes de bancos y agencias de cobranza de inmediato.' },
   { icon: 'gavel',        title: 'Procesos Judiciales',   desc: 'Suspensión legal de procesos de embargo sobre tu salario, vivienda o vehículos.' },
   { icon: 'heart_broken', title: 'Estrés Familiar',       desc: 'Recupera la paz en tu hogar eliminando la carga psicológica de la insolvencia.' },
-  { icon: 'block',        title: 'Reportes Negativos',    desc: 'Inicia el camino legal para limpiar tu historial en centrales de riesgo.' },
+  { icon: 'block',        title: 'Reportes Negativos',    desc: 'Extinguir la obligación es el requisito para que el reporte negativo empiece a caducar conforme a la Ley 1266 de 2008.' },
 ]
 
 const STEPS = [
   { n: '1', title: 'Análisis de Deuda',  desc: 'Evaluamos tu situación financiera actual y requisitos legales sin costo inicial.' },
   { n: '2', title: 'Solicitud Legal',    desc: 'Radicamos formalmente tu intención de acogerte a la ley ante centros de conciliación.' },
-  { n: '3', title: 'Negociación',        desc: 'Mediamos con tus acreedores para lograr un acuerdo de pago acorde a tu capacidad real.' },
+  { n: '3', title: 'Audiencia de negociación', desc: 'Presentamos tu propuesta de pago ante el conciliador, que dirige la audiencia con tus acreedores conforme a la ley.' },
   { n: '4', title: 'Fresh Start',        desc: 'Cumplido el acuerdo o la liquidación, tus deudas quedan legalmente extinguidas.', isLast: true },
+]
+
+/** Criterios del artículo 538 del CGP, modificado por la Ley 2445 de 2025. */
+const ELEGIBILIDAD = [
+  {
+    n: '1',
+    conector: 'O',
+    title: 'Mora superior a 90 días',
+    desc: 'Incumples dos o más obligaciones frente a dos o más acreedores distintos por más de noventa días.',
+  },
+  {
+    n: '2',
+    conector: 'O',
+    title: 'Dos o más procesos de cobro en curso',
+    desc: 'Tienen en tu contra dos o más procesos de cobro, de ejecución especial o de restitución del inmueble por mora en el arriendo.',
+  },
+  {
+    n: '3',
+    conector: 'Y',
+    title: 'Las deudas en mora superan el 30% del total',
+    desc: 'El valor de esas obligaciones representa al menos el 30% de todo tu pasivo. Antes de la reforma de 2025 el umbral era del 50%.',
+  },
 ]
 
 const TESTIMONIALS = [
@@ -59,7 +81,7 @@ const TESTIMONIALS = [
     city: 'Bogotá, D.C.',
     rating: 5,
     date: '2025-11-01',
-    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF logramos un acuerdo donde pago solo lo que puedo y recuperé mi casa. Gracias infinitas."',
+    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF el proceso avanzó ante el conciliador y pude conservar mi vivienda. Gracias infinitas."',
   },
   {
     initials: 'MG',
@@ -106,7 +128,7 @@ const FAQS = [
   },
   {
     q: '¿Cuánto cuesta el proceso?',
-    a: 'El valor se pacta según las características de tu caso, generalmente como un porcentaje del valor de la deuda. La primera consulta es completamente gratuita y sin compromiso.',
+    a: 'Nuestros honorarios parten del 10% del total de la deuda. Ese porcentaje es la base y varía según las características de cada caso. A eso se suman las expensas del trámite ante el centro de conciliación, que se explican desde el comienzo. La primera consulta es completamente gratuita y sin compromiso, y en ella se define el porcentaje que aplica a tu caso.',
   },
   {
     q: '¿Cuánto tiempo tarda?',
@@ -233,6 +255,57 @@ export default function Home() {
                   <p className="text-on-surface-variant text-sm leading-relaxed">{s.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── ELEGIBILIDAD ────────────────────────────── */}
+        <section id="calificas" className="bg-surface-container py-20 px-5">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="inline-block px-3 py-1 rounded-full bg-secondary-container text-[#00522f] text-xs font-bold uppercase tracking-wider mb-3">
+                Criterios de la ley
+              </span>
+              <h2 className="font-manrope text-3xl font-bold text-primary">¿Calificas para el proceso?</h2>
+              <p className="text-on-surface-variant mt-3 max-w-2xl mx-auto">
+                No es una valoración subjetiva. El artículo 538 del Código General del Proceso define exactamente
+                cuándo una persona está en cesación de pagos. Necesitas cumplir <strong>uno</strong> de los dos
+                primeros criterios <strong>y</strong> el tercero.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {ELEGIBILIDAD.map(c => (
+                <div key={c.title} className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-outline-variant/30 shadow-card">
+                  <div className={`shrink-0 w-11 h-11 rounded-xl flex items-center justify-center font-manrope font-bold text-white ${c.conector === 'Y' ? 'bg-secondary' : 'bg-primary'}`}>
+                    {c.n}
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                      <h3 className="font-manrope font-bold text-primary">{c.title}</h3>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${c.conector === 'Y' ? 'bg-secondary/15 text-[#00522f]' : 'bg-primary/10 text-primary'}`}>
+                        {c.conector === 'Y' ? 'Y además' : c.conector}
+                      </span>
+                    </div>
+                    <p className="text-on-surface-variant text-sm leading-relaxed">{c.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 bg-white rounded-2xl p-6 border border-outline-variant/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <p className="text-sm text-on-surface leading-relaxed">
+                <strong className="text-primary">Detalle que suele decidir el caso:</strong> para calcular ese 30% no
+                se cuentan los créditos que se estén pagando por libranza o descuento de nómina, salvo que hayan
+                dejado de abonarse.
+              </p>
+              <a
+                href="https://deudaoff.com/calculadora"
+                className="shrink-0 inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all"
+              >
+                <span className="material-symbols-outlined text-base">calculate</span>
+                Verificar mi caso
+              </a>
             </div>
           </div>
         </section>

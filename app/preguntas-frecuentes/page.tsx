@@ -39,7 +39,7 @@ const FAQS = [
     items: [
       {
         q: '¿Cuánto cuesta el proceso de insolvencia?',
-        a: 'La primera consulta de diagnóstico es completamente gratuita y sin compromiso. Los honorarios del proceso se pactan según las características de cada caso — generalmente como un porcentaje del valor de las deudas o una cuota mensual incluida dentro del plan de pagos. En Deuda OFF no cobramos grandes sumas por adelantado.',
+        a: 'La primera consulta de diagnóstico es completamente gratuita y sin compromiso. Nuestros honorarios parten del 10% del total de la deuda; ese porcentaje es la base y varía según las características de cada caso. Aparte están las expensas propias del trámite ante el centro de conciliación —comunicaciones, remisión de expedientes y gastos secretariales—, que el artículo 535 del Código General del Proceso pone a cargo del solicitante. En Deuda OFF no cobramos grandes sumas por adelantado.',
       },
       {
         q: '¿Puedo incluir el costo del abogado en el plan de pagos?',

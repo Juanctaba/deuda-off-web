@@ -32,7 +32,7 @@ export default function InsolvenciaBarranquilla() {
         },
         {
           q: '¿Cuánto cuesta iniciar el proceso desde Barranquilla?',
-          a: 'La primera consulta es completamente gratuita. Los honorarios del proceso se pactan según tu caso y generalmente se integran dentro del plan de pagos acordado, sin grandes sumas por adelantado.',
+          a: 'La primera consulta es completamente gratuita. Nuestros honorarios parten del 10% del total de la deuda; ese porcentaje es la base y varía según las características de cada caso. Se integran dentro del plan de pagos acordado, sin grandes sumas por adelantado.',
         },
       ]}
     />
