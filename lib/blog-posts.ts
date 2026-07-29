@@ -9,78 +9,275 @@ export interface BlogPost {
   about: string[]
   mentions: string[]
   content: string
+  /** Preguntas frecuentes — se emiten como schema FAQPage y se renderizan al final del artículo. */
+  faqs?: { q: string; a: string }[]
+  /** Fuentes normativas oficiales citadas en el artículo (señal E-E-A-T para contenido YMYL). */
+  sources?: { label: string; href: string }[]
 }
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ley-2445-de-2025-insolvencia-colombia',
-    title: 'Ley 2445 de 2025: Todo lo que debes saber sobre la nueva Ley de Insolvencia',
-    description: 'La Ley 2445 de 2025 modernizó el régimen de insolvencia de persona natural en Colombia. Conoce qué cambió, quiénes aplican y cómo puedes beneficiarte.',
+    title: 'Ley 2445 de 2025: qué cambió en la insolvencia de persona natural',
+    description: 'Guía completa de la Ley 2445 de 2025 con el articulado citado: quién puede acogerse, los tres procedimientos, qué pasa desde la aceptación, cuánto cuesta y cuánto dura el proceso.',
     date: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-07-29',
     category: 'Legislación',
-    readTime: '8 min',
-    about: ['Ley 2445 de 2025', 'Insolvencia de persona natural', 'Derecho concursal Colombia'],
-    mentions: ['Superintendencia de Sociedades', 'Ministerio de Justicia Colombia', 'Núcleo Jurídico SAS'],
+    readTime: '14 min',
+    about: ['Ley 2445 de 2025', 'Insolvencia de persona natural', 'Derecho concursal Colombia', 'Liquidación patrimonial'],
+    mentions: ['Ministerio de Justicia y del Derecho', 'Superintendencia de Sociedades', 'Superintendencia Financiera de Colombia', 'Núcleo Jurídico SAS'],
+    sources: [
+      { label: 'Ley 2445 de 2025 — texto oficial, Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
+      { label: 'Ley 2445 de 2025 — SUIN-Juriscol, Ministerio de Justicia y del Derecho', href: 'https://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Leyes/30054512' },
+      { label: 'Ley 1564 de 2012 (Código General del Proceso) — norma modificada', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012.html' },
+      { label: 'Ley 1116 de 2006 — régimen de insolvencia empresarial', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1116_2006.html' },
+    ],
+    faqs: [
+      {
+        q: '¿Qué es la Ley 2445 de 2025?',
+        a: 'Es la ley sancionada el 11 de febrero de 2025 que modificó el Título IV de la Sección Tercera del Libro Tercero de la Ley 1564 de 2012 (Código General del Proceso), donde se regula la insolvencia de persona natural. Según su artículo 1, sus objetivos son incorporar a pequeños comerciantes al régimen, corregir normas que generaban decisiones judiciales contradictorias, flexibilizar el proceso tras la crisis del Covid-19 y agilizar la liquidación patrimonial.',
+      },
+      {
+        q: '¿Cuáles son los requisitos exactos para acogerse a la insolvencia?',
+        a: 'El artículo 538 del CGP, modificado por el artículo 9 de la Ley 2445 de 2025, exige estar en cesación de pagos: incumplir dos o más obligaciones con dos o más acreedores por más de 90 días, o tener en curso dos o más procesos de cobro, de ejecución especial o de restitución de bienes por mora en cánones. Además, esas obligaciones deben representar no menos del 30% del pasivo total, sin contar los créditos que se estén pagando por libranza o descuento de nómina. Basta la declaración del deudor bajo la gravedad del juramento.',
+      },
+      {
+        q: '¿Cuánto cuesta el proceso de insolvencia de persona natural?',
+        a: 'El artículo 535 del CGP, modificado por el artículo 7 de la Ley 2445 de 2025, establece que los procedimientos de negociación de deudas y de convalidación de acuerdos son GRATUITOS ante centros de conciliación de consultorios jurídicos de facultades de derecho y de entidades públicas, servicio que debía implementarse a más tardar el 1 de enero de 2026. El solicitante asume únicamente las expensas (comunicaciones, remisión de expedientes y gastos secretariales); si no se pagan, se entiende desistida la solicitud. Los honorarios de abogado particular son aparte y se pactan libremente.',
+      },
+      {
+        q: '¿Cuánto dura el proceso de negociación de deudas?',
+        a: 'El artículo 544 del CGP, modificado por el artículo 15 de la Ley 2445 de 2025, fija 60 días contados desde que queda en firme la aceptación de la solicitud. Puede prorrogarse 30 días más a solicitud conjunta del deudor y de los acreedores con quienes ya se conciliaron derechos, y para el deudor comerciante hasta 90 días adicionales con voto favorable de la mayoría. El término se suspende mientras la jurisdicción ordinaria civil resuelve controversias.',
+      },
+      {
+        q: '¿Puedo perder el trabajo por estar en insolvencia?',
+        a: 'No. El parágrafo tercero del artículo 532 del CGP prohíbe que un empleador o contratante tenga en cuenta negativamente que un empleado, contratista o aspirante esté tramitando un procedimiento de insolvencia o se haya acogido a uno en el pasado, al decidir sobre su vinculación o desvinculación laboral, civil o administrativa. Tratándose de servidores públicos, hacerlo es causal de mala conducta.',
+      },
+      {
+        q: '¿Qué pasa si un banco me sigue cobrando después de radicar?',
+        a: 'El numeral 1 del artículo 545 establece sanciones escalonadas para el acreedor ya notificado que insista en diligencias de cobranza: llamado de atención la primera vez, amonestación la segunda y postergación del pago de todas sus obligaciones calificadas la tercera. A partir de la cuarta, el conciliador o el juez remite la queja a la Superintendencia Financiera o a la de Industria y Comercio para que se imponga una multa equivalente al 10% del monto de los créditos cobrados, incluidos los intereses.',
+      },
+      {
+        q: '¿Me pueden cortar los servicios públicos durante el proceso?',
+        a: 'No por deudas anteriores. El numeral 3 del artículo 545 prohíbe suspender los servicios públicos domiciliarios en la casa de habitación ni en el lugar de trabajo del deudor por mora en obligaciones anteriores a la aceptación. Si ya estaban suspendidos, deben restablecerse. La misma regla aplica a contratos de tracto sucesivo como arrendamiento, educación, salud y administración de propiedad horizontal.',
+      },
+      {
+        q: '¿Las deudas quedan realmente extinguidas?',
+        a: 'En la liquidación patrimonial, el numeral 1 del artículo 571 dispone que los saldos totales o parciales no cubiertos mutan a obligaciones naturales, es decir, dejan de ser judicialmente exigibles. Pero el beneficio se pierde si el deudor omitió dolosamente información relevante, ocultó o simuló bienes, o deterioró con dolo o culpa grave los activos a adjudicar. Tampoco cobija los saldos insolutos por obligaciones alimentarias.',
+      },
+      {
+        q: '¿Puedo volver a acogerme a la insolvencia más adelante?',
+        a: 'Sí, pero con plazos de espera. El artículo 574 establece 5 años desde el cumplimiento total del acuerdo anterior, o desde la aceptación del desistimiento. Quien se benefició de la conversión a obligaciones naturales debe esperar 10 años desde el inicio de la liquidación anterior; quien cubrió con sus bienes el total reconocido, 5 años. A quien se le negó ese beneficio debe esperar 15 años desde la apertura de la liquidación.',
+      },
+      {
+        q: '¿Toda mi familia puede tramitar la insolvencia junta?',
+        a: 'El artículo 539A, adicionado por el artículo 11 de la Ley 2445 de 2025, permite que un mismo conciliador tramite coordinadamente la insolvencia de varios deudores del mismo núcleo familiar que lo pidan, siempre que cada uno cumpla los presupuestos del artículo 538. El valor de los servicios del conciliador no puede exceder el 50% adicional al del caso de mayor pasivo y complejidad. Se entienden del mismo núcleo los cónyuges, compañeros permanentes y parientes dentro del segundo grado de consanguinidad y único civil.',
+      },
+    ],
     content: `
-<p class="definicion"><strong>Definición:</strong> La Ley 2445 de 2025 es la ley colombiana que modernizó el régimen de insolvencia de persona natural no comerciante. Vigente desde febrero de 2025, establece los procedimientos legales para que ciudadanos colombianos reorganicen o liquiden sus deudas de forma oficial, con protección del Estado frente a sus acreedores.</p>
+<p class="definicion"><strong>Definición:</strong> La Ley 2445 de 2025 es la ley colombiana, sancionada el 11 de febrero de 2025, que reformó el régimen de insolvencia de persona natural del Código General del Proceso. Amplió el acceso a pequeños comerciantes, bajó del 50% al 30% el umbral de deuda en mora exigido y reforzó las protecciones del deudor durante el trámite.</p>
 
-<p class="pilar-link">📘 <strong>Guía completa y actualizada:</strong> consulta nuestra <a href="/ley-2445-de-2025">guía de la Ley 2445 de 2025</a>, con el ámbito de aplicación, los requisitos de acceso, los tres procedimientos disponibles y las fuentes normativas oficiales citadas.</p>
+<p>Si estás buscando cómo salir de deudas que ya no puedes pagar, esta es la norma que te aplica. A diferencia de la mayoría de resúmenes que circulan, esta guía cita el articulado concreto para que puedas verificar cada afirmación en el <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html" target="_blank" rel="noopener noreferrer nofollow">texto oficial de la ley</a>.</p>
 
-<p>En febrero de 2025, Colombia actualizó su marco legal para proteger a los ciudadanos más endeudados. La <strong>Ley 2445 de 2025</strong> creó un régimen más ágil y accesible que el anterior, eliminando barreras de acceso y fortaleciendo las herramientas de protección para el deudor. Si estás abrumado por deudas en Colombia, esta ley fue diseñada para ti.</p>
+<h2>Qué es la Ley 2445 de 2025 y qué reformó</h2>
 
-<h2>¿Qué es la Ley 2445 de 2025?</h2>
-
-<p>La Ley 2445 de 2025 actualiza el procedimiento de insolvencia de persona natural no comerciante en Colombia, estableciendo mecanismos más claros para que quienes no pueden pagar sus deudas puedan llegar a acuerdos legales con sus acreedores bajo la supervisión del Estado.</p>
-
-<p>Esta norma reconoce que las personas pueden caer en insolvencia por circunstancias ajenas a su voluntad — desempleo, emergencias de salud, caída de un negocio o crisis económicas — y les garantiza una segunda oportunidad jurídica.</p>
-
-<h2>Principales cambios frente a la normativa anterior</h2>
+<p>La Ley 2445 de 2025 no creó un régimen nuevo: modificó el que ya existía. Su artículo 1 declara que el objeto es modificar el Título IV de la Sección Tercera del Libro Tercero de la Ley 1564 de 2012 (Código General del Proceso) con cuatro finalidades concretas:</p>
 
 <ul>
-  <li><strong>Mayor accesibilidad:</strong> Se reducen los requisitos formales, facilitando el acceso a personas con deudas de menor cuantía.</li>
-  <li><strong>Plazos más cortos:</strong> Las audiencias de conciliación deben realizarse en plazos más breves que bajo la normativa anterior.</li>
-  <li><strong>Protección ampliada:</strong> Desde la radicación, todos los procesos ejecutivos en contra del deudor quedan suspendidos automáticamente.</li>
-  <li><strong>Virtualidad reconocida:</strong> La ley reconoce expresamente los canales digitales en todas las etapas — el proceso puede gestionarse 100% en línea.</li>
-  <li><strong>Fresh start reforzado:</strong> Al cumplir el acuerdo, las deudas incluidas quedan extinguidas definitivamente y el historial crediticio se actualiza.</li>
+  <li>Incorporar a algunas personas naturales comerciantes al régimen de insolvencia de las no comerciantes.</li>
+  <li>Modificar normas cuya aplicación venía generando decisiones contradictorias entre jueces y estancamiento de los procesos liquidatorios.</li>
+  <li>Flexibilizar el proceso tras la crisis económica generada por la pandemia de Covid-19.</li>
+  <li>Agilizar la liquidación patrimonial y garantizar la entrega de los bienes a sus adjudicatarios.</li>
 </ul>
 
-<h2>¿Quiénes pueden acogerse a la Ley 2445 de 2025?</h2>
+<p>El artículo 2 cambió incluso el nombre del Título IV, que pasó a llamarse <strong>Insolvencia de la persona natural no comerciante y de la pequeña comerciante</strong>. Ese solo ajuste anticipa la reforma de fondo.</p>
 
-<p>El proceso aplica a <strong>personas naturales no comerciantes</strong> en Colombia que se encuentren en alguna de estas situaciones:</p>
+<p>El artículo 531, modificado por el artículo 3 de la ley, define la finalidad del régimen: el reintegro a la actividad productiva nacional de quien ha sufrido un quebranto económico, mediante la normalización de sus relaciones crediticias.</p>
+
+<h2>Qué cambió frente al régimen anterior</h2>
+
+<p>Esta es la comparación concreta entre el régimen previo y el vigente:</p>
+
+<div class="tabla-wrap">
+<table>
+  <thead>
+    <tr><th>Aspecto</th><th>Antes (Ley 1564 de 2012)</th><th>Ahora (Ley 2445 de 2025)</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Quién puede acceder</strong></td>
+      <td>Solo la persona natural no comerciante.</td>
+      <td>También el pequeño comerciante con activos inferiores a 1.000 SMLMV, excluida la vivienda familiar y el vehículo de trabajo (art. 532).</td>
+    </tr>
+    <tr>
+      <td><strong>Umbral de mora</strong></td>
+      <td>No menos del 50% del capital adeudado en mora.</td>
+      <td>No menos del <strong>30%</strong> del pasivo total, sin contar créditos pagados por libranza (art. 538).</td>
+    </tr>
+    <tr>
+      <td><strong>Costo del trámite</strong></td>
+      <td>Sin gratuidad generalizada.</td>
+      <td><strong>Gratuito</strong> en centros de conciliación de consultorios jurídicos y entidades públicas, desde el 1 de enero de 2026 (art. 535).</td>
+    </tr>
+    <tr>
+      <td><strong>Descuentos de libranza</strong></td>
+      <td>Continuaban durante el trámite.</td>
+      <td>Se suspenden desde la aceptación; los actos en contravención son ineficaces de pleno derecho (art. 545 num. 2).</td>
+    </tr>
+    <tr>
+      <td><strong>Servicios públicos</strong></td>
+      <td>Sin protección expresa.</td>
+      <td>No pueden suspenderse por deudas anteriores; si ya lo estaban, deben restablecerse (art. 545 num. 3).</td>
+    </tr>
+    <tr>
+      <td><strong>Protección laboral</strong></td>
+      <td>Sin norma expresa.</td>
+      <td>Prohibido usar la insolvencia como criterio de vinculación o despido; en servidores públicos es causal de mala conducta (art. 532, par. 3).</td>
+    </tr>
+    <tr>
+      <td><strong>Acreedor que sigue cobrando</strong></td>
+      <td>Sin sanción específica.</td>
+      <td>Sanciones escalonadas y multa del 10% de lo cobrado ante la Superintendencia competente (art. 545 num. 1).</td>
+    </tr>
+    <tr>
+      <td><strong>Trámite virtual</strong></td>
+      <td>Fundamentalmente presencial.</td>
+      <td>Competencia nacional virtual para centros y notarías, incluso con deudor domiciliado en el exterior (art. 533).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Quién puede acogerse: los requisitos exactos</h2>
+
+<p>Para acogerse a la insolvencia hay que estar en <strong>cesación de pagos</strong>. El artículo 538 del CGP, modificado por el artículo 9 de la Ley 2445 de 2025, define exactamente cuándo se configura.</p>
+
+<p class="cita-norma"><strong>Artículo 538 CGP.</strong> Estará en cesación de pagos la persona natural que como deudor o garante incumpla el pago de dos (2) o más obligaciones a favor de dos (2) o más acreedores por más de noventa (90) días, o contra el cual se hayan iniciado dos (2) o más procedimientos públicos o privados de cobro de obligaciones dinerarias, de ejecución especial o de restitución de bienes por mora en el pago de cánones. En cualquier caso, el valor porcentual de las obligaciones deberá representar no menos del treinta por ciento (30%) del pasivo total a su cargo.</p>
+
+<p>Desglosado en criterios verificables, necesitas cumplir <strong>una</strong> de las dos primeras condiciones <strong>más</strong> la tercera:</p>
+
+<ol>
+  <li><strong>Mora superior a 90 días</strong> en dos o más obligaciones frente a dos o más acreedores; o</li>
+  <li><strong>Dos o más procesos de cobro</strong> en curso: ejecutivos, de jurisdicción coactiva, de ejecución especial o de restitución del inmueble por mora en el arriendo.</li>
+  <li><strong>Y que esas obligaciones representen al menos el 30%</strong> de tu pasivo total.</li>
+</ol>
+
+<p>Hay un detalle técnico que casi nadie menciona y que puede decidir tu caso: para ese cálculo del 30% <strong>no se cuentan los créditos que se estén pagando por libranza o descuento de nómina</strong>, a menos que hayan dejado de abonarse efectivamente. Si buena parte de tu deuda se descuenta automáticamente del sueldo, el porcentaje se calcula sobre el resto, lo que suele facilitar que califiques.</p>
+
+<p>El mismo artículo aclara que para verificar la situación <strong>basta la declaración del deudor</strong>, entendida bajo la gravedad del juramento. No hay que probar la insolvencia con un dictamen previo.</p>
+
+<h3>Y si eres pequeño comerciante</h3>
+
+<p>El artículo 532 incorporó a la persona natural comerciante con activos totales inferiores a 1.000 salarios mínimos mensuales legales vigentes, <strong>excluido el valor de la vivienda de su familia y del vehículo que usa como instrumento de trabajo</strong>. La ley los denomina pequeños comerciantes. Puede acceder aunque no esté cumpliendo los deberes del artículo 19 del Código de Comercio, salvo el primero, que debe acreditar con la solicitud.</p>
+
+<p>Quedan por fuera, según el parágrafo primero del artículo 532, las personas naturales controlantes de sociedades mercantiles que estén en insolvencia empresarial ante la Superintendencia de Sociedades: a ellas se les aplica la <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1116_2006.html" target="_blank" rel="noopener noreferrer nofollow">Ley 1116 de 2006</a>.</p>
+
+<h2>Los tres procedimientos que ofrece la ley</h2>
+
+<p>El artículo 531 establece que la normalización de las relaciones crediticias puede lograrse por tres vías. No son dos: son tres, y confundirlas lleva a elegir mal.</p>
+
+<h3>1. Negociación de deudas</h3>
+<p>El camino más común. El deudor presenta una propuesta de pago clara, expresa y objetiva (art. 539 num. 2) y la discute con sus acreedores ante un conciliador. Aprobado el acuerdo, vincula a todos.</p>
+
+<h3>2. Convalidación de acuerdo privado</h3>
+<p>Cuando el deudor ya logró un acuerdo por fuera del trámite con una mayoría calificada de acreedores, el artículo 562 le permite llevarlo a convalidación para que resulte obligatorio también frente a quienes no lo suscribieron. Es la vía que más se pasa por alto.</p>
+
+<h3>3. Liquidación patrimonial</h3>
+<p>La salida cuando no hay acuerdo posible. Se adjudican a los acreedores los bienes embargables. Según el numeral 1 del artículo 571, los saldos no cubiertos <strong>mutan a obligaciones naturales</strong>: subsisten como deber moral pero dejan de ser judicialmente exigibles. Además, salvo en procesos de alimentos, los acreedores insatisfechos no podrán perseguir los bienes que el deudor adquiera después del inicio de la liquidación.</p>
+
+<h2>Qué pasa desde que aceptan tu solicitud</h2>
+
+<p>Este es el punto que más importa en la práctica: la protección no llega al final del proceso, sino al principio. El artículo 545 enumera los efectos que se producen <strong>a partir de la aceptación de la solicitud</strong>.</p>
+
+<div class="tabla-wrap">
+<table>
+  <thead>
+    <tr><th>Efecto</th><th>Qué significa</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Se frenan los procesos</strong></td>
+      <td>No pueden iniciarse nuevos procesos de ejecución, jurisdicción coactiva, cobro, ejecución especial ni restitución por mora en cánones, y se suspenden los que estuvieran en curso (num. 1).</td>
+    </tr>
+    <tr>
+      <td><strong>Se detienen las medidas cautelares</strong></td>
+      <td>La suspensión incluye la ejecución aún no practicada de embargos ya decretados sobre bienes, derechos, emolumentos, cuentas bancarias y cualquier producto financiero, y los actos preparatorios de esas medidas (num. 1).</td>
+    </tr>
+    <tr>
+      <td><strong>Cesan los descuentos de nómina</strong></td>
+      <td>Se suspenden descuentos de nómina, de productos financieros y pagos por libranza, salvo obligaciones alimentarias. Lo que se descuente pese a ello es ineficaz de pleno derecho, con devolución inmediata y responsabilidad solidaria del pagador y del acreedor (num. 2).</td>
+    </tr>
+    <tr>
+      <td><strong>No te cortan los servicios</strong></td>
+      <td>No pueden suspenderse los servicios públicos domiciliarios en tu casa ni en tu lugar de trabajo por deudas anteriores; si ya estaban cortados, deben restablecerse. Aplica también a arrendamiento, educación, salud y administración de propiedad horizontal (num. 3).</td>
+    </tr>
+    <tr>
+      <td><strong>Se interrumpe la prescripción</strong></td>
+      <td>Se interrumpe el término de prescripción y no opera la caducidad de las acciones respecto de los créditos exigibles antes del inicio (num. 6).</td>
+    </tr>
+    <tr>
+      <td><strong>Paz y salvo acotado</strong></td>
+      <td>Impuestos, administración, servicios públicos y demás tasas para obtener paz y salvo solo pueden exigirse respecto de lo causado después de la aceptación (num. 7).</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Qué pasa si el acreedor sigue llamando</h3>
+
+<p>La Ley 2445 puso dientes a la protección. Según el numeral 1 del artículo 545, el acreedor que ya fue comunicado y aun así adelanta diligencias de cobranza recibe: <strong>llamado de atención</strong> la primera vez, <strong>amonestación</strong> la segunda y <strong>postergación del pago</strong> de todas sus obligaciones calificadas la tercera. A partir de la cuarta, el conciliador o el juez envía la queja a la Superintendencia Financiera o a la de Industria y Comercio, conforme a la Ley 2300 de 2023, para que se imponga una <strong>multa del 10% del monto de los créditos cobrados</strong>, incluidos los intereses, por cada vez.</p>
+
+<h2>Cuánto cuesta el proceso</h2>
+
+<p>Es la pregunta que más se hace y la que casi nadie responde. La ley sí la responde.</p>
+
+<p class="cita-norma"><strong>Artículo 535 CGP — Gratuidad.</strong> Los procedimientos de negociación de deudas y de convalidación de acuerdo ante centros de conciliación de consultorios jurídicos de facultades de derecho y de las entidades públicas serán gratuitos y la prestación de este servicio se implementará a más tardar el 1 de enero de 2026 en todos los centros de conciliación de dichas entidades.</p>
+
+<p>En concreto, hay tres conceptos distintos que conviene no mezclar:</p>
 
 <ul>
-  <li>No pueden pagar sus deudas en las condiciones pactadas originalmente.</li>
-  <li>Prevén que en los próximos meses no podrán cumplir con sus obligaciones.</li>
-  <li>Tienen más de dos acreedores y su deuda total supera su capacidad de pago.</li>
+  <li><strong>El trámite ante el centro de conciliación.</strong> Es gratuito en los centros de consultorios jurídicos de facultades de derecho y de entidades públicas. En centros privados y notarías se cobran las tarifas autorizadas.</li>
+  <li><strong>Las expensas.</strong> Las asume el solicitante: comunicaciones, remisión de expedientes y gastos secretariales. Si no se pagan, se entiende desistida la solicitud.</li>
+  <li><strong>Los honorarios de abogado.</strong> Son aparte y se pactan libremente. El artículo 539 exige asistencia con apoderado judicial cuando el pasivo supera la mínima cuantía. Por debajo de esa cuantía, el parágrafo del artículo 535 permite que los consultorios jurídicos de las facultades de derecho representen o acompañen al deudor.</li>
 </ul>
 
-<p>No importa si las deudas son con bancos, cooperativas, entidades de financiamiento, personas naturales o empresas de cartera: el proceso puede incluir la mayoría de obligaciones crediticias.</p>
+<p>Si varios miembros de un mismo núcleo familiar tramitan a la vez, el artículo 539A limita el valor de los servicios del conciliador: no puede exceder el 50% adicional al del caso de mayor pasivo y complejidad.</p>
 
-<h2>Dos tipos de procedimiento: reorganización y liquidación</h2>
+<h2>Cuánto dura el proceso</h2>
 
-<h3>Procedimiento de Negociación de Deudas (Reorganización)</h3>
-<p>Es el camino más común. El deudor propone un plan de pago ajustado a su capacidad real. Si la mayoría de los acreedores aprueba el acuerdo, se vuelve obligatorio para todos — incluso para los que votaron en contra. Al finalizar el plan, las deudas restantes se extinguen.</p>
+<p>El artículo 544 fija un término concreto: <strong>60 días</strong> contados desde que queda en firme la aceptación de la solicitud. Puede prorrogarse por 30 días más a solicitud conjunta del deudor y de los acreedores con quienes ya se conciliaron definitivamente sus derechos; tratándose de deudor comerciante, hasta 90 días adicionales con voto favorable de la mayoría.</p>
 
-<h3>Procedimiento de Liquidación Patrimonial</h3>
-<p>Para quienes no tienen ingresos suficientes para ningún acuerdo de pago. Se liquidan los activos de forma ordenada bajo supervisión legal y, al finalizar, el deudor queda liberado de las deudas incluidas.</p>
+<p>Ese término se suspende mientras la jurisdicción ordinaria civil resuelve controversias, y también durante la vacancia judicial. Antes, el artículo 543 obliga a fijar la audiencia de negociación <strong>dentro de los diez (10) días siguientes a la aceptación</strong>.</p>
 
-<h2>Beneficios inmediatos al iniciar el proceso</h2>
+<h2>Qué NO cubre la ley</h2>
 
-<p>Desde el día que se radica formalmente la solicitud ante un Centro de Conciliación autorizado por el Ministerio de Justicia o ante la Superintendencia de Sociedades:</p>
+<p>Ser claro con los límites evita expectativas que después no se cumplen.</p>
 
 <ul>
-  <li><strong>Suspensión de embargos:</strong> Se detienen todos los embargos sobre salario, cuentas bancarias o bienes.</li>
-  <li><strong>Freno al acoso cobratorio:</strong> Bancos y agencias de cobranza deben cesar las llamadas y comunicaciones de presión.</li>
-  <li><strong>Pausa en procesos judiciales:</strong> Los procesos ejecutivos en curso quedan suspendidos.</li>
-  <li><strong>Congelamiento de intereses:</strong> En muchos casos se suspende el cobro de intereses moratorios.</li>
+  <li><strong>Obligaciones alimentarias.</strong> Quedan excluidas de la suspensión de descuentos (art. 545 num. 2) y sus saldos insolutos no mutan a obligaciones naturales (art. 571 num. 1).</li>
+  <li><strong>Si ocultaste información.</strong> El artículo 571 niega la conversión a obligaciones naturales a quien omitió dolosamente información relevante sobre ingresos, bienes o créditos, la ocultó o simuló, o deterioró con dolo o culpa grave los activos a adjudicar.</li>
+  <li><strong>Controlantes de sociedades en insolvencia empresarial.</strong> Se rigen por la Ley 1116 de 2006 (art. 532, par. 1).</li>
+  <li><strong>Volver a empezar de inmediato.</strong> El artículo 574 impone plazos de espera: 5 años tras cumplir un acuerdo, 10 años para quien se benefició de la conversión a obligaciones naturales, y 15 años para quien tuvo ese beneficio negado.</li>
+  <li><strong>Borrar automáticamente el reporte en centrales de riesgo.</strong> El proceso normaliza la deuda, pero la permanencia del dato negativo se rige por la Ley 1266 de 2008.</li>
 </ul>
 
-<h2>¿Cómo iniciar el proceso?</h2>
+<h2>Ante quién se tramita</h2>
 
-<p>El primer paso es una <strong>consulta gratuita y confidencial</strong> con un abogado especializado en insolvencia. En Deuda OFF evaluamos tu situación financiera sin costo: verificamos si el proceso aplica para tu caso, qué deudas puedes incluir y cuál sería tu cuota aproximada de pago. Contamos con más de <strong>750 casos resueltos exitosamente desde 2020</strong> bajo la legislación de insolvencia colombiana, con atención 100% virtual en todo el país.</p>
+<p>El artículo 533 asigna la competencia a los <strong>centros de conciliación autorizados por el Ministerio de Justicia y del Derecho</strong> del domicilio del deudor, a través de conciliadores inscritos en sus listas, y a las <strong>notarías</strong> con conciliadores inscritos. Los abogados conciliadores no pueden conocer directamente: solo por designación del centro.</p>
 
-<blockquote>La insolvencia no es un fracaso personal — es un derecho constitucional diseñado para protegerte cuando las circunstancias te superan.</blockquote>
+<p>Conviene precisar un error frecuente: la Superintendencia de Sociedades <strong>no</strong> tramita la insolvencia de persona natural. Su competencia es la insolvencia empresarial de la Ley 1116 de 2006. Para la liquidación patrimonial y las controversias, el artículo 534 asigna competencia al juez civil municipal o del circuito según la cuantía.</p>
+
+<p>Además, los centros y notarías con la infraestructura tecnológica adecuada tienen <strong>competencia nacional para tramitar virtualmente</strong>, cualquiera que sea el domicilio del deudor, incluso si reside en el exterior.</p>
+
+<h2>Cómo iniciar el proceso</h2>
+
+<p>El artículo 539 exige que la solicitud la presente directamente el deudor e incluya diez elementos: el informe de causas de la cesación de pagos, la propuesta de negociación, la relación completa de acreedores en orden de prelación, la relación detallada de bienes con sus gravámenes, los procesos en curso, la certificación de ingresos, los recursos disponibles tras gastos de subsistencia, la información sobre sociedad conyugal, la discriminación de obligaciones alimentarias con certificado del REDAM y, si es pequeño comerciante, la constancia de matrícula mercantil.</p>
+
+<p>Todo se entiende rendido bajo la gravedad del juramento. Un inventario impreciso o una propuesta inviable llevan al rechazo, y con él a perder la protección que ya se había activado. Por eso conviene asesoría especializada desde la preparación del expediente.</p>
+
+<p>En Deuda OFF evaluamos tu situación sin costo: verificamos si cumples los presupuestos del artículo 538, qué obligaciones puedes incluir y cuál sería tu capacidad real de pago. Más de 750 casos resueltos desde 2020, con atención 100% virtual en todo el país.</p>
+
+<p>La insolvencia no es un fracaso personal: es el mecanismo que la ley colombiana diseñó para que quien sufrió un quebranto económico vuelva a la actividad productiva.</p>
     `,
   },
   {
@@ -96,7 +293,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
 <p class="definicion"><strong>Respuesta directa:</strong> El proceso de insolvencia de persona natural en Colombia tiene 6 etapas: (1) diagnóstico gratuito, (2) recopilación de documentos y radicación, (3) notificación a acreedores, (4) audiencia de negociación, (5) ejecución del acuerdo y (6) extinción de deudas. Desde la radicación, tienes protección legal inmediata contra embargos y cobros coercitivos.</p>
 
-<p class="pilar-link">📘 <strong>Guía completa:</strong> revisa nuestra página sobre el <a href="/insolvencia-persona-natural">procedimiento de insolvencia de persona natural</a>, con quién califica, qué pasa con tus bienes, costos y tiempos.</p>
+<p class="pilar-link">📘 <strong>Guía normativa:</strong> consulta la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">guía completa de la Ley 2445 de 2025</a>, con el articulado citado: requisitos del artículo 538, efectos del artículo 545, gratuidad del artículo 535 y duración del artículo 544.</p>
 
 <p>El proceso de insolvencia de persona natural bajo la Ley 2445 de 2025 está diseñado para ser claro y predecible. A continuación, cada etapa con sus tiempos y efectos concretos.</p>
 
@@ -173,7 +370,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
 <p class="definicion"><strong>Respuesta directa:</strong> Pueden acogerse a la insolvencia de persona natural en Colombia las personas naturales no comerciantes que no pueden pagar sus deudas con al menos dos acreedores diferentes. No se requiere un monto mínimo de deuda específico bajo la Ley 2445 de 2025, y el proceso aplica para empleados, independientes, pensionados y desempleados con bienes.</p>
 
-<p class="pilar-link">📘 <strong>Guía completa:</strong> consulta los <a href="/insolvencia-persona-natural">requisitos detallados del procedimiento de insolvencia</a> y la <a href="/ley-2445-de-2025">guía de la Ley 2445 de 2025</a>, con las fuentes normativas oficiales.</p>
+<p class="pilar-link">📘 <strong>Los requisitos exactos, con la norma citada:</strong> el artículo 538 del CGP —modificado por la Ley 2445 de 2025— exige mora de más de 90 días con dos o más acreedores y que las obligaciones representen al menos el 30% del pasivo total. Ver la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">guía completa de la Ley 2445 de 2025</a>.</p>
 
 <p>La mayoría de colombianos con deudas que no pueden pagar califican para el proceso. A continuación, los criterios exactos de elegibilidad y los documentos necesarios.</p>
 

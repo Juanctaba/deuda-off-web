@@ -399,8 +399,7 @@ export default function Home() {
               <nav className="flex flex-col gap-2">
                 {[
                   { label: 'Cómo Funciona', href: '#como-funciona' },
-                  { label: 'Insolvencia Persona Natural', href: '/insolvencia-persona-natural' },
-                  { label: 'Ley 2445 de 2025', href: '/ley-2445-de-2025' },
+                  { label: 'Ley 2445 de 2025', href: '/blog/ley-2445-de-2025-insolvencia-colombia' },
                   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
                   { label: 'Casos de Éxito', href: '/casos-de-exito' },
                   { label: 'Blog', href: '/blog' },

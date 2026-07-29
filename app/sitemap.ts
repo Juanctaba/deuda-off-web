@@ -8,8 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: `${base}/consulta-gratuita`, lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${base}/ley-2445-de-2025`, lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
-    { url: `${base}/insolvencia-persona-natural`, lastModified: now, changeFrequency: 'monthly', priority: 0.95 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/recursos`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/preguntas-frecuentes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

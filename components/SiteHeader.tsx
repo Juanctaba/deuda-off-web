@@ -7,8 +7,7 @@ import { WA_URL } from '@/lib/constants'
 
 const NAV_LINKS = [
   { label: 'Cómo Funciona', href: '/#como-funciona' },
-  { label: 'Insolvencia', href: '/insolvencia-persona-natural' },
-  { label: 'Ley 2445 de 2025', href: '/ley-2445-de-2025' },
+  { label: 'Ley 2445 de 2025', href: '/blog/ley-2445-de-2025-insolvencia-colombia' },
   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
   { label: 'Blog', href: '/blog' },
   { label: 'Recursos', href: '/recursos' },

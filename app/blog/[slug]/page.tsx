@@ -81,12 +81,28 @@ export default function BlogPost({ params }: Props) {
     mentions: post.mentions.map(entity => ({ '@type': 'Organization', name: entity })),
     keywords: [...post.about, ...post.mentions].join(', '),
     isPartOf: { '@type': 'Blog', '@id': 'https://deudaoff.com/blog' },
+    ...(post.sources?.length ? { citation: post.sources.map(s => s.href) } : {}),
   }
+
+  const faqSchema = post.faqs?.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       <div className="min-h-screen bg-surface">
         {/* Header */}
@@ -127,6 +143,47 @@ export default function BlogPost({ params }: Props) {
           <div className="bg-white rounded-2xl shadow-card p-8 md:p-12 border border-outline-variant/30">
             <BlogContent html={post.content} />
           </div>
+
+          {/* Preguntas frecuentes — alimenta el schema FAQPage */}
+          {post.faqs && post.faqs.length > 0 && (
+            <section className="mt-10">
+              <h2 className="font-manrope text-2xl font-bold text-primary mb-5">Preguntas frecuentes</h2>
+              <div className="space-y-4">
+                {post.faqs.map(f => (
+                  <div key={f.q} className="bg-white rounded-xl p-6 border border-outline-variant/40 shadow-card">
+                    <h3 className="font-manrope font-semibold text-primary mb-2">{f.q}</h3>
+                    <p className="text-on-surface-variant text-sm leading-relaxed">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Fuentes normativas oficiales */}
+          {post.sources && post.sources.length > 0 && (
+            <section className="mt-10 bg-surface-container rounded-2xl p-6 border border-outline-variant/40">
+              <h2 className="font-manrope text-lg font-bold text-primary mb-3">Fuentes normativas</h2>
+              <ul className="space-y-2">
+                {post.sources.map(s => (
+                  <li key={s.href} className="flex items-start gap-2">
+                    <span className="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">link</span>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="text-sm text-on-surface-variant hover:text-secondary transition-colors underline decoration-outline-variant underline-offset-2"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs text-on-surface-variant/80 mt-4 leading-relaxed">
+                Contenido revisado por el equipo jurídico de Núcleo Jurídico SAS con base en el texto oficial de la
+                norma. Tiene fines informativos y no sustituye la asesoría jurídica sobre un caso concreto.
+              </p>
+            </section>
+          )}
 
           {/* CTA mid-article */}
           <div className="my-10 bg-secondary-container rounded-2xl p-7 border border-secondary/20">

@@ -19,9 +19,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Deuda OFF — Elimina tus Deudas Legalmente en Colombia',
-  description: 'Acógete a la Ley de Insolvencia de Persona Natural. Protege tu patrimonio, frena embargos y recupera tu tranquilidad financiera. +750 casos resueltos desde 2020. Núcleo Jurídico.',
-  keywords: 'insolvencia persona natural colombia, eliminar deudas legalmente, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia',
+  title: 'Deuda OFF — Insolvencia de persona natural en Colombia',
+  description: 'Acógete al Procedimiento de Insolvencia de Persona Natural bajo la Ley 2445 de 2025. Protege tu patrimonio, frena embargos y reorganiza tus deudas. +750 casos resueltos desde 2020. Núcleo Jurídico.',
+  keywords: 'insolvencia persona natural colombia, proceso insolvencia colombia, ley 2445 de 2025, ley insolvencia colombia, no puedo pagar mis deudas, abogado insolvencia colombia, negociacion de deudas, liquidacion patrimonial',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     languages: { 'es-CO': 'https://deudaoff.com' },
   },
   openGraph: {
-    title: 'Deuda OFF — Elimina tus Deudas Legalmente',
+    title: 'Deuda OFF — Insolvencia de persona natural en Colombia',
     description: '+750 casos resueltos desde 2020. Primera consulta gratuita. Respaldados por Núcleo Jurídico.',
     url: 'https://deudaoff.com',
     siteName: 'Deuda OFF',
