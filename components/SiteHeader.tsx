@@ -14,6 +14,8 @@ const NAV_LINKS = [
   { label: 'Casos de Éxito', href: '/casos-de-exito' },
 ]
 
+const CALC_URL = 'https://deudaoff.com/calculadora'
+
 export default function SiteHeader() {
   const [open, setOpen] = useState(false)
 
@@ -58,6 +60,13 @@ export default function SiteHeader() {
           WhatsApp
         </a>
         <a
+          href={CALC_URL}
+          className="hidden md:flex items-center gap-1.5 text-primary border border-primary/30 bg-primary/5 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-primary/10 transition-all"
+        >
+          <span className="material-symbols-outlined text-sm">calculate</span>
+          Calculadora
+        </a>
+        <a
           href="#formulario"
           className="hidden sm:inline-block bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all"
         >
@@ -94,6 +103,14 @@ export default function SiteHeader() {
             </a>
           ))}
           <div className="flex flex-col gap-3 mt-6">
+            <a
+              href={CALC_URL}
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-2 text-primary border border-primary/30 bg-primary/5 px-4 py-3 rounded-lg text-sm font-bold hover:bg-primary/10 transition-all"
+            >
+              <span className="material-symbols-outlined text-base">calculate</span>
+              Calculadora de Deuda
+            </a>
             <a
               href={WA_URL}
               target="_blank"
