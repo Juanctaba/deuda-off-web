@@ -65,7 +65,7 @@ const FAQS = [
   },
   {
     q: '¿Cuánto cuesta Deuda OFF comparado con seguir pagando mis deudas?',
-    a: 'Seguir pagando solo los intereses de una deuda de $50 millones puede costar más de $2 millones mensuales indefinidamente, sin reducir el capital. Nuestros honorarios son del 10% del capital adeudado —sobre el capital, no sobre el capital más los intereses— y según las características del caso el porcentaje puede ser menor. Sobre esa misma deuda de $50 millones de capital, serían $5 millones por todo el proceso, sin grandes desembolsos iniciales. La consulta inicial es completamente gratuita.',
+    a: 'Seguir pagando solo los intereses de una deuda de $60 millones puede costar más de $2 millones mensuales indefinidamente, sin reducir el saldo. Nuestros honorarios parten del 10% del total de la deuda; ese porcentaje es la base y varía según las características de cada caso. Sobre esa misma deuda de $60 millones serían del orden de $6 millones por todo el proceso, sin grandes desembolsos iniciales. La consulta inicial es completamente gratuita.',
   },
   {
     q: '¿Qué diferencia concretamente a Deuda OFF de otras firmas de insolvencia?',

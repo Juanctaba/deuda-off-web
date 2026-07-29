@@ -103,7 +103,7 @@ const schemaLegalService = {
   description: 'Servicio legal especializado en insolvencia de persona natural en Colombia. Acógete a la Ley 2445 de 2025: suspende embargos, negocia tus deudas y empieza de nuevo.',
   url: 'https://deudaoff.com',
   telephone: '+57-305-239-6052',
-  priceRange: 'Consulta gratuita — honorarios del 10% del capital adeudado',
+  priceRange: 'Consulta gratuita — honorarios desde el 10% del total de la deuda',
   currenciesAccepted: 'COP',
   paymentAccepted: 'Efectivo, transferencia bancaria',
   areaServed: [

@@ -43,7 +43,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         q: '¿Cuánto cuesta el proceso de insolvencia de persona natural?',
-        a: 'Hay que distinguir tres conceptos. El trámite: el artículo 535 del CGP, modificado por el artículo 7 de la Ley 2445 de 2025, establece que los procedimientos de negociación de deudas y de convalidación de acuerdos son GRATUITOS ante centros de conciliación de consultorios jurídicos de facultades de derecho y de entidades públicas, servicio que debía implementarse a más tardar el 1 de enero de 2026. Las expensas: comunicaciones, remisión de expedientes y gastos secretariales, a cargo del solicitante; si no se pagan, se entiende desistida la solicitud. Y los honorarios de abogado, que son aparte y se pactan libremente: en Deuda OFF son del 10% del capital adeudado, calculado sobre el capital y no sobre el capital más los intereses, y según las características del caso pueden ser un porcentaje menor.',
+        a: 'Hay que distinguir tres conceptos. El trámite: el artículo 535 del CGP, modificado por el artículo 7 de la Ley 2445 de 2025, establece que los procedimientos de negociación de deudas y de convalidación de acuerdos son GRATUITOS ante centros de conciliación de consultorios jurídicos de facultades de derecho y de entidades públicas, servicio que debía implementarse a más tardar el 1 de enero de 2026. Las expensas: comunicaciones, remisión de expedientes y gastos secretariales, a cargo del solicitante; si no se pagan, se entiende desistida la solicitud. Y los honorarios de abogado, que son aparte y se pactan libremente: en Deuda OFF parten del 10% del total de la deuda, porcentaje que es la base y varía según las características de cada caso.',
       },
       {
         q: '¿Cuánto dura el proceso de negociación de deudas?',
@@ -245,30 +245,26 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h3>Cuánto cobramos en Deuda OFF</h3>
 
-<p>Como casi nadie publica esta cifra, la dejamos explícita: nuestros honorarios son del <strong>10% del capital adeudado</strong>. Según las características de cada caso el porcentaje puede ser menor.</p>
+<p>Como casi nadie publica esta cifra, la dejamos explícita: nuestros honorarios parten del <strong>10% del total de la deuda</strong>. Ese porcentaje es la base y varía según las características de cada caso.</p>
 
-<p>Dos precisiones que cambian la cuenta a tu favor:</p>
-
-<ul>
-  <li><strong>Se calcula sobre el capital, no sobre el capital más los intereses.</strong> En deudas con mora larga los intereses acumulados suelen ser una porción enorme del saldo total. La base de cálculo es el capital, que es la cifra menor.</li>
-  <li><strong>No exigimos grandes desembolsos iniciales.</strong> El esquema reconoce que estás precisamente en una situación de falta de liquidez.</li>
-</ul>
+<p>Tampoco exigimos grandes desembolsos iniciales: el esquema reconoce que estás precisamente en una situación de falta de liquidez, y los honorarios se estructuran dentro del plan de pagos acordado.</p>
 
 <div class="tabla-wrap">
 <table>
   <thead>
-    <tr><th>Capital adeudado</th><th>Honorarios de referencia (10%)</th></tr>
+    <tr><th>Total de la deuda</th><th>Honorarios de referencia (10% base)</th></tr>
   </thead>
   <tbody>
-    <tr><td>$30.000.000</td><td>$3.000.000</td></tr>
-    <tr><td>$50.000.000</td><td>$5.000.000</td></tr>
+    <tr><td>$60.000.000</td><td>$6.000.000</td></tr>
     <tr><td>$80.000.000</td><td>$8.000.000</td></tr>
+    <tr><td>$100.000.000</td><td>$10.000.000</td></tr>
     <tr><td>$120.000.000</td><td>$12.000.000</td></tr>
+    <tr><td>$150.000.000</td><td>$15.000.000</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>Son valores de referencia sobre el 10%. El porcentaje aplicable a tu caso se define en la consulta inicial, que no tiene costo, y puede ser menor según sus características.</p>
+<p>Son valores de referencia calculados sobre el 10% base. El porcentaje aplicable a tu caso se define en la consulta inicial, que no tiene costo.</p>
 
 <h2>Cuánto dura el proceso</h2>
 
@@ -962,7 +958,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>El artículo 544 fija un término legal de <strong>60 días</strong> contados desde que queda en firme la aceptación de la solicitud, prorrogable por 30 días más a solicitud conjunta del deudor y de los acreedores con derechos ya conciliados; tratándose de deudor comerciante, hasta 90 días adicionales con voto favorable de la mayoría. En la práctica, con la preparación previa y la gestión del conciliador, el proceso completo —desde diagnóstico hasta acuerdo firmado— suele tomar entre 3 y 6 meses.</p>
 
-<p>Nuestros honorarios son del <strong>10% del capital adeudado</strong> —sobre el capital, no sobre el capital más los intereses acumulados— y según las características del caso el porcentaje puede ser menor. Se estructuran dentro del mismo plan de pagos acordado. <strong>La primera consulta con Deuda OFF es completamente gratuita.</strong> El proceso es 100% virtual: no necesitas ir a ningún juzgado ni desplazarte.</p>
+<p>Nuestros honorarios parten del <strong>10% del total de la deuda</strong>; ese porcentaje es la base y varía según las características de cada caso. Se estructuran dentro del mismo plan de pagos acordado. <strong>La primera consulta con Deuda OFF es completamente gratuita.</strong> El proceso es 100% virtual: no necesitas ir a ningún juzgado ni desplazarte.</p>
 
 <h2>Caso tipo: Daniel, propietario de una papelería en Bogotá</h2>
 
@@ -1014,7 +1010,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>El ahorro está en la ley. El artículo 539A dispone que, cuando un mismo conciliador tramita coordinadamente los casos de varios deudores del mismo núcleo familiar, <strong>el valor de sus servicios no podrá exceder del 50% adicional</strong> al que corresponda al caso de mayor pasivo y complejidad. Es decir: dos procesos no cuestan el doble.</p>
 
-<p>Ejemplo numérico con nuestra tarifa. Si tú debes $40 millones de capital y tu pareja $30 millones, los honorarios de Deuda OFF al 10% serían $4 millones y $3 millones por separado, es decir <strong>$7 millones</strong>. Tramitados de forma conjunta, el tope del artículo 539A aplicado a los servicios del conciliador reduce de forma significativa el costo total del trámite frente a llevarlos por separado.</p>
+<p>Ejemplo numérico con nuestra tarifa. Si tú debes $80 millones y tu pareja $60 millones, los honorarios de Deuda OFF sobre el 10% base serían $8 millones y $6 millones por separado, es decir <strong>$14 millones</strong>. Tramitados de forma conjunta, el tope del artículo 539A aplicado a los servicios del conciliador reduce de forma significativa el costo total del trámite frente a llevarlos por separado.</p>
 
 <p>El porcentaje concreto de honorarios se define en la consulta inicial y puede ser menor según las características de cada caso.</p>
 
