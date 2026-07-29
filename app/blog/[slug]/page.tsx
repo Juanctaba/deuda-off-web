@@ -10,6 +10,15 @@ interface Props {
   params: { slug: string }
 }
 
+/** Landings por ciudad. Ancla con el servicio completo, no solo el topónimo. */
+const CIUDADES = [
+  { label: 'Insolvencia de persona natural en Bogotá', href: '/insolvencia-bogota' },
+  { label: 'Insolvencia de persona natural en Medellín', href: '/insolvencia-medellin' },
+  { label: 'Insolvencia de persona natural en Cali', href: '/insolvencia-cali' },
+  { label: 'Insolvencia de persona natural en Barranquilla', href: '/insolvencia-barranquilla' },
+  { label: 'Insolvencia de persona natural en Bucaramanga', href: '/insolvencia-bucaramanga' },
+]
+
 export function generateStaticParams() {
   return BLOG_POSTS.map(p => ({ slug: p.slug }))
 }
@@ -231,6 +240,29 @@ export default function BlogPost({ params }: Props) {
               </div>
               <CRMForm />
             </div>
+          </section>
+
+          {/* Cobertura por ciudad — enlazado interno hacia las landings regionales */}
+          <section aria-labelledby="ciudades-post" className="mt-12">
+            <h2 id="ciudades-post" className="font-manrope text-xl font-bold text-primary mb-2">
+              Atendemos en toda Colombia
+            </h2>
+            <p className="text-on-surface-variant text-sm mb-5">
+              El trámite puede adelantarse de forma virtual en todo el país. Consulta la información de tu ciudad:
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {CIUDADES.map(c => (
+                <li key={c.href}>
+                  <Link
+                    href={c.href}
+                    className="group flex items-center gap-2.5 bg-white p-4 rounded-xl border border-outline-variant/30 shadow-card hover:border-secondary/50 transition-colors h-full"
+                  >
+                    <span className="material-symbols-outlined text-secondary text-lg shrink-0">location_on</span>
+                    <span className="font-semibold text-primary text-sm leading-snug">{c.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
 
           {/* Related posts */}

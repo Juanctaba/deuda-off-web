@@ -52,6 +52,18 @@ const STEPS = [
   { n: '4', title: 'Fresh Start',        desc: 'Cumplido el acuerdo o la liquidación, tus deudas quedan legalmente extinguidas.', isLast: true },
 ]
 
+/**
+ * Páginas por ciudad. El ancla lleva el servicio completo, no solo el nombre
+ * de la ciudad: "Bogotá" a secas no comunica nada a Google ni al usuario.
+ */
+const CIUDADES = [
+  { label: 'Insolvencia de persona natural en Bogotá', href: '/insolvencia-bogota' },
+  { label: 'Insolvencia de persona natural en Medellín', href: '/insolvencia-medellin' },
+  { label: 'Insolvencia de persona natural en Cali', href: '/insolvencia-cali' },
+  { label: 'Insolvencia de persona natural en Barranquilla', href: '/insolvencia-barranquilla' },
+  { label: 'Insolvencia de persona natural en Bucaramanga', href: '/insolvencia-bucaramanga' },
+]
+
 /** Criterios del artículo 538 del CGP, modificado por la Ley 2445 de 2025. */
 const ELEGIBILIDAD = [
   {
@@ -257,6 +269,35 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* ── CIUDADES ────────────────────────────────── */}
+        <section aria-labelledby="ciudades-heading" className="py-16 px-5 max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 id="ciudades-heading" className="font-manrope text-3xl font-bold text-primary">
+              Atendemos en toda Colombia
+            </h2>
+            <p className="text-on-surface-variant mt-3 max-w-2xl mx-auto">
+              El artículo 533 permite adelantar el trámite de forma virtual con competencia nacional. Estas son
+              nuestras páginas por ciudad, con la información propia de cada región.
+            </p>
+          </div>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {CIUDADES.map(c => (
+              <li key={c.href}>
+                <a
+                  href={c.href}
+                  className="group flex items-center gap-3 bg-white p-5 rounded-2xl border border-outline-variant/30 shadow-card hover:border-secondary/50 transition-colors h-full"
+                >
+                  <span className="material-symbols-outlined text-secondary shrink-0">location_on</span>
+                  <span className="font-manrope font-semibold text-primary text-sm leading-snug">{c.label}</span>
+                  <span className="material-symbols-outlined text-base text-secondary ml-auto shrink-0 group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* ── ELEGIBILIDAD ────────────────────────────── */}
