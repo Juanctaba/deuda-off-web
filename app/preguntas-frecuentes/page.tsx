@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: 'Preguntas Frecuentes sobre Insolvencia de Persona Natural | Deuda OFF',
   description: 'Resuelve todas tus dudas sobre el proceso de insolvencia de persona natural en Colombia: costos, tiempos, bienes, deudas y más.',
   alternates: { canonical: 'https://deudaoff.com/preguntas-frecuentes' },
+  openGraph: {
+    title: 'Preguntas Frecuentes sobre Insolvencia de Persona Natural',
+    description: 'Costos, tiempos, bienes, requisitos y reportes en centrales de riesgo: las dudas más comunes, resueltas.',
+    url: 'https://deudaoff.com/preguntas-frecuentes',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 const FAQS = [

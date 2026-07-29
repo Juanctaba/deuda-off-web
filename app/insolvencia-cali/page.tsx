@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Insolvencia de Persona Natural en Cali — Deuda OFF',
   description: 'Proceso de insolvencia de persona natural en Cali y el Valle del Cauca. Suspende embargos y negocia tus deudas con la Ley 2445 de 2025. Consulta gratuita.',
   alternates: { canonical: 'https://deudaoff.com/insolvencia-cali' },
-  keywords: 'insolvencia persona natural cali, abogado insolvencia cali, deudas cali valle del cauca, proceso insolvencia cali',
+  openGraph: {
+    title: 'Insolvencia de Persona Natural en Cali — Deuda OFF',
+    description: 'Suspende embargos y reorganiza tus deudas en Cali con la Ley 2445 de 2025. Consulta gratuita y atención virtual.',
+    url: 'https://deudaoff.com/insolvencia-cali',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function InsolvenciaCali() {

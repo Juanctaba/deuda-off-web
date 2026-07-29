@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   title: 'Blog sobre Insolvencia de Persona Natural en Colombia — Ley 2445 de 2025 | Deuda OFF',
   description: 'Guías, artículos y recursos sobre insolvencia de persona natural en Colombia: Ley 2445 de 2025, requisitos, proceso paso a paso, cómo evitar embargos y tus derechos como deudor.',
   alternates: { canonical: 'https://deudaoff.com/blog' },
+  openGraph: {
+    title: 'Blog sobre Insolvencia de Persona Natural en Colombia',
+    description: 'Guías sobre la Ley 2445 de 2025, requisitos, proceso paso a paso y tus derechos como deudor.',
+    url: 'https://deudaoff.com/blog',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 const CATEGORY_COLORS: Record<string, string> = {

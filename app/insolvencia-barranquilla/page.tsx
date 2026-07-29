@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Insolvencia de Persona Natural en Barranquilla — Deuda OFF',
   description: 'Proceso de insolvencia de persona natural en Barranquilla y el Atlántico. Frena embargos, negocia tus deudas legalmente. Primera consulta gratis.',
   alternates: { canonical: 'https://deudaoff.com/insolvencia-barranquilla' },
-  keywords: 'insolvencia persona natural barranquilla, abogado insolvencia barranquilla, deudas barranquilla atlantico, proceso insolvencia barranquilla',
+  openGraph: {
+    title: 'Insolvencia de Persona Natural en Barranquilla — Deuda OFF',
+    description: 'Suspende embargos y reorganiza tus deudas en Barranquilla con la Ley 2445 de 2025. Consulta gratuita y atención virtual.',
+    url: 'https://deudaoff.com/insolvencia-barranquilla',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function InsolvenciaBarranquilla() {

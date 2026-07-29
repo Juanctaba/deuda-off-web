@@ -5,7 +5,14 @@ export const metadata: Metadata = {
   title: 'Insolvencia de Persona Natural en Bogotá — Deuda OFF',
   description: 'Proceso de insolvencia de persona natural en Bogotá. Suspende embargos, negocia tus deudas y empieza de nuevo con la Ley 2445 de 2025. Consulta gratuita.',
   alternates: { canonical: 'https://deudaoff.com/insolvencia-bogota' },
-  keywords: 'insolvencia persona natural bogota, abogado insolvencia bogota, deudas bogota colombia, proceso insolvencia bogota',
+  openGraph: {
+    title: 'Insolvencia de Persona Natural en Bogotá — Deuda OFF',
+    description: 'Suspende embargos y reorganiza tus deudas en Bogotá con la Ley 2445 de 2025. Consulta gratuita y atención virtual.',
+    url: 'https://deudaoff.com/insolvencia-bogota',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function InsolvenciaBogota() {
