@@ -18,8 +18,8 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ley-2445-de-2025-insolvencia-colombia',
-    title: 'Ley 2445 de 2025: qué cambió en la insolvencia de persona natural',
-    description: 'Guía completa de la Ley 2445 de 2025 con el articulado citado: quién puede acogerse, los tres procedimientos, qué pasa desde la aceptación, cuánto cuesta y cuánto dura el proceso.',
+    title: 'Ley 2445 de 2025: la nueva Ley de Insolvencia en Colombia explicada',
+    description: 'Vigente desde febrero de 2025. Qué cambió, quiénes pueden acogerse, cuánto tarda y cómo frena embargos. Guía con el articulado citado, actualizada 2026.',
     date: '2026-04-10',
     dateModified: '2026-07-29',
     category: 'Legislación',
@@ -473,7 +473,7 @@ export const BLOG_POSTS: BlogPost[] = [
     about: ['Consecuencias no pagar deudas Colombia', 'Embargo de salario Colombia', 'Datacrédito Colombia'],
     mentions: ['Datacrédito TransUnion Colombia', 'Cifin Experian Colombia', 'Superintendencia de Industria y Comercio'],
     content: `
-<p class="definicion"><strong>Respuesta directa:</strong> Si no pagas tus deudas en Colombia, las consecuencias progresan en 5 fases: (1) llamadas de cobranza, (2) reporte a Datacrédito y Cifin, (3) cesión de cartera a empresa cobradora, (4) demanda ejecutiva ante juzgado civil y (5) embargo de salario, cuentas o bienes. Este proceso puede tomar de 6 a 18 meses. La salida legal es acogerse al proceso de insolvencia de persona natural bajo la Ley 2445 de 2025.</p>
+<p class="definicion"><strong>Respuesta directa:</strong> Si no pagas tus deudas en Colombia, las consecuencias progresan en 5 fases: (1) llamadas de cobranza, (2) reporte a Datacrédito y Cifin, (3) cesión de cartera a empresa cobradora, (4) demanda ejecutiva ante juzgado civil y (5) embargo de salario, cuentas o bienes. Este proceso puede tomar de 6 a 18 meses. La salida legal es acogerse al proceso de insolvencia de persona natural bajo la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">Ley 2445 de 2025</a>.</p>
 
 <p>Si estás considerando simplemente dejar de pagar y esperar que pase, este artículo te explica exactamente lo que ocurre en Colombia — y por qué existe una alternativa legal mucho mejor.</p>
 
@@ -535,8 +535,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'como-evitar-un-embargo-colombia',
-    title: 'Cómo Evitar un Embargo en Colombia: Guía Legal 2026',
-    description: 'Aprende qué pueden y qué NO pueden embargar en Colombia, cómo funciona el proceso de embargo y cómo la insolvencia de persona natural puede protegerte.',
+    title: 'Cómo evitar un embargo en Colombia: qué pueden y qué NO pueden embargarte',
+    description: 'Tu salario mínimo, tu vivienda familiar y tus enseres están protegidos por ley. Conoce los límites del embargo en Colombia y cómo frenarlo legalmente.',
     date: '2026-04-28',
     dateModified: '2026-05-01',
     category: 'Educación Financiera',
@@ -604,13 +604,15 @@ export const BLOG_POSTS: BlogPost[] = [
   <li>Notifica a tus acreedores sobre el proceso iniciado.</li>
 </ol>
 
+<p>Todo lo anterior se rige por <a href="/blog/ley-2445-de-2025-insolvencia-colombia">la nueva ley de insolvencia</a>, cuyos requisitos y efectos explicamos en detalle.</p>
+
 <blockquote>En Deuda OFF hemos ayudado a más de 750 colombianos a proteger su salario, su casa y su tranquilidad desde 2020. La consulta inicial no tiene ningún costo.</blockquote>
     `,
   },
   {
     slug: 'acoso-de-cobranza-colombia-ley',
-    title: 'Acoso de Cobranza en Colombia: Tus Derechos y Cómo Denunciarlo',
-    description: 'Conoce qué es legal e ilegal en las llamadas de cobranza en Colombia, cuáles son tus derechos como deudor y cómo denunciar el acoso ante la SIC.',
+    title: '¿Hasta qué hora pueden llamarte a cobrar? Ley de acoso de cobranza en Colombia',
+    description: 'Solo pueden llamarte de lunes a sábado, de 7 a.m. a 7 p.m., y no pueden contactar a tus familiares. Conoce tus derechos y cómo denunciar el acoso ante la SIC.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Derechos del Deudor',
@@ -664,6 +666,8 @@ export const BLOG_POSTS: BlogPost[] = [
   <li>Negocias la deuda a condiciones que puedas cumplir.</li>
   <li>Al finalizar el acuerdo, las deudas quedan extintas.</li>
 </ul>
+
+<p>Si quieres el detalle normativo, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>, con el articulado citado.</p>
 
 <blockquote>No tienes que aguantar el acoso. Tienes derechos como deudor y la ley colombiana te protege. En Deuda OFF te explicamos cómo ejercerlos sin costo en tu primera consulta.</blockquote>
     `,
@@ -731,6 +735,8 @@ export const BLOG_POSTS: BlogPost[] = [
   <li><strong>Acuerdo:</strong> se pactan las nuevas condiciones de pago con todos los acreedores simultáneamente.</li>
 </ol>
 
+<p>Para entender el alcance completo de <a href="/blog/ley-2445-de-2025-insolvencia-colombia">el régimen de insolvencia vigente</a>, consulta nuestra guía de la Ley 2445 de 2025.</p>
+
 <blockquote>Si tienes deudas con cooperativas y estás siendo presionado para pagar, la insolvencia de persona natural te da protección legal inmediata desde el primer día. No es necesario esperar a que te embargen para actuar.</blockquote>
     `,
   },
@@ -745,7 +751,7 @@ export const BLOG_POSTS: BlogPost[] = [
     about: ['Deudas bancarias insolvencia Colombia', 'Negociación con bancos insolvencia', 'Ley 2445 de 2025'],
     mentions: ['Davivienda', 'Bancolombia', 'Banco de Bogotá', 'Superintendencia Financiera de Colombia', 'Superintendencia de Sociedades'],
     content: `
-<p class="definicion"><strong>Respuesta directa:</strong> Las deudas con bancos como Davivienda, Bancolombia o Banco de Bogotá se pueden incluir en el proceso de insolvencia de persona natural bajo la Ley 2445 de 2025. Esto incluye tarjetas de crédito, créditos de consumo, préstamos de libre inversión y créditos hipotecarios. Desde la radicación, los bancos no pueden seguir cobrando ni ejecutar nuevos embargos.</p>
+<p class="definicion"><strong>Respuesta directa:</strong> Las deudas con bancos como Davivienda, Bancolombia o Banco de Bogotá se pueden incluir en el proceso de insolvencia de persona natural bajo la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">Ley 2445 de 2025</a>. Esto incluye tarjetas de crédito, créditos de consumo, préstamos de libre inversión y créditos hipotecarios. Desde la radicación, los bancos no pueden seguir cobrando ni ejecutar nuevos embargos.</p>
 
 <p>Los bancos son el tipo de acreedor más frecuente en los procesos de insolvencia en Colombia. Davivienda, Bancolombia, Banco de Bogotá, BBVA, Scotiabank Colpatria y otros participan regularmente en audiencias de negociación ante la Superintendencia de Sociedades y Centros de Conciliación autorizados por el Ministerio de Justicia.</p>
 
@@ -800,8 +806,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'rapicredit-prestamos-alto-costo-insolvencia',
-    title: 'Rapicredit y préstamos de alto costo: cómo salir legalmente con insolvencia',
-    description: 'Los créditos de Rapicredit, FGA y otros prestamistas de alto costo se pueden incluir en el proceso de insolvencia de persona natural. Conoce tus derechos y cómo protegerte del acoso de cobranza.',
+    title: '¿Rapicredit puede embargar tu sueldo? Qué dice la ley colombiana',
+    description: 'Rapicredit y los prestamistas de alto costo sí pueden iniciar cobro judicial, pero hay límites legales sobre tu salario. Conoce qué pueden embargar y cómo protegerte.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Derechos del Deudor',
@@ -874,6 +880,8 @@ export const BLOG_POSTS: BlogPost[] = [
   <li>Negocia todas tus deudas — bancos, cooperativas, Rapicredit — en un solo proceso.</li>
   <li>Te da un nuevo comienzo financiero respaldado por la ley.</li>
 </ul>
+
+<p>Todo lo anterior se rige por <a href="/blog/ley-2445-de-2025-insolvencia-colombia">la nueva ley de insolvencia</a>, cuyos requisitos y efectos explicamos en detalle.</p>
 
 <blockquote>Si tienes deudas con Rapicredit u otros prestamistas de alto costo y el acoso no te deja vivir, tienes derechos. La Ley 2445 de 2025 fue diseñada exactamente para situaciones como la tuya. En Deuda OFF la primera consulta es gratuita.</blockquote>
     `,
@@ -978,6 +986,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p><strong>¿Puedo incluir deudas con la DIAN?</strong><br/>Las obligaciones tributarias tienen un tratamiento especial en insolvencia. Algunas pueden incluirse, otras tienen prioridad de pago garantizada por ley. Tu abogado debe revisar el estado exacto de tus obligaciones con la DIAN antes de la radicación.</p>
 
+<p>Si quieres el detalle normativo, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>, con el articulado citado.</p>
+
 <blockquote>Si tienes un negocio pequeño con deudas que no puedes pagar, la Ley 2445 de 2025 te reconoce por primera vez el mismo derecho que siempre tuvieron los asalariados: un proceso legal para reorganizar tus deudas y proteger tu patrimonio. En Deuda OFF — Núcleo Jurídico SAS, la primera consulta es gratuita.</blockquote>
     `,
   },
@@ -1069,6 +1079,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <p><strong>¿El proceso afecta la custodia de menores de edad?</strong><br/>No. El proceso de insolvencia es un procedimiento civil-comercial que no tiene ninguna implicación sobre la custodia ni los derechos de los hijos menores. Las cuotas alimentarias tampoco pueden incluirse en el proceso.</p>
 
 <p><strong>¿Podemos hacer el proceso si uno está reportado en Datacrédito y el otro no?</strong><br/>Sí. El estado en centrales de riesgo no es un requisito de elegibilidad para el proceso. Lo que determina si calificas es la situación de mora con los acreedores, no el reporte en Datacrédito.</p>
+
+<p>Para entender el alcance completo de <a href="/blog/ley-2445-de-2025-insolvencia-colombia">el régimen de insolvencia vigente</a>, consulta nuestra guía de la Ley 2445 de 2025.</p>
 
 <blockquote>Si en tu hogar las deudas superan la capacidad de pago de toda la familia, la insolvencia conjunta puede ser la salida más eficiente: un solo proceso, un solo acuerdo y un ahorro real en honorarios. En Deuda OFF la primera consulta es gratuita y sin compromiso.</blockquote>
     `,
@@ -1177,6 +1189,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <p><strong>¿Puedo abrir cuenta de ahorros mientras estoy reportado?</strong><br/>Sí. Estar reportado en Datacrédito no impide abrir una cuenta de ahorros básica. Lo que puede afectarse es el acceso a créditos, tarjetas o productos financieros que requieren consulta de centrales de riesgo como requisito.</p>
 
 <p><strong>¿Qué pasa con el reporte si la insolvencia no llega a acuerdo?</strong><br/>Si el proceso de insolvencia termina sin acuerdo (fracaso de la negociación), el deudor puede pasar directamente a liquidación patrimonial. Al completarse la liquidación y extinguirse las deudas, los plazos de caducidad del reporte empiezan a correr de la misma forma.</p>
+
+<p>El marco normativo completo está en la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">Ley 2445 de 2025</a>, que analizamos artículo por artículo en nuestra guía.</p>
 
 <blockquote>Declararse insolvente no significa quedar marcado de por vida. La ley colombiana establece plazos claros, derechos concretos y un camino real para recuperar tu historial crediticio. El primer paso es extinguir la deuda legalmente — y eso es exactamente lo que hace el proceso de insolvencia. En Deuda OFF la primera consulta es gratuita.</blockquote>
     `,
@@ -1370,6 +1384,8 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>La decisión correcta depende de números concretos: cuánto debes, a quiénes, desde cuándo y qué capacidad de pago real tienes. Esa es exactamente la evaluación que hacemos sin costo en la consulta inicial.</p>
 
+<p>Todo lo anterior se rige por <a href="/blog/ley-2445-de-2025-insolvencia-colombia">la nueva ley de insolvencia</a>, cuyos requisitos y efectos explicamos en detalle.</p>
+
 <blockquote>Ningún proceso legal es gratis en términos de consecuencias. La diferencia entre que la insolvencia sea una solución o un problema está en el diagnóstico previo, no en el trámite.</blockquote>
     `,
   },
@@ -1488,6 +1504,8 @@ export const BLOG_POSTS: BlogPost[] = [
 </ul>
 
 <p>Un detalle técnico que puede inclinar la balanza: para ese cálculo del 30% <strong>no se cuentan los créditos que se estén pagando por libranza o descuento de nómina</strong>, salvo que hayan dejado de abonarse. Si buena parte de tu deuda se descuenta del sueldo automáticamente, el porcentaje se calcula sobre el resto.</p>
+
+<p>Para entender el alcance completo de <a href="/blog/ley-2445-de-2025-insolvencia-colombia">el régimen de insolvencia vigente</a>, consulta nuestra guía de la Ley 2445 de 2025.</p>
 
 <p>Si los tres se cumplen, estás en cesación de pagos en el sentido del artículo 538 y puedes solicitar el procedimiento. Verificarlo con precisión es el primer paso, y es gratuito en nuestra consulta inicial.</p>
     `,
@@ -1737,6 +1755,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>Qué hacer ahora</h2>
 
 <p>Si confirmaste que tienes un embargo, el orden razonable es: identificar el proceso y el despacho, verificar que los descuentos respetan los topes legales, y evaluar si tu situación configura la cesación de pagos del artículo 538 —mora superior a 90 días con dos o más acreedores y al menos el 30% del pasivo en mora—. Si la configura, el procedimiento de insolvencia es la vía para suspender la ejecución y renegociar.</p>
+
+<p>Si quieres el detalle normativo, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>, con el articulado citado.</p>
 
 <p>Un embargo no se resuelve esperando. En Deuda OFF revisamos tu caso sin costo y te decimos con claridad qué protección puedes activar y en cuánto tiempo.</p>
     `,
