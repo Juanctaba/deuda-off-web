@@ -44,7 +44,7 @@ const TESTIMONIALS = [
     initials: 'CR',
     name: 'Carlos Rodriguez',
     city: 'Bogotá, D.C.',
-    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF logramos un acuerdo donde pago solo lo que puedo y recuperé mi casa. Gracias infinitas."',
+    text: '"Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF el proceso avanzó ante el conciliador y pude conservar mi vivienda. Gracias infinitas."',
   },
   {
     initials: 'MG',

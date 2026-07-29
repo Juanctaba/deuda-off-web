@@ -38,7 +38,7 @@ const TESTIMONIALS = [
     initials: 'CR',
     name: 'Carlos Rodríguez',
     city: 'Bogotá, D.C.',
-    text: 'Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF logramos un acuerdo donde pago solo lo que puedo y recuperé mi tranquilidad.',
+    text: 'Debía más de 120 millones y los bancos me tenían desesperado. Con Deuda OFF el proceso avanzó ante el conciliador y pude conservar mi vivienda.',
   },
   {
     initials: 'ML',
@@ -51,6 +51,28 @@ const TESTIMONIALS = [
     name: 'Juan Felipe Ortiz',
     city: 'Cali, Valle del Cauca',
     text: 'Tenía 95 millones en tarjetas y libranzas. En 4 meses ya tenía un acuerdo de pago real. Volví a respirar.',
+  },
+]
+
+/** Criterios del artículo 538 del CGP, modificado por la Ley 2445 de 2025. */
+const ELEGIBILIDAD = [
+  {
+    n: '1',
+    title: 'Mora superior a 90 días',
+    desc: 'Incumples dos o más obligaciones frente a dos o más acreedores por más de noventa días.',
+    destacado: false,
+  },
+  {
+    n: '2',
+    title: 'O dos o más procesos de cobro',
+    desc: 'Hay en tu contra dos o más procesos de cobro, de ejecución especial o de restitución por mora en el arriendo.',
+    destacado: false,
+  },
+  {
+    n: '3',
+    title: 'Las deudas en mora superan el 30%',
+    desc: 'Esas obligaciones representan al menos el 30% de tu pasivo total. Antes de 2025 el umbral era del 50%.',
+    destacado: true,
   },
 ]
 
@@ -206,6 +228,56 @@ export default function ConsultaGratuita() {
                 Quiero mi Consulta Gratuita
                 <span className="material-symbols-outlined">arrow_forward</span>
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 3.5 ELEGIBILIDAD Y DURACIÓN ────────────────── */}
+        <section className="py-16 sm:py-20 px-5">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-manrope text-3xl sm:text-4xl font-bold text-primary leading-tight">
+                ¿Calificas? Estos son los criterios de la ley
+              </h2>
+              <p className="text-on-surface-variant mt-3 text-base sm:text-lg max-w-2xl mx-auto">
+                El artículo 538 del Código General del Proceso define cuándo estás en cesación de pagos. Debes cumplir
+                uno de los dos primeros criterios y además el tercero.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-4">
+              {ELEGIBILIDAD.map(c => (
+                <div key={c.title} className="bg-white p-5 rounded-2xl border border-outline-variant/30 shadow-card">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center font-manrope font-bold text-white text-sm ${c.destacado ? 'bg-secondary' : 'bg-primary'}`}>
+                      {c.n}
+                    </div>
+                    <span className={`text-[10px] font-bold uppercase tracking-wider ${c.destacado ? 'text-secondary' : 'text-on-surface-variant'}`}>
+                      {c.destacado ? 'Y además' : 'O'}
+                    </span>
+                  </div>
+                  <h3 className="font-manrope font-bold text-primary text-sm mb-1.5 leading-snug">{c.title}</h3>
+                  <p className="text-on-surface-variant text-sm leading-relaxed">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 bg-surface-container rounded-2xl p-6 border border-outline-variant/40">
+              <h3 className="font-manrope font-bold text-primary mb-2 flex items-center gap-2">
+                <span className="material-symbols-outlined text-secondary">schedule</span>
+                ¿Cuánto tarda?
+              </h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">
+                La ley fija <strong className="text-on-surface">60 días</strong> para el procedimiento de negociación
+                desde que queda en firme la aceptación de la solicitud (artículo 544), prorrogables por 30 días más.
+                En la práctica, entre la preparación del expediente, la radicación y la ejecución del acuerdo, el
+                proceso completo suele tomar <strong className="text-on-surface">entre 3 y 8 meses</strong> según la
+                complejidad del caso y el número de acreedores.
+              </p>
+              <p className="text-on-surface-variant text-sm leading-relaxed mt-3">
+                Lo importante: la protección legal no llega al final. Desde que se acepta tu solicitud se suspenden
+                los embargos, los procesos ejecutivos y los descuentos de nómina.
+              </p>
             </div>
           </div>
         </section>
