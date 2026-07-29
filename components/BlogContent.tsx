@@ -13,6 +13,9 @@ export function BlogContent({ html }: { html: string }) {
         [&_blockquote]:border-l-4 [&_blockquote]:border-secondary [&_blockquote]:pl-5 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-on-surface-variant [&_blockquote]:my-6
         [&_.definicion]:bg-secondary-container [&_.definicion]:border-l-4 [&_.definicion]:border-secondary [&_.definicion]:px-5 [&_.definicion]:py-4 [&_.definicion]:rounded-r-xl [&_.definicion]:mb-6 [&_.definicion]:text-on-surface [&_.definicion]:not-italic
         [&_.definicion_strong]:text-secondary [&_.definicion_strong]:font-bold
+        [&_.pilar-link]:bg-surface-container [&_.pilar-link]:border [&_.pilar-link]:border-outline-variant/50 [&_.pilar-link]:px-5 [&_.pilar-link]:py-4 [&_.pilar-link]:rounded-xl [&_.pilar-link]:mb-6 [&_.pilar-link]:text-sm [&_.pilar-link]:text-on-surface-variant
+        [&_.pilar-link_strong]:text-primary [&_.pilar-link_strong]:font-bold
+        [&_.pilar-link_a]:text-secondary [&_.pilar-link_a]:font-semibold
       "
       dangerouslySetInnerHTML={{ __html: html }}
     />

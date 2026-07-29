@@ -25,6 +25,8 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
 <p class="definicion"><strong>Definición:</strong> La Ley 2445 de 2025 es la ley colombiana que modernizó el régimen de insolvencia de persona natural no comerciante. Vigente desde febrero de 2025, establece los procedimientos legales para que ciudadanos colombianos reorganicen o liquiden sus deudas de forma oficial, con protección del Estado frente a sus acreedores.</p>
 
+<p class="pilar-link">📘 <strong>Guía completa y actualizada:</strong> consulta nuestra <a href="/ley-2445-de-2025">guía de la Ley 2445 de 2025</a>, con el ámbito de aplicación, los requisitos de acceso, los tres procedimientos disponibles y las fuentes normativas oficiales citadas.</p>
+
 <p>En febrero de 2025, Colombia actualizó su marco legal para proteger a los ciudadanos más endeudados. La <strong>Ley 2445 de 2025</strong> creó un régimen más ágil y accesible que el anterior, eliminando barreras de acceso y fortaleciendo las herramientas de protección para el deudor. Si estás abrumado por deudas en Colombia, esta ley fue diseñada para ti.</p>
 
 <h2>¿Qué es la Ley 2445 de 2025?</h2>
@@ -93,6 +95,8 @@ export const BLOG_POSTS: BlogPost[] = [
     mentions: ['Superintendencia de Sociedades', 'Ministerio de Justicia Colombia', 'Centros de Conciliación Colombia'],
     content: `
 <p class="definicion"><strong>Respuesta directa:</strong> El proceso de insolvencia de persona natural en Colombia tiene 6 etapas: (1) diagnóstico gratuito, (2) recopilación de documentos y radicación, (3) notificación a acreedores, (4) audiencia de negociación, (5) ejecución del acuerdo y (6) extinción de deudas. Desde la radicación, tienes protección legal inmediata contra embargos y cobros coercitivos.</p>
+
+<p class="pilar-link">📘 <strong>Guía completa:</strong> revisa nuestra página sobre el <a href="/insolvencia-persona-natural">procedimiento de insolvencia de persona natural</a>, con quién califica, qué pasa con tus bienes, costos y tiempos.</p>
 
 <p>El proceso de insolvencia de persona natural bajo la Ley 2445 de 2025 está diseñado para ser claro y predecible. A continuación, cada etapa con sus tiempos y efectos concretos.</p>
 
@@ -168,6 +172,8 @@ export const BLOG_POSTS: BlogPost[] = [
     mentions: ['Superintendencia de Sociedades', 'Registro Mercantil Colombia', 'DIAN Colombia'],
     content: `
 <p class="definicion"><strong>Respuesta directa:</strong> Pueden acogerse a la insolvencia de persona natural en Colombia las personas naturales no comerciantes que no pueden pagar sus deudas con al menos dos acreedores diferentes. No se requiere un monto mínimo de deuda específico bajo la Ley 2445 de 2025, y el proceso aplica para empleados, independientes, pensionados y desempleados con bienes.</p>
+
+<p class="pilar-link">📘 <strong>Guía completa:</strong> consulta los <a href="/insolvencia-persona-natural">requisitos detallados del procedimiento de insolvencia</a> y la <a href="/ley-2445-de-2025">guía de la Ley 2445 de 2025</a>, con las fuentes normativas oficiales.</p>
 
 <p>La mayoría de colombianos con deudas que no pueden pagar califican para el proceso. A continuación, los criterios exactos de elegibilidad y los documentos necesarios.</p>
 
