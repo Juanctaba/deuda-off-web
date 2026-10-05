@@ -176,7 +176,7 @@ export default function Home() {
                 Acógete a la Ley de Insolvencia de Persona Natural. Protege tu patrimonio, frena embargos y recupera tu tranquilidad financiera con expertos.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <a href="#formulario"
+                <a href="/consulta-gratuita"
                   className="h-14 px-8 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-card-lg hover:opacity-90 transition-all">
                   Quiero mi Consulta Gratuita
                   <span className="material-symbols-outlined text-xl">arrow_forward</span>
@@ -572,7 +572,7 @@ export default function Home() {
               <p className="text-sm text-white/60">
                 <strong className="text-white">WhatsApp:</strong> +57 305 239 6052
               </p>
-              <a href="#formulario"
+              <a href="/consulta-gratuita"
                 className="bg-secondary text-primary px-4 py-2.5 rounded-lg font-bold text-sm hover:opacity-90 transition-all text-center">
                 Consulta Gratuita
               </a>
