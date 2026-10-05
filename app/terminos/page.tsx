@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'Términos y Condiciones — Deuda OFF',
   description: 'Términos y condiciones del servicio de asesoría en insolvencia de persona natural de Deuda OFF, marca de Núcleo Jurídico SAS.',
   alternates: { canonical: 'https://deudaoff.com/terminos' },
+  openGraph: {
+    title: 'Términos y Condiciones — Deuda OFF',
+    description: 'Términos y condiciones del servicio de asesoría en insolvencia de persona natural de Deuda OFF, marca de Núcleo Jurídico SAS.',
+    url: 'https://deudaoff.com/terminos',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function Terminos() {

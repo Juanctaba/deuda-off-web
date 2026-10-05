@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'Aviso Legal — Deuda OFF',
   description: 'Aviso legal del sitio web deudaoff.com, operado por Núcleo Jurídico SAS, especialistas en insolvencia de persona natural en Colombia.',
   alternates: { canonical: 'https://deudaoff.com/aviso-legal' },
+  openGraph: {
+    title: 'Aviso Legal — Deuda OFF',
+    description: 'Aviso legal del sitio web deudaoff.com, operado por Núcleo Jurídico SAS, especialistas en insolvencia de persona natural en Colombia.',
+    url: 'https://deudaoff.com/aviso-legal',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function AvisoLegal() {
