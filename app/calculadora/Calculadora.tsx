@@ -442,8 +442,8 @@ export default function Calculadora() {
   const pct = Math.round((currentStep / STEPS.length) * 100)
 
   return (
-    <div className="bg-surface min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg:py-12">
+    <div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 lg:py-8">
         <div className="grid lg:grid-cols-[340px_1fr] gap-6 lg:gap-10">
           {/* Sidebar */}
           <aside className="bg-primary text-white rounded-3xl p-6 sm:p-8 lg:sticky lg:top-24 lg:self-start flex flex-col gap-6 overflow-hidden relative">
@@ -452,9 +452,9 @@ export default function Calculadora() {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 border border-secondary/40 text-secondary text-[10px] font-bold uppercase tracking-wider mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary" /> Verificación confidencial
               </span>
-              <h1 className="font-manrope text-2xl sm:text-3xl font-bold leading-tight">
+              <p className="font-manrope text-2xl sm:text-3xl font-bold leading-tight">
                 ¿Puedo eliminar mis deudas <span className="text-secondary-fixed-dim">legalmente?</span>
-              </h1>
+              </p>
               <p className="text-sm text-blue-100/80 leading-relaxed mt-3">
                 Responde 6 preguntas y en 2 minutos sabrás si calificas para acogerte a la Ley 2445 de 2025.
               </p>
