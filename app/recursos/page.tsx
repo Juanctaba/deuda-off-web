@@ -52,7 +52,7 @@ export default function RecursosPage() {
 
       <Script
         src="https://app.trysoro.com/api/embed/e8016fb6-24c7-4925-a78d-73af8f0cde17"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
     </>
   )

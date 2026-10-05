@@ -168,6 +168,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Preconnect solo para Material Symbols — next/font ya gestiona fonts.gstatic.com */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.deudaoff.com" />
 
         {/* Material Symbols — rango restringido vs original (24,400,0..1 vs 20..48,100..700,0..1,-50..200) */}
         <link
