@@ -185,7 +185,7 @@ export default function PreguntasFrecuentes() {
               Habla directamente con un especialista. La consulta es gratuita y confidencial.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#formulario" className="bg-secondary text-primary px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
+              <Link href="/consulta-gratuita" className="bg-secondary text-primary px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-all">
                 Consulta Gratuita
               </Link>
               <a
