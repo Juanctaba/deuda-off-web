@@ -158,8 +158,10 @@ const schemaLegalService = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // suppressHydrationWarning: el script inline de MaterialSymbols puede añadir la
+  // clase ms-ready a <html> antes de que React hidrate (solo afecta a este nodo).
   return (
-    <html lang="es" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="es" className={`${manrope.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         {/* Preconnect solo para Material Symbols — next/font ya gestiona fonts.gstatic.com */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

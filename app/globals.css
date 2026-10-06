@@ -52,6 +52,12 @@ h1, h2, h3, h4, h5, h6 {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Oculta el nombre de la ligadura hasta que la fuente cargue (clase puesta por
+   components/MaterialSymbols.tsx). visibility conserva la caja → sin CLS. */
+html:not(.ms-ready) .material-symbols-outlined {
+  visibility: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
