@@ -67,7 +67,7 @@ export default function SiteHeader() {
           Calculadora
         </a>
         <a
-          href="#formulario"
+          href="/consulta-gratuita"
           className="hidden sm:inline-block bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-all"
         >
           Consulta Gratis
@@ -125,7 +125,7 @@ export default function SiteHeader() {
               WhatsApp
             </a>
             <a
-              href="#formulario"
+              href="/consulta-gratuita"
               onClick={() => setOpen(false)}
               className="bg-primary text-white px-5 py-3 rounded-lg text-sm font-bold hover:opacity-90 transition-all text-center"
             >

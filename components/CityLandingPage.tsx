@@ -113,7 +113,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
             </h1>
             <p className="text-lg text-on-surface-variant leading-relaxed">{intro}</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href="#formulario"
+              <a href="/consulta-gratuita"
                 className="h-14 px-8 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-card-lg hover:opacity-90 transition-all">
                 Quiero mi Consulta Gratuita
               </a>
@@ -122,6 +122,17 @@ export default function CityLandingPage({ city, department, slug, headline, intr
                 WhatsApp
               </a>
             </div>
+            <p className="text-sm text-on-surface-variant pt-1">
+              También puedes{' '}
+              <a href="#formulario" className="text-primary font-semibold underline underline-offset-2 hover:opacity-80">
+                dejar tus datos aquí
+              </a>
+              {' '}o ir a la{' '}
+              <a href="/consulta-gratuita" className="text-primary font-semibold underline underline-offset-2 hover:opacity-80">
+                página de consulta gratuita
+              </a>
+              .
+            </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 text-sm text-on-surface-variant">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-secondary inline-block" /> +750 casos resueltos
@@ -223,6 +234,7 @@ export default function CityLandingPage({ city, department, slug, headline, intr
             <p className="text-xs text-white/40 mt-1">Vigilado por la Superintendencia de Sociedades.</p>
           </div>
           <div className="flex gap-6 text-xs text-white/50">
+            <Link href="/consulta-gratuita" className="hover:text-white transition-colors">Consulta gratuita</Link>
             <Link href="/terminos" className="hover:text-white transition-colors">Términos</Link>
             <Link href="/privacidad" className="hover:text-white transition-colors">Privacidad</Link>
             <Link href="/aviso-legal" className="hover:text-white transition-colors">Aviso Legal</Link>
