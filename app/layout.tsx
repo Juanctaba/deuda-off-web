@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Manrope, Inter } from 'next/font/google'
 import Script from 'next/script'
 import ConditionalHeader from '@/components/ConditionalHeader'
+import MaterialSymbols from '@/components/MaterialSymbols'
 import './globals.css'
 
 const manrope = Manrope({
@@ -164,11 +165,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Material Symbols — rango restringido vs original (24,400,0..1 vs 20..48,100..700,0..1,-50..200) */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap"
-        />
+        {/* Material Symbols no bloqueante (client: media=print → all) */}
+        <MaterialSymbols />
 
         <Script
           id="gtm-script"
