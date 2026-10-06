@@ -158,7 +158,7 @@ export default function Home() {
       <main>
 
         {/* ── HERO ────────────────────────────────────── */}
-        <section className="min-h-[85vh] flex items-center px-5 py-16 max-w-7xl mx-auto">
+        <section className="min-h-[85vh] flex items-center px-5 py-16 max-w-7xl mx-auto overflow-x-hidden">
           <div className="grid md:grid-cols-2 gap-12 items-center w-full">
             {/* Left */}
             <div className="space-y-6">
