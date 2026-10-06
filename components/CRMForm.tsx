@@ -22,7 +22,7 @@ export default function CRMForm() {
         title="Form Web"
 
       />
-      <Script src="https://api.deudaoff.com/js/form_embed.js" strategy="afterInteractive" />
+      <Script src="https://api.deudaoff.com/js/form_embed.js" strategy="lazyOnload" />
     </div>
   )
 }
