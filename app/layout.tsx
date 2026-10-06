@@ -47,11 +47,6 @@ const schemaWebSite = {
   url: 'https://deudaoff.com',
   description: 'Servicio legal especializado en insolvencia de persona natural en Colombia bajo la Ley 2445 de 2025.',
   inLanguage: 'es-CO',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: 'https://deudaoff.com/blog?q={search_term_string}' },
-    'query-input': 'required name=search_term_string',
-  },
 }
 
 const schemaOrganization = {
@@ -91,7 +86,7 @@ const schemaOrganization = {
     { '@type': 'City', name: 'Bucaramanga' },
     { '@type': 'Country', name: 'Colombia' },
   ],
-  sameAs: [],
+  sameAs: ['https://www.instagram.com/deudaoff/'],
 }
 
 const schemaLegalService = {

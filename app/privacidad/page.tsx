@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'Política de Privacidad — Deuda OFF',
   description: 'Política de tratamiento de datos personales de Deuda OFF conforme a la Ley 1581 de 2012 de protección de datos en Colombia.',
   alternates: { canonical: 'https://deudaoff.com/privacidad' },
+  openGraph: {
+    title: 'Política de Privacidad — Deuda OFF',
+    description: 'Política de tratamiento de datos personales de Deuda OFF conforme a la Ley 1581 de 2012 de protección de datos en Colombia.',
+    url: 'https://deudaoff.com/privacidad',
+    siteName: 'Deuda OFF',
+    locale: 'es_CO',
+    type: 'website',
+  },
 }
 
 export default function Privacidad() {
