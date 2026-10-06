@@ -155,10 +155,10 @@ const FAQS = [
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="overflow-x-clip">
 
         {/* ── HERO ────────────────────────────────────── */}
-        <section className="min-h-[85vh] flex items-center px-5 py-16 max-w-7xl mx-auto overflow-x-hidden">
+        <section className="min-h-[85vh] flex items-center px-5 py-16 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center w-full">
             {/* Left */}
             <div className="space-y-6">
