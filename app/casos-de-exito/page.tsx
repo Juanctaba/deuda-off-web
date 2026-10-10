@@ -123,27 +123,6 @@ const breadcrumbSchema = {
   ],
 }
 
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://deudaoff.com/#legalservice',
-  name: 'Deuda OFF — Insolvencia de Persona Natural',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '750',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: CASES.map(c => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: c.initials },
-    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-    reviewBody: c.quote,
-    locationCreated: { '@type': 'City', name: c.city.split(',')[0] },
-  })),
-}
-
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -158,7 +137,6 @@ export default function CasosDeExito() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="min-h-screen bg-surface">
