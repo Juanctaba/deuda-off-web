@@ -516,6 +516,7 @@ export default function Home() {
                   { label: 'Ley 2445 de 2025', href: '/blog/ley-2445-de-2025-insolvencia-colombia' },
                   { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
                   { label: 'Casos de Éxito', href: '/casos-de-exito' },
+                  { label: '¿Por qué Deuda OFF?', href: '/por-que-deuda-off' },
                   { label: 'Blog', href: '/blog' },
                 ].map(item => (
                   <a key={item.label} href={item.href} className="text-sm text-white/60 hover:text-white transition-colors">
