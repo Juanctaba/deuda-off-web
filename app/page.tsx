@@ -105,27 +105,6 @@ const TESTIMONIALS = [
   },
 ]
 
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://deudaoff.com/#legalservice',
-  name: 'Deuda OFF — Insolvencia de Persona Natural',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '750',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: TESTIMONIALS.map(t => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: t.name },
-    reviewRating: { '@type': 'Rating', ratingValue: String(t.rating), bestRating: '5' },
-    datePublished: t.date,
-    reviewBody: t.text.replace(/"/g, ''),
-  })),
-}
-
 const BENEFITS = [
   { icon: 'balance',   title: 'Ley 2445 de 2025',      desc: 'Abogados especializados en la nueva Ley de Insolvencia de Persona Natural vigente desde 2025.' },
   { icon: 'verified',  title: '100% Legal',             desc: 'Procedimientos avalados por la Constitución y la Ley.' },
@@ -621,8 +600,6 @@ export default function Home() {
       />
       {/* ── Schema HowTo ────────────────────────────── */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      {/* ── Schema Review / AggregateRating ─────────── */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
     </>
   )
 }
