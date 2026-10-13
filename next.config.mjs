@@ -7,6 +7,13 @@ const nextConfig = {
       { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
     ],
   },
+  async rewrites() {
+    return [
+      // IndexNow: /<key>.txt lo sirve app/indexnow-key/[key]/route.ts con la key de
+      // INDEXNOW_KEY. Los .txt reales (robots, llms) tienen prioridad: van antes que los rewrites.
+      { source: '/:key([a-zA-Z0-9-]{8,128})\\.txt', destination: '/indexnow-key/:key' },
+    ]
+  },
   async redirects() {
     return [
       // Consolidación de contenido: se descartaron las páginas pilar duplicadas

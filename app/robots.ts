@@ -4,6 +4,7 @@ import type { MetadataRoute } from 'next'
 const ALLOWED_BOTS = [
   'Googlebot',       // Google Search, AI Overviews y AI Mode
   'Bingbot',         // Bing y Copilot
+  'msnbot',           // rastreador heredado de Bing
   'GPTBot',          // OpenAI (entrenamiento)
   'OAI-SearchBot',   // búsqueda de ChatGPT
   'ChatGPT-User',    // ChatGPT abriendo una página a pedido del usuario
