@@ -13,8 +13,11 @@
  * fonts.load resuelve con [] (hoja aún no aplicada), reintenta cada 100 ms.
  */
 export default function MaterialSymbols() {
+  // Solo los iconos usados (Google Fonts exige orden alfabético). Si agregas un icono, súmalo aquí.
+  // Incluye los iconos dinámicos ({x.icon} en home, consulta-gratuita, casos-de-exito, por-que-deuda-off;
+  // STATUS_BADGE/RESULT_THEME de Calculadora.tsx; close/menu de SiteHeader).
   const href =
-    'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=block'
+    'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&icon_names=arrow_forward,balance,block,calculate,calendar_today,call_end,cancel,celebration,chat,check_circle,close,credit_card_off,error,format_quote,gavel,heart_broken,info,laptop,link,location_on,lock,menu,mood_bad,payments,progress_activity,public,savings,schedule,search,send,shield_lock,star,swap_horiz,verified,verified_user,workspace_premium&display=block'
 
   return (
     <>
