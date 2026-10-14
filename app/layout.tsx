@@ -20,8 +20,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Ley de Insolvencia en Colombia: la salida legal a tus deudas | Deuda OFF',
-  description: 'Acógete a la Ley de Insolvencia de Persona Natural (Ley 2445 de 2025). Frena embargos y protege tu patrimonio. +750 casos desde 2020. Consulta gratis.',
+  title: 'Ley de Insolvencia en Colombia: salida legal a tus deudas',
+  description: 'Acógete a la Ley de Insolvencia de Persona Natural (Ley 2445 de 2025). Frena embargos y protege tu patrimonio. Consulta gratis.',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     languages: { 'es-CO': 'https://deudaoff.com/' },
   },
   openGraph: {
-    title: 'Ley de Insolvencia en Colombia: la salida legal a tus deudas | Deuda OFF',
+    title: 'Ley de Insolvencia en Colombia: salida legal a tus deudas',
     description: '+750 casos resueltos desde 2020. Primera consulta gratuita. Respaldados por Núcleo Jurídico.',
     url: 'https://deudaoff.com/',
     siteName: 'Deuda OFF',

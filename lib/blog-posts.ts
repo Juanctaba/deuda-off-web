@@ -1,6 +1,8 @@
 export interface BlogPost {
   slug: string
   title: string
+  /** Title SEO (<title>, og:title y headline) cuando el H1 es más largo; se usa tal cual, sin sufijo. */
+  seoTitle?: string
   description: string
   date: string
   dateModified: string
@@ -19,6 +21,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ley-2445-de-2025-insolvencia-colombia',
     title: 'Ley 2445 de 2025: la nueva Ley de Insolvencia en Colombia explicada',
+    seoTitle: 'Ley 2445 de 2025: la nueva Ley de Insolvencia explicada',
     description: 'Vigente desde febrero de 2025. Qué cambió, quiénes pueden acogerse, cuánto tarda y cómo frena embargos. Guía con el articulado citado, actualizada 2026.',
     date: '2026-04-10',
     dateModified: '2026-07-29',
@@ -308,6 +311,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'proceso-insolvencia-persona-natural-paso-a-paso',
     title: 'Proceso de Insolvencia Persona Natural: Guía Paso a Paso 2026',
+    seoTitle: 'Proceso de insolvencia de persona natural: paso a paso',
     description: 'Conoce cada etapa del proceso de insolvencia de persona natural en Colombia: desde el diagnóstico inicial hasta el fresh start. Tiempos, costos y qué esperar.',
     date: '2026-04-15',
     dateModified: '2026-07-29',
@@ -385,6 +389,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'requisitos-insolvencia-persona-natural-colombia',
     title: 'Requisitos para Acogerte a la Insolvencia de Persona Natural en Colombia',
+    seoTitle: 'Requisitos de la insolvencia de persona natural en Colombia',
     description: '¿Cumples los requisitos para la insolvencia de persona natural? Conoce quién puede aplicar, qué documentos necesitas y qué deudas se pueden incluir.',
     date: '2026-04-20',
     dateModified: '2026-07-29',
@@ -465,7 +470,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'que-pasa-si-no-pago-mis-deudas-colombia',
     title: '¿Qué Pasa si No Pago Mis Deudas en Colombia? Consecuencias y Salida Legal',
-    description: 'Conoce las consecuencias reales de no pagar deudas en Colombia: reportes en centrales de riesgo, embargos, procesos judiciales — y cómo evitarlos legalmente.',
+    seoTitle: '¿Qué pasa si no pago mis deudas en Colombia?',
+    description: 'Reportes en centrales de riesgo, cobro judicial y embargos: las consecuencias reales de no pagar deudas en Colombia y cómo evitarlas legalmente.',
     date: '2026-04-25',
     dateModified: '2026-05-01',
     category: 'Educación Financiera',
@@ -536,6 +542,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'como-evitar-un-embargo-colombia',
     title: 'Cómo evitar un embargo en Colombia: qué pueden y qué NO pueden embargarte',
+    seoTitle: 'Cómo evitar un embargo en Colombia: qué no pueden embargarte',
     description: 'Tu salario mínimo, tu vivienda familiar y tus enseres están protegidos por ley. Conoce los límites del embargo en Colombia y cómo frenarlo legalmente.',
     date: '2026-04-28',
     dateModified: '2026-05-01',
@@ -612,6 +619,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'acoso-de-cobranza-colombia-ley',
     title: '¿Hasta qué hora pueden llamarte a cobrar? Ley de acoso de cobranza en Colombia',
+    seoTitle: '¿Hasta qué hora pueden llamarte a cobrar en Colombia?',
     description: 'Solo pueden llamarte de lunes a sábado, de 7 a.m. a 7 p.m., y no pueden contactar a tus familiares. Conoce tus derechos y cómo denunciar el acoso ante la SIC.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
@@ -675,7 +683,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'deudas-cooperativas-insolvencia-colombia',
     title: 'Deudas con cooperativas en Colombia: ¿se pueden incluir en insolvencia?',
-    description: 'Sí, las deudas con cooperativas de ahorro y crédito pueden incluirse en el proceso de insolvencia de persona natural. Te explicamos cómo funciona y qué condiciones aplican bajo la Ley 2445 de 2025.',
+    seoTitle: 'Deudas con cooperativas: ¿entran en la insolvencia?',
+    description: 'Sí, las deudas con cooperativas de ahorro y crédito pueden incluirse en la insolvencia de persona natural. Cómo funciona bajo la Ley 2445 de 2025.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Guías',
@@ -743,7 +752,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'deudas-bancarias-insolvencia-davivienda-bancolombia',
     title: 'Deudas con Davivienda, Bancolombia o Banco de Bogotá: cómo funciona la insolvencia',
-    description: 'Los bancos son los principales acreedores en los procesos de insolvencia. Aprende cómo se negocian créditos hipotecarios, tarjetas y préstamos de consumo bancario bajo la Ley 2445 de 2025.',
+    seoTitle: 'Deudas con Bancolombia o Davivienda: cómo entran en insolvencia',
+    description: 'Cómo se negocian créditos hipotecarios, tarjetas y préstamos de consumo con los bancos en la insolvencia de persona natural (Ley 2445 de 2025).',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Guías',
@@ -807,6 +817,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'rapicredit-prestamos-alto-costo-insolvencia',
     title: '¿Rapicredit puede embargar tu sueldo? Qué dice la ley colombiana',
+    seoTitle: '¿Rapicredit puede embargar tu sueldo? Qué dice la ley',
     description: 'Rapicredit y los prestamistas de alto costo sí pueden iniciar cobro judicial, pero hay límites legales sobre tu salario. Conoce qué pueden embargar y cómo protegerte.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
@@ -889,7 +900,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'insolvencia-pequeno-comerciante-colombia-2025',
     title: 'Insolvencia para pequeños comerciantes en Colombia: lo que cambió con la Ley 2445 de 2025',
-    description: 'Desde 2025, los pequeños comerciantes en Colombia pueden acogerse al proceso de insolvencia. Descubre si calificas, qué activos se protegen y cómo funciona el proceso. Consulta gratuita.',
+    seoTitle: 'Insolvencia para pequeños comerciantes en Colombia',
+    description: 'Desde la Ley 2445 de 2025 los pequeños comerciantes pueden acogerse a la insolvencia. Si calificas, qué activos se protegen y cómo funciona.',
     date: '2026-05-01',
     dateModified: '2026-07-29',
     category: 'Legislación',
@@ -994,6 +1006,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'insolvencia-familiar-conjunta-colombia-ley-2445',
     title: 'Insolvencia familiar conjunta en Colombia: cómo funciona y cuánto ahorran',
+    seoTitle: 'Insolvencia familiar conjunta en Colombia: cómo funciona',
     description: '¿Tú y tu pareja tienen deudas? La Ley 2445 de 2025 permite iniciar el proceso de insolvencia en familia. El segundo proceso cuesta 50% menos. Consulta gratuita.',
     date: '2026-05-01',
     dateModified: '2026-07-29',
@@ -1087,8 +1100,9 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'como-salir-de-datacredito-despues-insolvencia-colombia',
-    title: '¿Cómo salir de Datacrédito después de la insolvencia? Guía 2025',
-    description: 'Después de la insolvencia en Colombia, tu historial en Datacrédito se actualiza. Conoce los plazos exactos, tus derechos y qué hacer para recuperar tu puntaje crediticio.',
+    title: '¿Cómo salir de Datacrédito después de la insolvencia?',
+    seoTitle: 'Cómo salir de Datacrédito después de la insolvencia',
+    description: 'Después de la insolvencia tu historial en Datacrédito se actualiza. Plazos, tus derechos y qué hacer para recuperar tu puntaje crediticio.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Educación Financiera',
@@ -1198,7 +1212,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'desventajas-ley-de-insolvencia',
     title: 'Desventajas de la Ley de Insolvencia: lo que nadie te cuenta antes de radicar',
-    description: 'Las desventajas reales del proceso de insolvencia de persona natural en Colombia, con el articulado citado: qué pasa si fracasa la negociación, cuánto tiempo debes esperar para volver a acogerte y en qué casos no conviene.',
+    seoTitle: 'Desventajas de la Ley de Insolvencia: lo que nadie te cuenta',
+    description: 'Las desventajas reales de la insolvencia de persona natural, con el articulado citado: si fracasa la negociación, cuándo puedes volver a acogerte y cuándo no conviene.',
     date: '2026-07-29',
     dateModified: '2026-07-29',
     category: 'Análisis',
@@ -1392,7 +1407,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'que-es-la-insolvencia',
     title: 'Qué es la insolvencia: definición legal, tipos y cómo funciona en Colombia',
-    description: 'Qué es la insolvencia económica, qué dice la ley colombiana, en qué se diferencia de la quiebra y la bancarrota, y cuándo una persona se considera legalmente en cesación de pagos.',
+    seoTitle: 'Qué es la insolvencia: definición, tipos y cómo funciona',
+    description: 'Qué es la insolvencia económica, qué dice la ley colombiana, en qué se diferencia de la quiebra y cuándo una persona está en cesación de pagos.',
     date: '2026-07-29',
     dateModified: '2026-07-29',
     category: 'Conceptos',
@@ -1513,7 +1529,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'como-declararse-en-insolvencia',
     title: 'Cómo declararse en insolvencia en Colombia: requisitos, documentos y pasos',
-    description: 'Guía práctica para declararse en insolvencia como persona natural en Colombia: los diez documentos que exige el artículo 539, ante quién se radica, qué pasa después y cuánto tarda.',
+    seoTitle: 'Cómo declararse en insolvencia en Colombia: pasos y documentos',
+    description: 'Los diez documentos que exige el artículo 539, ante quién se radica, qué pasa después y cuánto tarda declararse en insolvencia como persona natural.',
     date: '2026-07-29',
     dateModified: '2026-07-29',
     category: 'Guías',
@@ -1636,7 +1653,8 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'como-saber-si-tengo-un-embargo',
     title: 'Cómo saber si tengo un embargo en Colombia: 5 formas de verificarlo',
-    description: 'Cómo consultar si tienes un embargo sobre tu salario, cuenta bancaria o bienes en Colombia, qué señales lo anticipan y cómo suspenderlo legalmente con el proceso de insolvencia.',
+    seoTitle: 'Cómo saber si tengo un embargo en Colombia: 5 formas',
+    description: 'Cómo consultar si tienes un embargo sobre tu salario, cuenta o bienes en Colombia, qué señales lo anticipan y cómo suspenderlo con la insolvencia.',
     date: '2026-07-29',
     dateModified: '2026-07-29',
     category: 'Guías',

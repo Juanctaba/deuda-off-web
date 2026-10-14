@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog sobre Insolvencia de Persona Natural en Colombia — Ley 2445 de 2025 | Deuda OFF',
+  title: 'Blog de insolvencia de persona natural en Colombia',
   description: 'Guías, artículos y recursos sobre insolvencia de persona natural en Colombia: Ley 2445 de 2025, requisitos, proceso paso a paso, cómo evitar embargos y tus derechos como deudor.',
   alternates: { canonical: 'https://deudaoff.com/blog' },
   openGraph: {
