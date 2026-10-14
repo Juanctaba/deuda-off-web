@@ -4,11 +4,11 @@ import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Casos de Éxito en Insolvencia de Persona Natural — +750 Casos Resueltos | Deuda OFF',
-  description: 'Historias reales de colombianos que lograron salir de sus deudas legalmente con Deuda OFF. Más de 750 casos resueltos desde 2020 bajo la Ley de Insolvencia de Persona Natural.',
+  title: 'Casos de insolvencia de persona natural | Deuda OFF',
+  description: 'Casos reales de insolvencia de persona natural resueltos con Deuda OFF: colombianos que salieron de sus deudas legalmente con la Ley de Insolvencia.',
   alternates: { canonical: 'https://deudaoff.com/casos-de-exito' },
   openGraph: {
-    title: 'Casos de Éxito en Insolvencia de Persona Natural — +750 casos resueltos',
+    title: 'Casos de insolvencia de persona natural',
     description: 'Historias reales de colombianos que resolvieron sus deudas con el procedimiento de insolvencia. +750 casos desde 2020.',
     url: 'https://deudaoff.com/casos-de-exito',
     siteName: 'Deuda OFF',

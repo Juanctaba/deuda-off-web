@@ -27,11 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(params.slug)
   if (!post) return {}
   return {
-    title: `${post.title} | Deuda OFF`,
+    title: post.seoTitle ?? `${post.title} | Deuda OFF`,
     description: post.description,
     alternates: { canonical: `https://deudaoff.com/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.description,
       url: `https://deudaoff.com/blog/${post.slug}`,
       type: 'article',
@@ -72,7 +72,7 @@ export default function BlogPost({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     '@id': `https://deudaoff.com/blog/${post.slug}#article`,
-    headline: post.title,
+    headline: post.seoTitle ?? post.title,
     description: post.description,
     datePublished: post.date,
     dateModified: post.dateModified,

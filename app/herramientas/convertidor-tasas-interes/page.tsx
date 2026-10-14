@@ -6,12 +6,12 @@ import { WA_URL } from '@/lib/constants'
 const Convertidor = dynamic(() => import('./Convertidor'), { ssr: false })
 
 export const metadata: Metadata = {
-  title: 'Convertidor de tasas de interés: efectiva anual a mensual y viceversa',
+  title: 'Convertidor de tasas: efectiva anual a mensual y viceversa',
   description:
-    'Convierte tasas de interés efectivas entre periodos: de efectiva anual a mensual, de mensual a anual, trimestral, semestral o diaria. Calculadora gratuita con la fórmula explicada.',
+    'Convierte tasas efectivas entre periodos: de anual a mensual, de mensual a anual, trimestral, semestral o diaria. Gratis y con la fórmula explicada.',
   alternates: { canonical: 'https://deudaoff.com/herramientas/convertidor-tasas-interes' },
   openGraph: {
-    title: 'Convertidor de tasas de interés — efectiva anual a mensual',
+    title: 'Convertidor de tasas: efectiva anual a mensual y viceversa',
     description:
       'Calculadora gratuita para convertir tasas efectivas entre periodos, con la fórmula de capitalización compuesta explicada paso a paso.',
     url: 'https://deudaoff.com/herramientas/convertidor-tasas-interes',
