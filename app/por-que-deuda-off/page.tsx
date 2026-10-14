@@ -4,11 +4,11 @@ import CRMForm from '@/components/CRMForm'
 import { WA_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: '¿Por qué Deuda OFF? Comparativa de opciones para salir de deudas en Colombia',
+  title: '¿Por qué Deuda OFF? Opciones para salir de deudas en Colombia',
   description: 'Descubre por qué Deuda OFF es la opción más completa para el proceso de insolvencia de persona natural. Comparamos alternativas: hacerlo solo, gestores sin aval y abogados especializados.',
   alternates: { canonical: 'https://deudaoff.com/por-que-deuda-off' },
   openGraph: {
-    title: '¿Por qué Deuda OFF? Comparativa de opciones para salir de deudas',
+    title: '¿Por qué Deuda OFF? Opciones para salir de deudas en Colombia',
     description: 'Comparamos las alternativas reales: hacerlo solo, gestores sin aval y abogados especializados en insolvencia.',
     url: 'https://deudaoff.com/por-que-deuda-off',
     siteName: 'Deuda OFF',

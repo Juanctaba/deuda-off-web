@@ -752,7 +752,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'deudas-bancarias-insolvencia-davivienda-bancolombia',
     title: 'Deudas con Davivienda, Bancolombia o Banco de Bogotá: cómo funciona la insolvencia',
-    seoTitle: 'Deudas con Bancolombia o Davivienda: cómo entran en insolvencia',
+    seoTitle: 'Deudas con Bancolombia o Davivienda en insolvencia',
     description: 'Cómo se negocian créditos hipotecarios, tarjetas y préstamos de consumo con los bancos en la insolvencia de persona natural (Ley 2445 de 2025).',
     date: '2026-05-01',
     dateModified: '2026-05-01',
@@ -1007,7 +1007,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'insolvencia-familiar-conjunta-colombia-ley-2445',
     title: 'Insolvencia familiar conjunta en Colombia: cómo funciona y cuánto ahorran',
     seoTitle: 'Insolvencia familiar conjunta en Colombia: cómo funciona',
-    description: '¿Tú y tu pareja tienen deudas? La Ley 2445 de 2025 permite iniciar el proceso de insolvencia en familia. El segundo proceso cuesta 50% menos. Consulta gratuita.',
+    description: '¿Tú y tu pareja tienen deudas? La Ley 2445 de 2025 permite iniciar el proceso de insolvencia en familia. Consulta gratuita.',
     date: '2026-05-01',
     dateModified: '2026-07-29',
     category: 'Guías',
