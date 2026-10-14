@@ -52,7 +52,11 @@ export default function BlogPost({ params }: Props) {
   const post = getBlogPost(params.slug)
   if (!post) notFound()
 
-  const related = BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 3)
+  // Rotativo: los 3 posts siguientes (en círculo), para que todos reciban enlaces internos
+  const idx = BLOG_POSTS.findIndex(p => p.slug === post.slug)
+  const related = [1, 2, 3]
+    .map(k => BLOG_POSTS[(idx + k) % BLOG_POSTS.length])
+    .filter(p => p.slug !== post.slug)
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
