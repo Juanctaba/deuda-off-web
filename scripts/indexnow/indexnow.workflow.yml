@@ -1,0 +1,70 @@
+# COPIAR A .github/workflows/indexnow.yml (el token del bot no tiene scope "workflow";
+# lo agrega Juan desde la UI de GitHub o con un token con ese scope).
+name: IndexNow
+
+# Se ejecuta cuando Vercel marca un deploy de Production como exitoso.
+# Envía a api.indexnow.org solo el diff del sitemap contra el deploy anterior.
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo mostrar qué se enviaría"
+        type: boolean
+        default: true
+      submit_all:
+        description: "Alta inicial: enviar todo el sitemap filtrado"
+        type: boolean
+        default: false
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE_HOST: deudaoff.com
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts/indexnow-submit.mjs
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Restaurar snapshot del sitemap anterior
+        uses: actions/cache/restore@v4
+        with:
+          path: .indexnow/prev.json
+          key: indexnow-snapshot-${{ github.run_id }}
+          restore-keys: indexnow-snapshot-
+      - name: Esperar a que el dominio apunte al deploy nuevo
+        if: github.event_name == 'deployment_status'
+        run: sleep 30
+      - name: Diff del sitemap y envío a IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          PREV_SNAPSHOT: .indexnow/prev.json
+          NEW_SNAPSHOT: .indexnow/new.json
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '0' }}
+          SUBMIT_ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.submit_all && '1' || '0' }}
+        run: |
+          mkdir -p .indexnow
+          node scripts/indexnow-submit.mjs
+          mv .indexnow/new.json .indexnow/prev.json
+      - name: Guardar snapshot para el próximo deploy
+        if: success() && (github.event_name == 'deployment_status' || !inputs.dry_run)
+        uses: actions/cache/save@v4
+        with:
+          path: .indexnow/prev.json
+          key: indexnow-snapshot-${{ github.run_id }}
