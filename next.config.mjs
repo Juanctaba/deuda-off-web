@@ -23,5 +23,15 @@ const nextConfig = {
       },
     ]
   },
+  async headers() {
+    return [
+      {
+        // Alias duplicado del mismo proyecto Vercel; canonical = deudaoff.com
+        source: '/:path*',
+        has: [{ type: 'host', value: 'insolvencia.nucleojuridico.com.co' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, follow' }],
+      },
+    ]
+  },
 }
 export default nextConfig
