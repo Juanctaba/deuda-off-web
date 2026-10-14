@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Artículos, guías y recursos prácticos sobre insolvencia de persona natural en Colombia, Ley 2445 de 2025 y cómo proteger tu patrimonio.',
   alternates: { canonical: 'https://deudaoff.com/recursos' },
   openGraph: {
-    title: 'Recursos sobre Insolvencia de Persona Natural en Colombia',
+    title: 'Recursos sobre insolvencia de persona natural',
     description: 'Artículos, guías y recursos prácticos sobre la Ley 2445 de 2025 y cómo proteger tu patrimonio.',
     url: 'https://deudaoff.com/recursos',
     siteName: 'Deuda OFF',

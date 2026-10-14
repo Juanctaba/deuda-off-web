@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { WA_URL_FAQ } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Insolvencia de persona natural: preguntas frecuentes | Deuda OFF',
+  title: 'Preguntas frecuentes sobre insolvencia | Deuda OFF',
   description: 'Resuelve todas tus dudas sobre el proceso de insolvencia de persona natural en Colombia: costos, tiempos, bienes, deudas y más.',
   alternates: { canonical: 'https://deudaoff.com/preguntas-frecuentes' },
   openGraph: {
-    title: 'Insolvencia de persona natural: preguntas frecuentes',
+    title: 'Preguntas frecuentes sobre insolvencia',
     description: 'Costos, tiempos, bienes, requisitos y reportes en centrales de riesgo: las dudas más comunes, resueltas.',
     url: 'https://deudaoff.com/preguntas-frecuentes',
     siteName: 'Deuda OFF',

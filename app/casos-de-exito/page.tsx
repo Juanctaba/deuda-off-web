@@ -5,7 +5,7 @@ import { WA_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Casos de insolvencia de persona natural | Deuda OFF',
-  description: 'Historias reales de colombianos que lograron salir de sus deudas legalmente con Deuda OFF. Más de 750 casos resueltos desde 2020 bajo la Ley de Insolvencia de Persona Natural.',
+  description: 'Casos reales de insolvencia de persona natural resueltos con Deuda OFF: colombianos que salieron de sus deudas legalmente con la Ley de Insolvencia.',
   alternates: { canonical: 'https://deudaoff.com/casos-de-exito' },
   openGraph: {
     title: 'Casos de insolvencia de persona natural',
