@@ -818,7 +818,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'rapicredit-prestamos-alto-costo-insolvencia',
     title: '¿Rapicredit puede embargar tu sueldo? Qué dice la ley colombiana',
     seoTitle: '¿Rapicredit puede embargar tu sueldo? Qué dice la ley',
-    description: 'Rapicredit y los prestamistas de alto costo pueden demandarte, pero la ley limita el embargo de tu salario. Qué pueden embargar y cómo protegerte.',
+    description: 'Rapicredit y los prestamistas de alto costo pueden iniciar un cobro judicial, pero la ley limita el embargo de tu salario. Qué embargan y cómo protegerte.',
     date: '2026-05-01',
     dateModified: '2026-05-01',
     category: 'Derechos del Deudor',
