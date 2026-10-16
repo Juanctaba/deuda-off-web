@@ -3,7 +3,7 @@ import CityLandingPage from '@/components/CityLandingPage'
 
 export const metadata: Metadata = {
   title: 'Insolvencia de Persona Natural en Medellín — Deuda OFF',
-  description: 'Proceso de insolvencia de persona natural en Medellín y el área metropolitana. Protege tu salario, frena embargos y negocia tus deudas legalmente. Consulta gratuita.',
+  description: 'Insolvencia de persona natural en Medellín y el área metropolitana: conoce el proceso para negociar tus deudas. Consulta gratuita.',
   alternates: { canonical: 'https://deudaoff.com/insolvencia-medellin' },
   openGraph: {
     title: 'Insolvencia de Persona Natural en Medellín — Deuda OFF',

@@ -7,8 +7,8 @@ import { WA_URL } from '@/lib/constants'
 const CRMForm = dynamic(() => import('@/components/CRMForm'), { ssr: false })
 
 export const metadata: Metadata = {
-  title: 'Consulta Gratuita — Insolvencia de Persona Natural | Deuda OFF',
-  description: 'Accede al Procedimiento de Insolvencia de Persona Natural y empieza de cero. Suspende embargos, frena las llamadas de cobranza y negocia tus deudas. Primera consulta GRATIS.',
+  title: 'Consulta gratuita: insolvencia persona natural | Deuda OFF',
+  description: 'Consulta gratuita sobre insolvencia de persona natural: conoce el procedimiento, los pasos para negociar tus deudas y cómo revisar tu caso.',
   alternates: { canonical: 'https://deudaoff.com/consulta-gratuita' },
   openGraph: {
     title: '¿Deudas que no puedes pagar? La ley colombiana te protege',
