@@ -634,7 +634,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Llamadas a las 6 de la mañana, mensajes a personas que no tienen que ver con tu deuda, insistencia por varios canales el mismo día. Esta guía explica qué dice la ley sobre horarios, canales y contactos, y por dónde puedes reclamar si no se cumple. Cada punto cita su artículo para que puedas verificarlo.</p>
 
-<p class="cta-consulta">Si te contactan fuera del horario o por canales que no autorizaste, puedes pedir orientación: <a href="/consulta-gratuita">consulta gratis cómo documentar las llamadas</a>.</p>
+<p class="cta-consulta">Si te contactan fuera del horario o por canales que no autorizaste, puedes pedir orientación: <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-acoso-cobranza-cuerpo-1">consulta gratis cómo documentar las llamadas</a>.</p>
 
 <h2>Horario y frecuencia: lo que dice la ley</h2>
 
@@ -705,7 +705,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Verifica en cada portal los requisitos y los datos que piden antes de presentar el reclamo.</p>
 
-<p class="cta-consulta">¿Ya reuniste capturas o registros de llamadas? <a href="/consulta-gratuita">Revisa tu caso de cobranza con el equipo legal</a> antes de presentar el reclamo.</p>
+<p class="cta-consulta">¿Ya reuniste capturas o registros de llamadas? <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-acoso-cobranza-cuerpo-2">Revisa tu caso de cobranza con el equipo legal</a> antes de presentar el reclamo.</p>
 
 <h2>Cobranza e insolvencia: una vía, no la única</h2>
 
@@ -715,7 +715,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Para ver el procedimiento completo, lee la guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>. Si ya tienes un proceso ejecutivo en tu contra y quieres saber qué se puede embargar y qué no, consulta <a href="/blog/como-evitar-un-embargo-colombia">qué no pueden embargarte en Colombia</a>.</p>
 
-<p class="cta-consulta">La insolvencia de persona natural es una de las vías para ordenar tus deudas, no la única. <a href="/consulta-gratuita">Pide tu consulta gratuita sobre cobranza e insolvencia</a>.</p>
+<p class="cta-consulta">La insolvencia de persona natural es una de las vías para ordenar tus deudas, no la única. <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-acoso-cobranza-final">Pide tu consulta gratuita sobre cobranza e insolvencia</a>.</p>
 
 <blockquote>La cobranza tiene reglas de horario, canal y contacto. Conocerlas te permite verificar si se están cumpliendo y reunir lo necesario para reclamar si no es así.</blockquote>
     `,
@@ -842,7 +842,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Esta guía explica, con el artículo de cada norma, cómo se tratan las deudas bancarias en ese trámite. No reemplaza la revisión de tu caso con tus documentos. Para ver la ley completa, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>.</p>
 
-<p class="cta-consulta">Cada banco y cada deuda tienen condiciones distintas. Si quieres saber qué podría entrar en tu caso, <a href="/consulta-gratuita">revisa tu situación en una consulta gratuita</a>.</p>
+<p class="cta-consulta">Cada banco y cada deuda tienen condiciones distintas. Si quieres saber qué podría entrar en tu caso, <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-deudas-bancarias-cuerpo-1">revisa tu situación en una consulta gratuita</a>.</p>
 
 <h2>¿Qué deudas bancarias se pueden incluir?</h2>
 
@@ -871,7 +871,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Esto no significa que conserves o pierdas la vivienda. Depende de la garantía, del acuerdo que se logre y de las condiciones del inmueble. Eso se revisa con la escritura y el certificado de tradición y libertad.</p>
 
-<p class="cta-consulta">Si tu deuda es hipotecaria o de varias entidades, conviene mirarla con tus documentos. <a href="/consulta-gratuita">Cuéntanos tu caso de deudas bancarias</a> y revisamos qué dice la norma para tu situación.</p>
+<p class="cta-consulta">Si tu deuda es hipotecaria o de varias entidades, conviene mirarla con tus documentos. <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-deudas-bancarias-cuerpo-2">Cuéntanos tu caso de deudas bancarias</a> y revisamos qué dice la norma para tu situación.</p>
 
 <h2>¿Cómo funciona la negociación con los bancos?</h2>
 
@@ -946,7 +946,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <blockquote>Que un banco te cobre no es ilegal. Lo que sí tiene reglas es cómo y cuándo te cobran, y qué opciones tienes para ordenar tus deudas. Cada punto de esta guía cita su artículo para que puedas verificarlo.</blockquote>
 
-<p class="cta-consulta">No hay una respuesta única para todos los casos. <a href="/consulta-gratuita">Agenda tu consulta gratuita sobre deudas con bancos</a> y revisa tus opciones con el equipo legal.</p>
+<p class="cta-consulta">No hay una respuesta única para todos los casos. <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-deudas-bancarias-final">Agenda tu consulta gratuita sobre deudas con bancos</a> y revisa tus opciones con el equipo legal.</p>
     `,
     faqs: [
       {
@@ -1877,7 +1877,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Un embargo no siempre llega con aviso. A veces lo descubres porque el desprendible llega con un descuento que no esperabas o porque tu cuenta aparece retenida. Esta guía te muestra dónde mirar y qué dice la ley sobre lo que se puede y no se puede embargar. Algunas consultas pueden tener costo: verifica el valor vigente en cada canal.</p>
 
-<p class="cta-consulta">Si encontraste un proceso en tu contra, el primer paso es entender de qué trata. <a href="/consulta-gratuita">Revisa tu caso de embargo en una consulta gratuita</a>.</p>
+<p class="cta-consulta">Si encontraste un proceso en tu contra, el primer paso es entender de qué trata. <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-embargo-cuerpo-1">Revisa tu caso de embargo en una consulta gratuita</a>.</p>
 
 <h2>Las cinco consultas, de un vistazo</h2>
 
@@ -1924,7 +1924,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Los vehículos son bienes sujetos a registro: el embargo se comunica a la autoridad que lleva el registro y se inscribe (CGP, art. 593, num. 1). Puedes revisar la información del vehículo en el <a href="https://portalpublico.runt.gov.co/#/consulta-vehiculo/consulta/consulta-ciudadana" target="_blank" rel="noopener noreferrer nofollow">portal público del RUNT</a> y confirmar con el organismo de tránsito donde está matriculado. Si el portal no muestra con claridad las limitaciones, pide el certificado en tránsito.</p>
 
-<p class="cta-consulta">Con los resultados de estas cinco consultas, <a href="/consulta-gratuita">pide orientación sobre tu embargo</a> y confirma qué se puede hacer en tu caso.</p>
+<p class="cta-consulta">Con los resultados de estas cinco consultas, <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-embargo-cuerpo-2">pide orientación sobre tu embargo</a> y confirma qué se puede hacer en tu caso.</p>
 
 <h2>Señales de que puede haber un embargo</h2>
 
@@ -1982,7 +1982,7 @@ export const BLOG_POSTS: BlogPost[] = [
   <li><strong>Evalúa qué vía te sirve:</strong> pedir el levantamiento dentro del proceso, prestar caución o la negociación de deudas de la Ley 2445.</li>
 </ol>
 
-<p class="cta-consulta">Cada proceso avanza a su ritmo y cada caso tiene condiciones distintas. <a href="/consulta-gratuita">Habla con el equipo legal en tu consulta gratuita</a> para revisar qué hacer en el tuyo.</p>
+<p class="cta-consulta">Cada proceso avanza a su ritmo y cada caso tiene condiciones distintas. <a href="/consulta-gratuita" data-cta="consulta-gratuita-blog-embargo-final">Habla con el equipo legal en tu consulta gratuita</a> para revisar qué hacer en el tuyo.</p>
 
 <blockquote>Saber exactamente qué está embargado, por quién y por cuánto es el primer paso para revisar si la medida se ajusta a la ley.</blockquote>
     `,
