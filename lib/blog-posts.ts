@@ -1830,7 +1830,7 @@ export const BLOG_POSTS: BlogPost[] = [
     mentions: ['Rama Judicial de Colombia', 'Superintendencia de Notariado y Registro', 'Núcleo Jurídico SAS'],
     sources: [
       { label: 'Rama Judicial — Consulta de procesos', href: 'https://consultaprocesos.ramajudicial.gov.co/' },
-      { label: 'Ley 1564 de 2012 (Código General del Proceso), arts. 578–604 (medidas cautelares: embargo, inembargables, levantamiento, caución) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012_pr020.html' },
+      { label: 'Ley 1564 de 2012 (Código General del Proceso), arts. 588–604 (medidas cautelares: embargo, inembargables, levantamiento, caución) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012_pr020.html' },
       { label: 'Ley 2445 de 2025 (insolvencia de la persona natural no comerciante, modifica el Código General del Proceso) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
       { label: 'Código Sustantivo del Trabajo, arts. 154–156 (embargo de salarios) — Secretaría del Senado de la República', href: 'http://secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr005.html' },
       { label: 'Superintendencia de Notariado y Registro — Certificado de tradición y libertad', href: 'https://certificados.supernotariado.gov.co/certificado' },
