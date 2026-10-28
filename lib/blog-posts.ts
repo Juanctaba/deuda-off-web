@@ -622,63 +622,138 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: '¿Hasta qué hora pueden llamarte a cobrar en Colombia?',
     description: 'Solo pueden llamarte de lunes a sábado, de 7 a.m. a 7 p.m., y no pueden contactar a tus familiares. Conoce tus derechos y cómo denunciar el acoso ante la SIC.',
     date: '2026-05-01',
-    dateModified: '2026-05-01',
+    dateModified: '2026-10-29',
     category: 'Derechos del Deudor',
     readTime: '5 min',
     about: ['Acoso de cobranza Colombia', 'Derechos del deudor Colombia', 'Ley 1480 de 2011 Estatuto del Consumidor'],
     mentions: ['Superintendencia de Industria y Comercio SIC', 'Superintendencia Financiera Colombia', 'Defensoría del Consumidor Financiero Colombia'],
     content: `
-<p class="definicion"><strong>Definición:</strong> El acoso de cobranza en Colombia ocurre cuando bancos, entidades financieras o empresas de gestión de cartera usan métodos prohibidos para presionar al deudor: llamadas fuera del horario permitido (lunes a sábado 7am–7pm), contacto con familiares para ejercer presión, amenazas o divulgación de la deuda a terceros. Estas prácticas son ilegales y sancionables por la Superintendencia de Industria y Comercio (SIC).</p>
+<p class="definicion"><strong>Respuesta directa:</strong> La Ley 2300 de 2023 (art. 3) permite cobrar de lunes a viernes entre las 7:00 a. m. y las 7:00 p. m., y los sábados entre las 8:00 a. m. y las 3:00 p. m. Los domingos y festivos no se puede contactar al deudor para cobrar. Además, una vez establecido un contacto directo, no pueden volver a contactarte por varios canales dentro de la misma semana ni más de una vez en el mismo día.</p>
 
-<p>Llamadas a las 6 de la mañana, mensajes a tus familiares, amenazas veladas. El acoso cobratorio es una realidad que viven miles de colombianos endeudados — y es también una violación de derechos sancionada por ley.</p>
+<p><em>Actualizado: 29 oct 2026</em></p>
 
-<h2>Lo que la ley colombiana prohíbe a los cobradores</h2>
+<p>Llamadas a las 6 de la mañana, mensajes a personas que no tienen que ver con tu deuda, insistencia por varios canales el mismo día. Esta guía explica qué dice la ley sobre horarios, canales y contactos, y por dónde puedes reclamar si no se cumple. Cada punto cita su artículo para que puedas verificarlo.</p>
 
-<p>El <strong>Estatuto del Consumidor (Ley 1480 de 2011)</strong> y las circulares de la Superintendencia de Industria y Comercio (SIC) establecen prohibiciones concretas:</p>
+<p class="cta-consulta">Si te contactan fuera del horario o por canales que no autorizaste, puedes pedir orientación: <a href="/consulta-gratuita">consulta gratis cómo documentar las llamadas</a>.</p>
 
-<ul>
-  <li><strong>Llamadas en horarios no permitidos:</strong> solo pueden llamarte de lunes a sábado entre las 7:00 a.m. y las 7:00 p.m. Domingos y festivos están prohibidos.</li>
-  <li><strong>Contactar a terceros para presionarte:</strong> no pueden llamar a familiares, amigos, vecinos o compañeros de trabajo para informarles de tu deuda.</li>
-  <li><strong>Amenazas e intimidación:</strong> no pueden amenazarte con acciones que no tienen facultad de ejecutar.</li>
-  <li><strong>Divulgar tu deuda a terceros:</strong> tu situación financiera es información privada.</li>
-  <li><strong>Hostigamiento telefónico:</strong> múltiples llamadas al día con fines de presión están prohibidas.</li>
-  <li><strong>Visitas intimidatorias al trabajo:</strong> las visitas que generen presión pública son ilegales.</li>
-</ul>
+<h2>Horario y frecuencia: lo que dice la ley</h2>
 
-<h2>Lo que sí pueden hacer legalmente</h2>
+<p class="cita-norma"><strong>Ley 2300 de 2023, art. 3.</strong> Una vez establecido un contacto directo con el consumidor, este no podrá ser contactado por parte de gestores de cobranza mediante varios canales dentro de una misma semana ni en más de una ocasión durante el mismo día. (...) dentro del horario de lunes a viernes y de 7:00 a. m. a 7:00 p. m., y sábados de 8:00 a. m. a 3:00 p. m., excluyendo cualquier tipo de contacto con el consumidor los domingos y días festivos.</p>
 
 <ul>
-  <li>Contactarte en horarios permitidos para informarte del estado de la deuda.</li>
-  <li>Ofrecerte acuerdos de pago o refinanciación.</li>
-  <li>Reportarte a Datacrédito (TransUnion) y Cifin (Experian).</li>
-  <li>Iniciar un proceso judicial ejecutivo para cobrar la deuda.</li>
-  <li>Enviarte comunicaciones escritas o por correo electrónico.</li>
+  <li><strong>Lunes a viernes:</strong> de 7:00 a. m. a 7:00 p. m.</li>
+  <li><strong>Sábados:</strong> de 8:00 a. m. a 3:00 p. m.</li>
+  <li><strong>Domingos y festivos:</strong> ningún contacto de cobranza.</li>
+  <li><strong>Frecuencia:</strong> después de un contacto directo, no varios canales en la misma semana ni más de una vez en el mismo día.</li>
 </ul>
 
-<h2>Cómo denunciar el acoso ante la SIC</h2>
+<p>Las prácticas de cobranza deben hacerse de manera respetuosa y sin afectar tu intimidad personal ni familiar (art. 3). La misma ley (art. 5, parágrafo 3) aplica este horario a los mensajes publicitarios por SMS, aplicaciones, correo y llamadas comerciales.</p>
+
+<p>Hay un caso especial: si <strong>tú</strong> necesitas que te contacten en otros horarios, debes decirlo de forma expresa en un documento distinto al contrato y posterior a su firma (art. 3, parágrafo). Una cláusula dentro del contrato no cuenta como esa autorización.</p>
+
+<p>Los canales también los eliges tú: solo pueden contactarte por los canales que hayas autorizado, y la entidad debe informarlos previamente para que elijas cuáles autorizas (art. 2).</p>
+
+<h2>Qué más prohíbe la ley</h2>
+
+<ul>
+  <li><strong>Contactar a tus referencias personales o de otra índole.</strong> No pueden hacerlo en ningún caso (art. 4). Al avalista, codeudor o deudor solidario se le contacta en las mismas condiciones que a ti.</li>
+  <li><strong>Visitas al domicilio o al lugar de trabajo</strong> con fines de cobranza (art. 6). Tiene excepciones: microcréditos, crédito de fomento y de desarrollo agropecuario o rural con autorización expresa tuya, y cuando el cobrador no tiene canales actualizados y los operadores reportan que no se pudo contactar al consumidor (art. 6, parágrafos 1 y 2).</li>
+  <li><strong>Preguntarte el motivo por el que no pagaste</strong> (art. 7). Sí pueden preguntarte por alternativas de pago acordes con tu situación financiera.</li>
+</ul>
+
+<p>La ley exceptúa de estas medidas los contactos para informar sobre la confirmación de operaciones monetarias, ahorros voluntarios y cesantías, enviar información que tú pediste o generar alertas por transacciones fraudulentas, inusuales o sospechosas (art. 8).</p>
+
+<h2>Quién está obligado a cumplirla</h2>
+
+<p>La Ley 2300 no se limita a los bancos. Aplica a las entidades vigiladas por la Superintendencia Financiera y a todas las personas naturales y jurídicas que hagan gestiones de cobranza de forma directa, por medio de terceros o por cesión de la obligación (art. 1 y su parágrafo). Esto incluye a la firma de abogados o a la casa de cobranza que contrata el banco, y a quien compra tu cartera. Quien cobra por cesión debe cumplir las mismas reglas.</p>
+
+<h2>Lo que sí pueden hacer</h2>
+
+<ul>
+  <li>Contactarte dentro del horario y por los canales que autorizaste, para informarte del estado de la deuda.</li>
+  <li>Preguntarte por alternativas de pago acordes con tu situación (art. 7, parágrafo).</li>
+  <li>Reportar la deuda a las centrales de riesgo, siempre que cumplan las reglas de la Ley 1266 de 2008 y de la Ley 2157 de 2021. Entre ellas, la comunicación previa al titular antes del reporte negativo.</li>
+  <li>Acudir a un juez para cobrar la deuda mediante un proceso ejecutivo.</li>
+</ul>
+
+<p>Que puedan cobrar no cambia el horario, los canales ni la prohibición de contactar referencias.</p>
+
+<h2>Cómo documentar las llamadas</h2>
+
+<p>Para presentar un reclamo, ayuda tener un registro ordenado. Guarda:</p>
+
+<ul>
+  <li><strong>Fecha y hora</strong> de cada llamada o mensaje.</li>
+  <li><strong>Canal:</strong> llamada, SMS, WhatsApp, correo u otro.</li>
+  <li><strong>Número o remitente</strong> y a nombre de qué entidad o firma se identifican.</li>
+  <li><strong>Capturas de pantalla</strong> de mensajes y del registro de llamadas de tu teléfono.</li>
+  <li><strong>A quién más contactaron</strong>, si alguna de tus referencias te avisa.</li>
+  <li>Si autorizaste o no ese canal, y si diste otro horario por escrito (art. 2 y art. 3, parágrafo).</li>
+</ul>
+
+<p>Este registro no garantiza el resultado de un reclamo, pero permite que la autoridad vea qué pasó y cuándo.</p>
+
+<h2>Cómo denunciar el acoso ante la SIC y la Superfinanciera</h2>
+
+<p>El incumplimiento de la Ley 2300 lo sancionan la Superintendencia Financiera de Colombia y la Superintendencia de Industria y Comercio, según el art. 9 de la Ley 2300 de 2023, que remite al marco de competencias de la Ley Estatutaria 1266 de 2008. La autoridad competente depende de quién te cobra.</p>
 
 <ol>
-  <li><strong>SIC (Superintendencia de Industria y Comercio):</strong> queja en línea en el portal de la SIC. Es gratuito y puedes hacerlo sin abogado. La SIC puede imponer multas significativas a las entidades infractoras.</li>
-  <li><strong>Superintendencia Financiera de Colombia:</strong> si es un banco o compañía de financiamiento.</li>
-  <li><strong>Defensoría del Consumidor Financiero:</strong> cada entidad financiera debe tener uno; es de libre acceso.</li>
+  <li><strong>Superintendencia de Industria y Comercio (SIC):</strong> puedes presentar la queja o denuncia del consumidor en su <a href="https://denuncias.sic.gov.co/consumidor/consumidor/paso0" target="_blank" rel="noopener noreferrer nofollow">portal de denuncias</a>. Si el problema es el manejo de tus datos personales en el reporte, la SIC tiene un canal específico de <a href="https://sedeelectronica.sic.gov.co/atencion-y-servicios-a-la-ciudadania/servicios/quejas-datos-personales" target="_blank" rel="noopener noreferrer nofollow">quejas por datos personales</a>.</li>
+  <li><strong>Superintendencia Financiera de Colombia:</strong> si el que cobra es una entidad vigilada por ella (por ejemplo, un banco), puedes <a href="https://www.superfinanciera.gov.co/publicaciones/20650/consumidor-financieroinformacion-generalquejas-contra-entidades-vigiladasquejas-contra-entidades-vigiladas-por-la-superintendencia-financiera-de-colombia-20650/" target="_blank" rel="noopener noreferrer nofollow">reportar la inconformidad</a> con el formulario de la entidad.</li>
+  <li><strong>Defensor del Consumidor Financiero:</strong> las entidades vigiladas que defina el Gobierno nacional deben tener uno, que atiende las quejas de los consumidores de forma gratuita y puede actuar como conciliador (Ley 1328 de 2009, art. 13). No todas las entidades están obligadas a tenerlo.</li>
 </ol>
 
-<p>Guarda evidencias: capturas de pantalla de mensajes, registros de llamadas con fecha y hora. En Colombia es legal grabar llamadas en las que participas.</p>
+<p>Verifica en cada portal los requisitos y los datos que piden antes de presentar el reclamo.</p>
 
-<h2>La solución definitiva: el proceso de insolvencia</h2>
+<p class="cta-consulta">¿Ya reuniste capturas o registros de llamadas? <a href="/consulta-gratuita">Revisa tu caso de cobranza con el equipo legal</a> antes de presentar el reclamo.</p>
 
-<p>Una denuncia ante la SIC puede frenar el acoso temporalmente, pero la deuda sigue creciendo. El <strong>proceso de insolvencia de persona natural bajo la Ley 2445 de 2025</strong> resuelve ambos problemas a la vez:</p>
+<h2>Cobranza e insolvencia: una vía, no la única</h2>
 
-<ul>
-  <li>El acoso cobratorio cesa desde la radicación, por mandato legal — no por buena voluntad del cobrador.</li>
-  <li>Negocias la deuda a condiciones que puedas cumplir.</li>
-  <li>Al finalizar el acuerdo, las deudas quedan extintas.</li>
-</ul>
+<p>Un reclamo por incumplir horarios o canales ataca la forma de cobrar, pero no cambia la deuda. El procedimiento de negociación de deudas de persona natural no comerciante (Ley 2445 de 2025) es una de las vías para ordenarla. Tiene requisitos: estar en cesación de pagos, es decir, dos o más obligaciones vencidas por más de 90 días con dos o más acreedores, que sumen al menos el 30% de tu pasivo (art. 538).</p>
 
-<p>Si quieres el detalle normativo, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>, con el articulado citado.</p>
+<p>Si el trámite se acepta, desde la aceptación (no desde la radicación de la solicitud) no pueden iniciarse nuevos procesos de ejecución y se suspenden los que estén en curso. Si un acreedor al que ya se le comunicó la admisión sigue con diligencias de cobranza, la ley prevé sanciones graduales y, desde la cuarta vez, la queja a la Superintendencia Financiera o a la de Industria y Comercio (art. 545, num. 1). Un acuerdo no se logra por el solo hecho de presentar la solicitud: depende de la votación de los acreedores.</p>
 
-<blockquote>No tienes que aguantar el acoso. Tienes derechos como deudor y la ley colombiana te protege. En Deuda OFF te explicamos cómo ejercerlos sin costo en tu primera consulta.</blockquote>
+<p>Para ver el procedimiento completo, lee la guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>. Si ya tienes un proceso ejecutivo en tu contra y quieres saber qué se puede embargar y qué no, consulta <a href="/blog/como-evitar-un-embargo-colombia">qué no pueden embargarte en Colombia</a>.</p>
+
+<p class="cta-consulta">La insolvencia de persona natural es una de las vías para ordenar tus deudas, no la única. <a href="/consulta-gratuita">Pide tu consulta gratuita sobre cobranza e insolvencia</a>.</p>
+
+<blockquote>La cobranza tiene reglas de horario, canal y contacto. Conocerlas te permite verificar si se están cumpliendo y reunir lo necesario para reclamar si no es así.</blockquote>
     `,
+    faqs: [
+      {
+        q: '¿A qué hora pueden llamarme para cobrar entre semana?',
+        a: 'De lunes a viernes entre las 7:00 a. m. y las 7:00 p. m. (Ley 2300 de 2023, art. 3). Además, una vez establecido un contacto directo, no pueden contactarte por varios canales dentro de la misma semana ni más de una vez durante el mismo día.',
+      },
+      {
+        q: '¿Pueden cobrarme los sábados?',
+        a: 'Sí, pero solo entre las 8:00 a. m. y las 3:00 p. m. (Ley 2300 de 2023, art. 3). Es un horario distinto al de lunes a viernes, y termina antes de las 7:00 p. m.',
+      },
+      {
+        q: '¿Pueden contactarme los domingos y festivos?',
+        a: 'No. La ley excluye cualquier tipo de contacto de cobranza con el consumidor los domingos y días festivos (Ley 2300 de 2023, art. 3). Si tú pides expresamente otro horario, debe constar en un documento distinto al contrato y posterior a su firma (art. 3, parágrafo).',
+      },
+      {
+        q: '¿Pueden llamar a mis familiares o a las referencias que di?',
+        a: 'No pueden contactar a tus referencias personales ni de otra índole (Ley 2300 de 2023, art. 4). Al avalista, codeudor o deudor solidario sí se le puede contactar, pero en las mismas condiciones de horario y canal que a ti.',
+      },
+      {
+        q: '¿Pueden ir a mi casa o a mi trabajo a cobrarme?',
+        a: 'La ley dice que se abstendrán de adelantar gestiones de cobranza mediante visitas al domicilio o al lugar de trabajo (Ley 2300 de 2023, art. 6). Tiene excepciones: microcréditos, crédito de fomento y de desarrollo agropecuario o rural con autorización expresa del consumidor, y cuando el cobrador no tiene canales actualizados y los operadores reportan que no pudieron contactarlo.',
+      },
+      {
+        q: '¿A quién reclamo si no cumplen la ley de cobranza?',
+        a: 'El incumplimiento de la Ley 2300 de 2023 lo sancionan la Superintendencia Financiera de Colombia y la Superintendencia de Industria y Comercio, según el art. 9 de la Ley 2300 de 2023, que remite al marco de competencias de la Ley Estatutaria 1266 de 2008. También puedes acudir al Defensor del Consumidor Financiero de la entidad, cuando esta deba tenerlo (Ley 1328 de 2009, art. 13).',
+      },
+    ],
+    sources: [
+      { label: 'Ley 2300 de 2023 (medidas de protección del derecho a la intimidad de los consumidores) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2300_2023.html' },
+      { label: 'Ley 2445 de 2025 (insolvencia de la persona natural no comerciante, modifica el Código General del Proceso) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
+      { label: 'Ley 2157 de 2021 (modifica la Ley 1266 de 2008, habeas data financiero) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2157_2021.html' },
+      { label: 'Ley 1328 de 2009, art. 13 (Defensor del Consumidor Financiero) — Función Pública, Gestor Normativo', href: 'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=36841' },
+      { label: 'Superintendencia de Industria y Comercio — Denuncias de consumidor', href: 'https://denuncias.sic.gov.co/consumidor/consumidor/paso0' },
+      { label: 'Superintendencia de Industria y Comercio — Quejas por datos personales', href: 'https://sedeelectronica.sic.gov.co/atencion-y-servicios-a-la-ciudadania/servicios/quejas-datos-personales' },
+      { label: 'Superintendencia Financiera de Colombia — Quejas contra entidades vigiladas', href: 'https://www.superfinanciera.gov.co/publicaciones/20650/consumidor-financieroinformacion-generalquejas-contra-entidades-vigiladasquejas-contra-entidades-vigiladas-por-la-superintendencia-financiera-de-colombia-20650/' },
+    ],
   },
   {
     slug: 'deudas-cooperativas-insolvencia-colombia',
@@ -755,64 +830,156 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: 'Deudas con Bancolombia o Davivienda en insolvencia',
     description: 'Cómo se negocian créditos hipotecarios, tarjetas y préstamos de consumo con los bancos en la insolvencia de persona natural (Ley 2445 de 2025).',
     date: '2026-05-01',
-    dateModified: '2026-05-01',
+    dateModified: '2026-10-29',
     category: 'Guías',
     readTime: '7 min',
     about: ['Deudas bancarias insolvencia Colombia', 'Negociación con bancos insolvencia', 'Ley 2445 de 2025'],
     mentions: ['Davivienda', 'Bancolombia', 'Banco de Bogotá', 'Superintendencia Financiera de Colombia', 'Superintendencia de Sociedades'],
     content: `
-<p class="definicion"><strong>Respuesta directa:</strong> Las deudas con bancos como Davivienda, Bancolombia o Banco de Bogotá se pueden incluir en el proceso de insolvencia de persona natural bajo la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">Ley 2445 de 2025</a>. Esto incluye tarjetas de crédito, créditos de consumo, préstamos de libre inversión y créditos hipotecarios. Desde la radicación, los bancos no pueden seguir cobrando ni ejecutar nuevos embargos.</p>
+<p class="definicion"><strong>Respuesta directa:</strong> Las deudas con bancos como Davivienda, Bancolombia o Banco de Bogotá pueden hacer parte de la negociación de deudas de persona natural no comerciante que regula la Ley 2445 de 2025. Qué entra, con qué condiciones y con qué resultado depende de tu situación y de lo que se acuerde en la audiencia con tus acreedores. Lo que la ley sí fija es que, desde que el conciliador acepta la solicitud, no pueden iniciarse nuevos procesos de ejecución y se suspenden los que estén en curso (art. 545 CGP).</p>
 
-<p>Los bancos son el tipo de acreedor más frecuente en los procesos de insolvencia en Colombia. Davivienda, Bancolombia, Banco de Bogotá, BBVA, Scotiabank Colpatria y otros participan regularmente en audiencias de negociación ante la Superintendencia de Sociedades y Centros de Conciliación autorizados por el Ministerio de Justicia.</p>
+<p><em>Actualizado: 29 oct 2026</em></p>
+
+<p>Esta guía explica, con el artículo de cada norma, cómo se tratan las deudas bancarias en ese trámite. No reemplaza la revisión de tu caso con tus documentos. Para ver la ley completa, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>.</p>
+
+<p class="cta-consulta">Cada banco y cada deuda tienen condiciones distintas. Si quieres saber qué podría entrar en tu caso, <a href="/consulta-gratuita">revisa tu situación en una consulta gratuita</a>.</p>
 
 <h2>¿Qué deudas bancarias se pueden incluir?</h2>
 
+<p>La ley no hace una lista de productos. Tú relacionas en la solicitud a todos tus acreedores, con el valor de cada obligación (art. 539), y el acuerdo de pago puede versar sobre cualquier obligación patrimonial que hayas contraído (art. 553, num. 4). Con los bancos, las deudas más comunes en esa relación son:</p>
+
 <ul>
-  <li><strong>Tarjetas de crédito:</strong> saldo total a la fecha de radicación, incluyendo capital, intereses corrientes y mora. Los intereses futuros se congelan.</li>
-  <li><strong>Créditos de libre inversión:</strong> préstamos personales sin destinación específica.</li>
-  <li><strong>Créditos de consumo:</strong> incluyendo créditos para electrodomésticos, vehículos (si no tienen prenda activa) y educación.</li>
-  <li><strong>Créditos hipotecarios:</strong> pueden incluirse; esto no significa que pierdas tu vivienda — significa que la deuda entra a negociarse.</li>
-  <li><strong>Cartera cedida o vendida:</strong> si el banco vendió tu deuda a una empresa de cartera o agencia de cobro, esa empresa hereda la posición de acreedor y debe participar en el proceso.</li>
+  <li>Tarjetas de crédito.</li>
+  <li>Créditos de consumo y de libre inversión.</li>
+  <li>Crédito hipotecario, que tiene reglas propias (ver la sección siguiente).</li>
 </ul>
+
+<p>Antes de preguntarte qué deudas entran, hay una condición de entrada: estar en <strong>cesación de pagos</strong>. El artículo 538 la define como tener dos o más obligaciones vencidas por más de 90 días con dos o más acreedores (o dos o más procesos de cobro en tu contra), y que esas obligaciones representen al menos el 30% de tu pasivo total. Lo declaras bajo juramento.</p>
+
+<p>Si solo debes a un banco, o si tu mora es reciente, puede que todavía no cumplas esa condición. Eso se mira caso por caso.</p>
 
 <h2>¿Qué pasa con mi crédito hipotecario?</h2>
 
-<p>Este es el punto más sensible para la mayoría de personas. Al incluir una hipoteca en el proceso de insolvencia:</p>
+<p>Un crédito con hipoteca es una obligación con garantía real, y la ley la trata distinto de una tarjeta:</p>
 
 <ul>
-  <li>El banco no puede iniciar ni continuar el proceso de remate de tu vivienda mientras el proceso esté activo.</li>
-  <li>Puedes negociar un plan de pago ajustado a tu capacidad real, incluyendo una posible reducción de intereses de mora.</li>
-  <li>Si tienes <em>afectación a vivienda de familia</em> registrada, tu inmueble tiene protecciones adicionales.</li>
-  <li>Si la deuda hipotecaria es impagable incluso con acuerdo, existe la figura de dación en pago dentro del proceso, que te permite entregar el inmueble al banco y que la deuda quede saldada.</li>
+  <li><strong>Procesos en curso.</strong> Desde la aceptación de la solicitud no pueden iniciarse nuevos procesos de ejecución, incluidos los de ejecución especial, y se suspenden los que ya estén en curso (art. 545, num. 1).</li>
+  <li><strong>Acuerdo con el banco acreedor.</strong> Si no se logra un acuerdo con todos los acreedores, la ley permite que en la misma audiencia el deudor haga acuerdos bilaterales con quienes tengan garantía real o leasing sobre el inmueble que sea su vivienda. Esos acuerdos tienen plenos efectos entre las partes, y ese crédito y ese bien quedan fuera de la liquidación patrimonial (art. 553, num. 3).</li>
+  <li><strong>Dación en pago.</strong> Entregar un bien para pagar una deuda necesita el consentimiento expreso del acreedor. Si el bien es el que respalda la obligación, no se necesita ese consentimiento siempre que el valor del bien en el acuerdo no supere el monto de la deuda, y <strong>el saldo que quede sigue siendo una deuda</strong> (art. 554, num. 6).</li>
+  <li><strong>Si la negociación fracasa</strong>, el trámite pasa a la liquidación patrimonial (arts. 559 y 561).</li>
 </ul>
 
-<h2>¿Cómo reaccionan los bancos ante el proceso?</h2>
+<p>Esto no significa que conserves o pierdas la vivienda. Depende de la garantía, del acuerdo que se logre y de las condiciones del inmueble. Eso se revisa con la escritura y el certificado de tradición y libertad.</p>
 
-<p>Los bancos grandes tienen apoderados legales especializados en procesos de insolvencia. En general:</p>
+<p class="cta-consulta">Si tu deuda es hipotecaria o de varias entidades, conviene mirarla con tus documentos. <a href="/consulta-gratuita">Cuéntanos tu caso de deudas bancarias</a> y revisamos qué dice la norma para tu situación.</p>
+
+<h2>¿Cómo funciona la negociación con los bancos?</h2>
+
+<ol>
+  <li><strong>Solicitud.</strong> Se presenta ante un centro de conciliación autorizado por el Ministerio de Justicia y del Derecho o ante una notaría (art. 533). La solicitud lleva la relación de acreedores, tus bienes, tus ingresos y una propuesta de pago (art. 539).</li>
+  <li><strong>Aceptación y citación.</strong> Si la solicitud cumple los requisitos, el conciliador la acepta y fija la audiencia de negociación en los 10 días siguientes (art. 543). Comunica la aceptación a los acreedores (art. 548).</li>
+  <li><strong>Audiencia.</strong> Los acreedores pueden discutir sus créditos y se negocia una propuesta de pago.</li>
+  <li><strong>Votación.</strong> El acuerdo se aprueba con el voto favorable de dos o más acreedores que representen más del 50% del valor de los créditos, contado por capital (art. 553, num. 2). Una vez aprobado, obliga a todos los acreedores, también a quienes no votaron a favor (art. 553, par. 2).</li>
+  <li><strong>Plazo de la negociación.</strong> Es de 60 días desde que queda en firme la aceptación, ampliable por 30 días más si lo piden las partes (art. 544).</li>
+  <li><strong>Si no hay acuerdo</strong>, el trámite pasa a liquidación patrimonial (art. 559).</li>
+</ol>
+
+<p>Lo que cada banco decida votar no es predecible desde afuera. Esta guía no afirma cómo reaccionará una entidad concreta. Para el paso a paso de los requisitos y los documentos, consulta <a href="/blog/como-declararse-en-insolvencia">cómo declararse en insolvencia en Colombia</a>.</p>
+
+<h2>¿Qué pasa con las llamadas y el cobro mientras dura el proceso?</h2>
+
+<p>El efecto lo fija el artículo 545 del Código General del Proceso <strong>desde la aceptación</strong> de la solicitud, no desde que la presentas.</p>
 
 <ul>
-  <li><strong>Participan en la audiencia</strong> a través de sus apoderados, generalmente sin presencia física del cliente bancario.</li>
-  <li><strong>Evalúan el plan de pagos propuesto</strong> en función del saldo adeudado, la capacidad de pago demostrada y las garantías existentes.</li>
-  <li><strong>Votan el acuerdo</strong> con base en el valor de su acreencia. Si su voto es positivo y suma mayoría, el acuerdo es aprobado.</li>
-  <li>Si votan en contra pero la mayoría aprueba, el acuerdo igualmente les es oponible.</li>
+  <li>No pueden iniciarse nuevos procesos de ejecución y se suspenden los que estén en curso, incluida la ejecución aún no practicada de medidas cautelares ya decretadas (num. 1).</li>
+  <li>Si un acreedor al que ya se le comunicó la admisión sigue con diligencias de cobranza, la ley prevé sanciones graduales: llamado de atención, amonestación y postergación del pago de sus créditos; desde la cuarta vez, el conciliador o el juez remite la queja a la Superintendencia Financiera o a la de Industria y Comercio, con multa equivalente al 10% de lo cobrado (num. 1).</li>
+  <li>Se suspenden los descuentos de nómina y de libranza, salvo los de alimentos (num. 2).</li>
 </ul>
 
-<p>En la práctica, bancos como Davivienda y Bancolombia tienen equipos de gestión de cartera que prefieren un acuerdo viable a un proceso de liquidación prolongado.</p>
+<p>Mientras tanto, y también antes del trámite, la <strong>Ley 2300 de 2023</strong> limita horarios, canales y contactos de cualquier cobrador. La explicamos en la guía sobre el <a href="/blog/acoso-de-cobranza-colombia-ley">acoso de cobranza y los horarios permitidos</a>.</p>
 
 <h2>¿Qué pasa con mi historial en Datacrédito durante el proceso?</h2>
 
-<p>Al momento de radicar la solicitud de insolvencia, tu estado en Datacrédito y Cifin refleja la situación de insolvencia — esto es normal y esperado. Al cumplir el acuerdo y extinguir las deudas, la Ley 2445 de 2025 establece plazos para la normalización del historial. El proceso de insolvencia no te deja reportado indefinidamente: al finalizar, puedes reconstruir tu perfil crediticio.</p>
+<p>La permanencia del dato negativo la regula el artículo 13 de la Ley 1266 de 2008, tal como lo modificó el artículo 3 de la Ley 2157 de 2021:</p>
+
+<ul>
+  <li>El dato negativo permanece el doble del tiempo de la mora, con un máximo de cuatro años contados desde que se paguen las cuotas vencidas o se extinga la obligación.</li>
+  <li>Aun así, caduca a los ocho años contados desde que la obligación entró en mora.</li>
+  <li>La información positiva permanece de forma indefinida.</li>
+  <li>Consultar tu propia información financiera es gratuito, en toda ocasión y por todos los medios (art. 5 de la Ley 2157, par. 2).</li>
+</ul>
+
+<p>Cómo se cuentan estos plazos cuando hay un acuerdo de insolvencia (cuándo se considera pagada o extinguida la obligación) se revisa en cada caso. No damos plazos propios. Para ver cómo sigue tu historial después del trámite, lee <a href="/blog/como-salir-de-datacredito-despues-insolvencia-colombia">cómo salir de Datacrédito después de la insolvencia</a>.</p>
 
 <h2>¿Qué pasa si el banco ya cedió mi deuda a una agencia de cobro?</h2>
 
-<p>Si tu deuda fue vendida o cedida a una empresa de cartera (como Recuperaciones Universal, Cartera Activa u otras), esa empresa pasa a ser tu acreedor. Debes incluirla en el proceso de insolvencia, no al banco original. Tu abogado verificará quién tiene hoy la titularidad legal de cada deuda a través de la documentación requerida en la radicación.</p>
+<p>La Ley 2300 de 2023 aplica a quien cobra de forma directa, por medio de terceros o por cesión de la deuda (art. 1). Eso incluye a una agencia de cobranza o a quien compró tu cartera. Las reglas de la ley no cambian por el cambio de acreedor:</p>
+
+<ul>
+  <li>Solo pueden contactarte por los canales que tú autorizaste (art. 2).</li>
+  <li>Hay horarios y un límite de contactos (art. 3).</li>
+  <li>No pueden contactar a tus referencias personales. Con el avalista, el codeudor o el deudor solidario aplican las mismas condiciones (art. 4).</li>
+</ul>
+
+<p>En la negociación de deudas, la relación de acreedores debe incluir a quien hoy es titular del crédito (art. 539). Si no sabes a quién le vendieron tu deuda, pídele al banco o a la agencia que te lo certifique por escrito.</p>
 
 <h2>¿Puedo incluir deudas con varios bancos al mismo tiempo?</h2>
 
-<p>Sí, y esa es precisamente una de las ventajas del proceso de insolvencia: todos los acreedores bancarios se negocian en <strong>una sola audiencia</strong>, de forma simultánea. No tienes que negociar con Davivienda, luego con Bancolombia, luego con Banco de Bogotá por separado. El conciliador convoca a todos al mismo tiempo, y el acuerdo que se logra aplica para todos.</p>
+<p>Sí. La solicitud relaciona a todos tus acreedores, sean Davivienda, Bancolombia, Banco de Bogotá u otra entidad (art. 539), y el conciliador comunica la aceptación a todos los acreedores relacionados, con la fecha de la audiencia de negociación (art. 548). El acuerdo se vota entre todos y, una vez aprobado, obliga a todos (art. 553). Las excepciones son los acuerdos bilaterales sobre garantías reales que se explicaron en la sección del crédito hipotecario.</p>
 
-<blockquote>Los bancos hacen parte del sistema legal colombiano y deben respetar el proceso de insolvencia. Desde la radicación, ningún banco puede continuar cobros coercitivos, embargos ni procesos ejecutivos contra ti. Eso es un derecho constitucional.</blockquote>
+<p>Tener deudas con varias entidades también te ayuda a cumplir la condición de entrada: la cesación de pagos exige dos o más acreedores (art. 538). Si quieres estimar el orden de magnitud de tu caso, puedes usar la <a href="/calculadora">calculadora de Deuda OFF</a>.</p>
+
+<h2>Qué documentos reunir antes de la consulta</h2>
+
+<p>El artículo 539 enumera lo que lleva la solicitud. Tener esto a la mano acorta la revisión de tu caso:</p>
+
+<ul>
+  <li>De cada deuda: acreedor, dirección y correo, capital e intereses por separado, tasa de interés, fecha de otorgamiento y de vencimiento, y el documento donde consta (contrato, pagaré, extracto o certificación de saldo). Si hay codeudores, fiadores o avalistas, sus datos.</li>
+  <li>Relación de tus bienes, con soportes como el certificado de tradición y libertad de un inmueble o la tarjeta de propiedad de un vehículo, y con los gravámenes o embargos que pesen sobre ellos.</li>
+  <li>Procesos judiciales o actuaciones de cobro en curso: despacho donde están radicados y estado actual.</li>
+  <li>Certificación de ingresos expedida por tu empleador o fondo de pensiones, o una declaración de ingresos si eres independiente, y lo que te queda disponible para pagar después de tus gastos de subsistencia.</li>
+  <li>Si tuviste sociedad conyugal o patrimonial, los documentos que indica la norma sobre su liquidación o separación de bienes.</li>
+  <li>Si tienes obligaciones alimentarias, su detalle (valor y beneficiarios) y el certificado del Registro de Deudores Alimentarios Morosos (Redam).</li>
+</ul>
+
+<p>Si te falta alguno de estos documentos, se puede pedir al acreedor o a la entidad que lo expide.</p>
+
+<blockquote>Que un banco te cobre no es ilegal. Lo que sí tiene reglas es cómo y cuándo te cobran, y qué opciones tienes para ordenar tus deudas. Cada punto de esta guía cita su artículo para que puedas verificarlo.</blockquote>
+
+<p class="cta-consulta">No hay una respuesta única para todos los casos. <a href="/consulta-gratuita">Agenda tu consulta gratuita sobre deudas con bancos</a> y revisa tus opciones con el equipo legal.</p>
     `,
+    faqs: [
+      {
+        q: '¿Puedo incluir mi tarjeta de crédito de Bancolombia o Davivienda en la insolvencia?',
+        a: 'Sí puede hacer parte de la relación de acreedores. La solicitud debe relacionar todas tus deudas (Ley 2445 de 2025, art. 539 del Código General del Proceso) y el acuerdo de pago puede versar sobre cualquier obligación patrimonial (art. 553, num. 4). Para pedir el trámite debes estar en cesación de pagos: dos o más obligaciones vencidas por más de 90 días con dos o más acreedores, que sumen al menos el 30% de tu pasivo (art. 538).',
+      },
+      {
+        q: '¿Qué pasa con un crédito hipotecario si inicio el trámite?',
+        a: 'Desde que el conciliador acepta la solicitud no pueden iniciarse nuevos procesos de ejecución y se suspenden los que estén en curso (art. 545, num. 1). El crédito con garantía real tiene reglas propias: puede haber acuerdos bilaterales sobre el inmueble que sea tu vivienda (art. 553, num. 3) y la dación en pago de un bien que respalda la deuda deja un saldo adeudado si el valor del bien es menor (art. 554, num. 6). Que conserves o no el inmueble depende de cada caso.',
+      },
+      {
+        q: '¿Los bancos pueden seguir cobrándome mientras el trámite está en curso?',
+        a: 'Desde la aceptación de la solicitud se suspenden los procesos de ejecución y los descuentos de nómina, salvo alimentos (Ley 2445 de 2025, art. 545 del Código General del Proceso). Si un acreedor al que ya se le comunicó la admisión sigue con diligencias de cobranza, la ley prevé sanciones graduales. En todo caso, la Ley 2300 de 2023 limita los horarios, los canales y el número de contactos de cualquier cobrador (arts. 2 y 3).',
+      },
+      {
+        q: '¿Cuánto tiempo aparece mi deuda en Datacrédito?',
+        a: 'El dato negativo permanece el doble del tiempo de la mora, con un máximo de cuatro años contados desde el pago o la extinción de la obligación, y caduca a los ocho años desde que entró en mora (Ley 1266 de 2008, art. 13, modificado por la Ley 2157 de 2021, art. 3). La información positiva permanece de forma indefinida. Cómo se cuentan estos plazos con un acuerdo de insolvencia se revisa en cada caso.',
+      },
+      {
+        q: '¿Ante quién se hace el trámite de insolvencia de persona natural?',
+        a: 'Ante un centro de conciliación autorizado por el Ministerio de Justicia y del Derecho o ante una notaría del domicilio del deudor (Ley 2445 de 2025, art. 533 del Código General del Proceso). Las controversias que surjan en el trámite las resuelve el juez civil (art. 534). La Superintendencia de Sociedades no es la autoridad ante la que se presenta la solicitud de una persona natural no comerciante.',
+      },
+      {
+        q: '¿Qué pasa si mi deuda ya fue vendida a una agencia de cobranza?',
+        a: 'La Ley 2300 de 2023 aplica a quien cobra de forma directa, por medio de terceros o por cesión (art. 1), así que sus reglas de canales, horarios y no contacto de referencias personales siguen vigentes (arts. 2, 3 y 4). En la negociación de deudas, la relación de acreedores debe incluir a quien hoy es el titular del crédito. Si no sabes quién es, pídele al banco o a la agencia una certificación escrita.',
+      },
+    ],
+    sources: [
+      { label: 'Ley 2445 de 2025 (modifica el Título IV, Sección Tercera, Libro Tercero del Código General del Proceso) — texto oficial, Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
+      { label: 'Ley 2157 de 2021, art. 3 (modifica el art. 13 de la Ley 1266 de 2008) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2157_2021.html' },
+      { label: 'Ley 2300 de 2023 (cobranza de deudas) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2300_2023.html' },
+      { label: 'Ley 1564 de 2012 (Código General del Proceso) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012.html' },
+    ],
   },
   {
     slug: 'rapicredit-prestamos-alto-costo-insolvencia',
@@ -1656,127 +1823,168 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: 'Cómo saber si tengo un embargo en Colombia: 5 formas',
     description: 'Cómo consultar si tienes un embargo sobre tu salario, cuenta o bienes en Colombia, qué señales lo anticipan y cómo suspenderlo con la insolvencia.',
     date: '2026-07-29',
-    dateModified: '2026-07-29',
+    dateModified: '2026-10-29',
     category: 'Guías',
     readTime: '8 min',
     about: ['Embargo en Colombia', 'Consulta de procesos judiciales', 'Suspensión de embargos', 'Ley 2445 de 2025'],
     mentions: ['Rama Judicial de Colombia', 'Superintendencia de Notariado y Registro', 'Núcleo Jurídico SAS'],
     sources: [
-      { label: 'Consulta de Procesos Nacional Unificada — Rama Judicial de Colombia', href: 'https://consultaprocesos.ramajudicial.gov.co/' },
-      { label: 'Ley 2445 de 2025 — texto oficial, Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
-      { label: 'Ley 1564 de 2012 (Código General del Proceso)', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012.html' },
+      { label: 'Rama Judicial — Consulta de procesos', href: 'https://consultaprocesos.ramajudicial.gov.co/' },
+      { label: 'Ley 1564 de 2012 (Código General del Proceso), arts. 588–604 (medidas cautelares: embargo, inembargables, levantamiento, caución) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_1564_2012_pr020.html' },
+      { label: 'Ley 2445 de 2025 (insolvencia de la persona natural no comerciante, modifica el Código General del Proceso) — Secretaría del Senado de la República', href: 'http://www.secretariasenado.gov.co/senado/basedoc/ley_2445_2025.html' },
+      { label: 'Código Sustantivo del Trabajo, arts. 154–156 (embargo de salarios) — Secretaría del Senado de la República', href: 'http://secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr005.html' },
+      { label: 'Superintendencia de Notariado y Registro — Certificado de tradición y libertad', href: 'https://certificados.supernotariado.gov.co/certificado' },
+      { label: 'RUNT — Consulta ciudadana de vehículo (portal público)', href: 'https://portalpublico.runt.gov.co/#/consulta-vehiculo/consulta/consulta-ciudadana' },
     ],
     faqs: [
       {
-        q: '¿Cómo puedo saber si tengo un embargo?',
-        a: 'Hay cinco vías: consultar tu nombre o cédula en el portal de Consulta de Procesos de la Rama Judicial, revisar el desprendible de nómina en busca de descuentos judiciales, revisar los extractos y saldos de tus cuentas bancarias, pedir el certificado de tradición y libertad de tus inmuebles ante la Oficina de Registro de Instrumentos Públicos, y consultar el registro del vehículo en el RUNT o la secretaría de tránsito.',
+        q: '¿Cómo sé si tengo un embargo?',
+        a: 'Revisa cinco lugares: la consulta de procesos de la Rama Judicial por tu nombre, tu desprendible de nómina, tus cuentas bancarias, el certificado de tradición y libertad de tus inmuebles y el registro de tu vehículo. El embargo se comunica según el bien: al registrador si es un bien sujeto a registro, al pagador si es salario y a la entidad bancaria si son dineros depositados (Código General del Proceso, art. 593).',
       },
       {
         q: '¿Me pueden embargar sin avisarme?',
-        a: 'El embargo se decreta dentro de un proceso ejecutivo en el que debe notificarse al demandado. En la práctica, muchas personas se enteran cuando ven el descuento en la nómina o la cuenta bloqueada, porque la notificación se surtió en una dirección desactualizada o mediante emplazamiento. Que no te hayas enterado no significa que el proceso no exista: por eso conviene consultar directamente en la Rama Judicial.',
+        a: 'El ejecutante puede solicitar el embargo y secuestro de bienes desde la presentación de la demanda (Código General del Proceso, art. 599). Por eso es posible enterarse de la medida por el banco, el empleador o el registro antes de conocer el proceso completo. Si encuentras una retención, pide el oficio que la ordenó.',
       },
       {
-        q: '¿Cuánto me pueden embargar del salario?',
-        a: 'Como regla general en Colombia el salario mínimo legal es inembargable, y del excedente puede embargarse hasta la quinta parte. La excepción son las obligaciones alimentarias y las deudas con cooperativas, donde el límite es hasta el 50%. Verificar que el descuento respeta esos topes es uno de los primeros puntos a revisar.',
+        q: '¿Cuánto de mi salario pueden embargar?',
+        a: 'El salario mínimo no es embargable (Código Sustantivo del Trabajo, art. 154). El exceso del salario mínimo solo es embargable en una quinta parte (art. 155). Hasta el 50% puede embargarse únicamente a favor de cooperativas legalmente autorizadas y para pensiones alimenticias (art. 156). Los salarios y las prestaciones sociales también son inembargables en la proporción prevista en las leyes (CGP, art. 594, num. 6).',
       },
       {
-        q: '¿Cómo puedo detener un embargo legalmente?',
-        a: 'El artículo 545 del Código General del Proceso establece que desde la aceptación de la solicitud de negociación de deudas se suspenden los procesos de ejecución en curso, y esa suspensión incluye la ejecución aún no practicada de medidas cautelares ya decretadas sobre bienes, derechos, cuentas bancarias y emolumentos. También cesan los descuentos de nómina y libranza, salvo obligaciones alimentarias.',
+        q: '¿Cómo puedo detener un embargo de forma legal?',
+        a: 'Dentro del proceso ejecutivo, el embargo se levanta en los casos del art. 597 del Código General del Proceso (por ejemplo, si lo pide quien lo solicitó, si se desiste de la demanda o si el demandado presta caución). El ejecutado también puede evitar o levantar embargos prestando caución por el valor actual de la ejecución aumentada en un 50% (art. 602). Y, si se acepta la solicitud de negociación de deudas de la Ley 2445 de 2025, se suspenden los procesos de ejecución en curso, incluida la ejecución aún no practicada de las medidas cautelares (art. 545, num. 1).',
       },
       {
-        q: '¿Qué pasa si me descuentan de la nómina después de radicar la insolvencia?',
-        a: 'El numeral 2 del artículo 545 dispone que los actos ejecutados en contravención de la suspensión son ineficaces de pleno derecho. El conciliador pone la sanción en conocimiento del pagador y del acreedor, junto con la orden de devolución inmediata de las sumas descontadas, y ambos responden solidariamente desde que recibieron la comunicación.',
+        q: '¿Qué pasa con los descuentos de nómina si me aceptan la negociación de deudas?',
+        a: 'Desde la aceptación de la solicitud por el conciliador, se suspenden los descuentos de nómina y por libranza, excepto los de alimentos. Los actos contrarios son ineficaces de pleno derecho (Código General del Proceso, art. 545, num. 2, modificado por la Ley 2445 de 2025).',
       },
       {
-        q: '¿El embargo caduca solo con el tiempo?',
-        a: 'No. Una medida cautelar se levanta por orden del juez que la decretó, sea porque se pagó la obligación, prosperó una excepción, se declaró la nulidad, o porque opera la protección de un procedimiento de insolvencia. Esperar no resuelve el embargo, y mientras tanto los intereses siguen corriendo.',
+        q: '¿El embargo se acaba solo con el tiempo?',
+        a: 'No hay una regla general de que el embargo caduque por el simple paso del tiempo. El Código General del Proceso (art. 597) enumera los casos de levantamiento, entre ellos que, pasados cinco años desde la inscripción de la medida, no se halle el expediente en que se decretó. Para saber si aplica en tu caso, hay que revisar el proceso.',
+      },
+      {
+        q: '¿Dónde consulto si no sé en qué juzgado está mi proceso?',
+        a: 'En el portal de consulta de procesos de la Rama Judicial puedes buscar por tu nombre completo y, si el portal lo permite, por tu documento. Para inmuebles, el certificado de tradición y libertad (Superintendencia de Notariado y Registro) indica el juzgado que ordenó el embargo. Para el salario o la cuenta, el oficio que recibió tu empleador o tu banco.',
+      },
+      {
+        q: '¿Qué debo hacer si encuentro un embargo?',
+        a: 'Confirma el despacho y el número del proceso, pide copia del expediente y verifica que lo embargado respete los límites de la ley (salario, bienes inembargables y valor máximo de la medida). Después, evalúa las vías legales: pedir el levantamiento dentro del proceso, prestar caución o, si cumples los requisitos de cesación de pagos, la negociación de deudas de la Ley 2445 de 2025 (CGP, art. 538).',
       },
     ],
     content: `
-<p class="definicion"><strong>Respuesta directa:</strong> Para saber si tienes un embargo en Colombia puedes consultar tu cédula en el portal de Consulta de Procesos de la Rama Judicial, revisar tu desprendible de nómina buscando descuentos judiciales, verificar el estado de tus cuentas bancarias, pedir el certificado de tradición y libertad de tus inmuebles y consultar el registro de tu vehículo. Las cinco vías son gratuitas o de bajo costo.</p>
+<p class="definicion"><strong>Respuesta directa:</strong> Para saber si tienes un embargo, revisa cinco lugares: la consulta de procesos de la Rama Judicial, tu desprendible de nómina, tus cuentas bancarias, el certificado de tradición y libertad de tus inmuebles y el registro de tu vehículo. Según lo que esté embargado, el embargo se comunica a un destinatario distinto: al registrador, al pagador de tu salario o al banco (Código General del Proceso, art. 593).</p>
 
-<p>La mayoría de personas descubre un embargo por sorpresa: un descuento inesperado en el sueldo o una cuenta bloqueada. Esta guía te muestra cómo verificarlo antes de que ocurra, y qué puedes hacer si ya ocurrió.</p>
+<p><em>Actualizado: 29 oct 2026</em></p>
 
-<h2>1. Consulta de Procesos de la Rama Judicial</h2>
+<p>Un embargo no siempre llega con aviso. A veces lo descubres porque el desprendible llega con un descuento que no esperabas o porque tu cuenta aparece retenida. Esta guía te muestra dónde mirar y qué dice la ley sobre lo que se puede y no se puede embargar. Algunas consultas pueden tener costo: verifica el valor vigente en cada canal.</p>
 
-<p>Es la vía más directa. El portal de <a href="https://consultaprocesos.ramajudicial.gov.co/" target="_blank" rel="noopener noreferrer nofollow">Consulta de Procesos Nacional Unificada</a> permite buscar procesos por nombre o número de documento de las partes.</p>
+<p class="cta-consulta">Si encontraste un proceso en tu contra, el primer paso es entender de qué trata. <a href="/consulta-gratuita">Revisa tu caso de embargo en una consulta gratuita</a>.</p>
 
-<ul>
-  <li>Busca por <strong>tu número de cédula</strong> y también por tu nombre completo, con y sin tildes: los registros no siempre son consistentes.</li>
-  <li>Revisa procesos en los que figures como <strong>demandado</strong>, especialmente ejecutivos singulares, hipotecarios o prendarios.</li>
-  <li>Abre las actuaciones para ver si hay auto que decrete medidas cautelares.</li>
-</ul>
+<h2>Las cinco consultas, de un vistazo</h2>
 
-<p>Ten presente que no todos los despachos actualizan con la misma oportunidad, y que los procesos de cobro coactivo de entidades públicas —DIAN, secretarías de tránsito, municipios— no siempre aparecen ahí, porque no son procesos judiciales.</p>
+<div class="tabla-wrap">
+<table>
+  <thead>
+    <tr><th>Dónde</th><th>Qué puedes ver</th><th>Qué necesitas</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1. Rama Judicial</td><td>Si hay un proceso a tu nombre y en qué despacho está</td><td>Tu nombre completo y, si el portal lo permite, tu documento</td></tr>
+    <tr><td>2. Desprendible de nómina</td><td>Si tu empleador retiene parte de tu salario por orden judicial</td><td>Tu desprendible y, si no aparece claro, preguntar a Recursos Humanos o Nómina</td></tr>
+    <tr><td>3. Cuentas bancarias</td><td>Si tu cuenta tiene fondos retenidos</td><td>La app o sucursal del banco, y pedir la orden</td></tr>
+    <tr><td>4. Certificado de tradición y libertad</td><td>Si un inmueble tiene embargo inscrito</td><td>La matrícula inmobiliaria del inmueble</td></tr>
+    <tr><td>5. Registro del vehículo</td><td>Si tu vehículo tiene limitaciones o embargos</td><td>Placa y documento</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>1. Consulta tu nombre en la Rama Judicial</h2>
+
+<p>La Rama Judicial tiene un portal de <a href="https://consultaprocesos.ramajudicial.gov.co/" target="_blank" rel="noopener noreferrer nofollow">consulta de procesos</a>. Busca por tu nombre completo (y, si el portal lo permite, por tu documento). Si aparece un proceso ejecutivo en tu contra, el despacho y el número de radicado te dicen dónde está tramitándose y quién es el demandante. Con eso puedes pedir la copia del expediente o acudir al juzgado.</p>
+
+<p>Ten en cuenta que la consulta cubre procesos judiciales. Si el embargo viene de un cobro coactivo (por ejemplo, de una entidad pública), puede no aparecer ahí; en ese caso, la entidad que cobra te debe informar.</p>
 
 <h2>2. Revisa tu desprendible de nómina</h2>
 
-<p>Si el embargo recayó sobre tu salario, aparecerá como un descuento identificado con expresiones como <em>embargo judicial</em>, <em>descuento por orden judicial</em> o el número del proceso.</p>
+<p>El embargo de salarios se comunica al pagador o empleador, que debe retener la proporción que fija la ley y consignarla a órdenes del juzgado (CGP, art. 593, num. 9). Si ves una retención nueva, pregunta al área de nómina de qué oficio proviene y pide copia: debe indicar el juzgado, el proceso y el valor.</p>
 
-<p>Dos cosas para verificar de inmediato:</p>
+<p>La ley limita cuánto de tu salario puede embargarse. El salario mínimo no es embargable (Código Sustantivo del Trabajo, art. 154). El exceso del salario mínimo solo se embarga en una quinta parte (art. 155). Hasta el 50% puede embargarse únicamente a favor de cooperativas legalmente autorizadas y por pensiones alimenticias (art. 156). Además, los salarios y las prestaciones sociales son inembargables en la proporción prevista en las leyes (CGP, art. 594, num. 6).</p>
 
-<ul>
-  <li><strong>Que respeten los topes legales.</strong> Como regla general el salario mínimo es inembargable y del excedente puede embargarse hasta la quinta parte. La excepción son las obligaciones alimentarias y las deudas con cooperativas, donde el límite llega al 50%.</li>
-  <li><strong>Que no haya doble descuento</strong> por la misma obligación, algo más común de lo que parece cuando conviven una libranza y un embargo.</li>
-</ul>
+<h2>3. Mira tus cuentas bancarias</h2>
 
-<p>Tu pagador está obligado a informarte el origen del descuento si se lo solicitas.</p>
+<p>El embargo de dineros en bancos se comunica a la entidad, que debe constituir el certificado de depósito y ponerlo a disposición del juez dentro de los tres días siguientes. Con la recepción del oficio queda consumado el embargo (CGP, art. 593, num. 10). Si ves saldo retenido, pide al banco por escrito el oficio que ordenó la medida: debe indicar el juzgado y el proceso.</p>
 
-<h2>3. Verifica tus cuentas bancarias</h2>
-
-<p>Un embargo de cuentas se manifiesta como saldo retenido o imposibilidad de disponer de los fondos. Consulta el detalle en tu banca en línea o pide en la sucursal la constancia del oficio que originó la retención: ahí figura el juzgado y el número de proceso, que es lo que necesitas para rastrearlo.</p>
-
-<p>Recuerda que hay montos protegidos: los depósitos en cuentas de ahorro tienen un tope legal de inembargabilidad, y las cuentas marcadas como cuenta de ahorro para el fomento de la construcción o similares tienen reglas propias.</p>
+<p>Los depósitos de ahorro en establecimientos de crédito son inembargables en el monto señalado por la autoridad competente, salvo para créditos alimentarios (art. 594, num. 2). El monto vigente debe verificarse en la norma que lo fije.</p>
 
 <h2>4. Pide el certificado de tradición y libertad</h2>
 
-<p>Para inmuebles, el certificado de tradición y libertad que expide la Oficina de Registro de Instrumentos Públicos muestra en sus anotaciones cualquier embargo inscrito, con la fecha y el despacho que lo ordenó. Se solicita en línea y tiene un costo bajo.</p>
+<p>Si tienes un inmueble, el embargo se comunica al registrador, que lo inscribe y emite el certificado sobre su situación jurídica (CGP, art. 593, num. 1). Por eso, el certificado de tradición y libertad es la forma de verificar si hay una anotación de embargo. Puedes solicitarlo en el portal de la <a href="https://certificados.supernotariado.gov.co/certificado" target="_blank" rel="noopener noreferrer nofollow">Superintendencia de Notariado y Registro</a>; verifica allí el valor vigente.</p>
 
-<p>Es la verificación más confiable, porque un embargo sobre inmueble solo produce efectos si está inscrito.</p>
+<p>Busca en el certificado anotaciones que digan “embargo” (por ejemplo, “embargo ejecutivo”) y el nombre del juzgado. Si el inmueble es tu vivienda y se practica el secuestro, el juez te la deja en calidad de secuestre, salvo que quien pidió la medida solicite que se entregue a un secuestre designado por el juez (art. 595, num. 3).</p>
 
 <h2>5. Consulta el registro de tu vehículo</h2>
 
-<p>Para vehículos, la consulta ante el RUNT o la secretaría de tránsito donde esté matriculado revela limitaciones a la propiedad, incluidos embargos. También aparecerán prendas y otras afectaciones.</p>
+<p>Los vehículos son bienes sujetos a registro: el embargo se comunica a la autoridad que lleva el registro y se inscribe (CGP, art. 593, num. 1). Puedes revisar la información del vehículo en el <a href="https://portalpublico.runt.gov.co/#/consulta-vehiculo/consulta/consulta-ciudadana" target="_blank" rel="noopener noreferrer nofollow">portal público del RUNT</a> y confirmar con el organismo de tránsito donde está matriculado. Si el portal no muestra con claridad las limitaciones, pide el certificado en tránsito.</p>
 
-<h2>Señales de que un embargo viene en camino</h2>
+<p class="cta-consulta">Con los resultados de estas cinco consultas, <a href="/consulta-gratuita">pide orientación sobre tu embargo</a> y confirma qué se puede hacer en tu caso.</p>
 
-<p>Antes del embargo casi siempre hay avisos. Si estás viendo esto, conviene actuar antes de que la medida se materialice:</p>
+<h2>Señales de que puede haber un embargo</h2>
 
 <ul>
-  <li>Llamadas de cobranza que pasan de la entidad original a una firma de abogados o casa de cobranza.</li>
-  <li>Comunicaciones que anuncian el "inicio de acciones judiciales" o mencionan un proceso ejecutivo.</li>
-  <li>Notificaciones por correo certificado a tu dirección registrada, o avisos de emplazamiento.</li>
-  <li>Mora superior a 90 días en obligaciones con garantía o con pagaré firmado.</li>
+  <li>Un descuento nuevo en el desprendible que no corresponde a deducciones que tú autorizaste.</li>
+  <li>Saldo retenido o cuenta bloqueada sin explicación del banco.</li>
+  <li>Notificación de un juzgado o del tránsito por correo, correo electrónico o a tu domicilio.</li>
+  <li>Una anotación de embargo en el certificado de tradición y libertad de tu inmueble.</li>
+  <li>Un proceso ejecutivo a tu nombre en la consulta de la Rama Judicial.</li>
 </ul>
+
+<p>Ninguna señal confirma por sí sola el embargo: la prueba es el oficio o la anotación que lo ordena.</p>
+
+<h2>Qué protege la ley</h2>
+
+<p>Aun con un embargo en curso, la ley pone límites. Estos son los más relevantes para una persona natural:</p>
+
+<ul>
+  <li><strong>Salario:</strong> el salario mínimo no es embargable, y el exceso solo en una quinta parte (CST, arts. 154 y 155). La excepción del 50% aplica únicamente para cooperativas legalmente autorizadas y pensiones alimenticias (art. 156).</li>
+  <li><strong>Bienes inembargables:</strong> entre otros, el televisor, el radio, el computador personal, los utensilios de cocina, la nevera y los demás muebles necesarios para tu subsistencia y la de tu familia o para tu trabajo individual, salvo cobro del crédito con que se compró el bien y salvo bienes suntuarios de alto valor (CGP, art. 594, num. 11). También el combustible y los alimentos para un mes, a criterio del juez (num. 12), los derechos de uso y habitación (num. 14) y los animales domésticos de compañía (num. 17).</li>
+  <li><strong>Que no se embargue de más:</strong> el valor de los bienes embargados no puede exceder del doble del crédito cobrado, sus intereses y costas, con excepciones como un solo bien o bienes con hipoteca o prenda (art. 599). Si las medidas resultan excesivas, el juez puede ordenar la reducción (art. 600). En bancos, la cuantía máxima de la medida no puede exceder el valor del crédito y las costas más un 50% (art. 593, num. 10).</li>
+  <li><strong>Indicar qué se embarga primero:</strong> el ejecutado puede pedir que el juez embargue los bienes que él señale para evitar que se embarguen otros, salvo que el embargo se funde en garantía real (art. 599, parágrafo).</li>
+  <li><strong>Caución:</strong> el ejecutado puede evitar o levantar embargos prestando caución por el valor actual de la ejecución aumentada en un 50% (art. 602).</li>
+</ul>
+
+<p>Si quieres ver con más detalle qué bienes e ingresos no pueden embargarte, lee <a href="/blog/como-evitar-un-embargo-colombia">qué no pueden embargarte en Colombia</a>. Esta guía se centra en cómo saber si ya tienes un embargo y qué puedes hacer a partir de ahí.</p>
 
 <h2>Cómo suspender un embargo legalmente</h2>
 
-<p>Aquí está la parte útil. El procedimiento de insolvencia de persona natural no solo negocia la deuda: <strong>detiene la ejecución</strong>. El artículo 545 del Código General del Proceso es explícito.</p>
+<p>Hay dos tipos de salida: las que se piden dentro del proceso ejecutivo y las que vienen del procedimiento de negociación de deudas de la Ley 2445 de 2025.</p>
 
-<p class="cita-norma"><strong>Artículo 545 CGP, numeral 1.</strong> No podrán iniciarse contra el deudor nuevos procesos o trámites públicos o privados de ejecución (...) y se suspenderán los que estuvieren en curso al momento de la aceptación. La suspensión incluirá la ejecución aún no totalmente practicada de medidas cautelares ya decretadas respecto de bienes o derechos pertenecientes al deudor y emolumentos que este tenga por recibir por cualquier causa, personalmente o en cuentas bancarias o por medio de cualquier producto financiero.</p>
+<p><strong>Dentro del proceso ejecutivo.</strong> El embargo y el secuestro se levantan en los casos del art. 597 del CGP. Por ejemplo: si lo pide quien solicitó la medida, si se desiste de la demanda, si el demandado presta caución para garantizar lo que se pretende y las costas, si se ordena la terminación del proceso ejecutivo, o cuando, pasados cinco años desde la inscripción de la medida, no se halla el expediente (art. 597, num. 1, 2, 3, 4 y 10).</p>
 
-<p>En concreto, desde la aceptación de la solicitud:</p>
+<p><strong>Con la negociación de deudas (Ley 2445 de 2025).</strong> Desde la aceptación de la solicitud por el conciliador, no pueden iniciarse nuevos procesos de ejecución contra el deudor y se suspenden los que estén en curso. La suspensión incluye la ejecución aún no totalmente practicada de medidas cautelares ya decretadas sobre bienes, derechos y emolumentos del deudor, por ejemplo en cuentas bancarias, y los actos preparatorios para perfeccionarlas (CGP, art. 545, num. 1, modificado por la Ley 2445).</p>
+
+<p class="cta-nota">Esto no significa que toda medida ya practicada se levante sola. Qué pasa con una medida ya practicada antes de la aceptación depende del proceso y de lo que se acuerde. Los bienes secuestrados o retenidos después de la aceptación deben restituirse al deudor mediante el control de legalidad (art. 548), y el acuerdo de pago puede incluir la facultad de disponer de bienes embargados (art. 553, num. 6).</p>
+
+<p>La aceptación tiene otros efectos que conviene conocer:</p>
 
 <ul>
-  <li><strong>Se suspenden los procesos ejecutivos</strong> en curso y no pueden iniciarse nuevos.</li>
-  <li><strong>Se frena la ejecución de embargos</strong> ya decretados pero no practicados del todo, incluidos los de cuentas bancarias y emolumentos.</li>
-  <li><strong>Cesan los descuentos de nómina y libranza</strong>, salvo obligaciones alimentarias. Lo que se descuente pese a ello es <strong>ineficaz de pleno derecho</strong>, con orden de devolución inmediata y responsabilidad solidaria del pagador y del acreedor.</li>
-  <li><strong>No pueden cortarte los servicios públicos domiciliarios</strong> por deudas anteriores, y si ya estaban cortados deben restablecerse.</li>
+  <li><strong>Nómina y libranzas:</strong> se suspenden los descuentos por libranza o nómina, excepto los de alimentos. Los actos en contra son ineficaces de pleno derecho (art. 545, num. 2).</li>
+  <li><strong>Servicios públicos:</strong> no pueden suspenderse y, si ya estaban suspendidos, deben restablecerse (art. 545, num. 3).</li>
+  <li><strong>Acreedores que siguen cobrando:</strong> el deudor puede alegar la nulidad con la certificación del conciliador. La ley prevé sanciones graduales y, desde la cuarta vez, la queja ante la Superintendencia Financiera o la de Industria y Comercio, con multa del 10% de los créditos cobrados por cada vez, a solicitud del deudor (art. 545, num. 1).</li>
 </ul>
 
-<p>El mismo numeral 1 añade una herramienta práctica: para alegar la nulidad del proceso ante el juez, el funcionario o el particular encargado del cobro, <strong>basta presentar copia de la certificación que expida el conciliador</strong> sobre la aceptación al procedimiento.</p>
-
-<h2>Y si el acreedor sigue cobrando</h2>
-
-<p>La Ley 2445 de 2025 puso sanciones concretas. Al acreedor ya notificado que insista en diligencias de cobranza le corresponde llamado de atención la primera vez, amonestación la segunda y postergación del pago de todas sus obligaciones calificadas la tercera. Desde la cuarta, el conciliador o el juez remite la queja a la Superintendencia Financiera o a la de Industria y Comercio para que se imponga una <strong>multa del 10% del monto de los créditos cobrados</strong>, incluidos intereses.</p>
+<p>Para entrar a este procedimiento la ley exige estar en cesación de pagos: dos o más obligaciones vencidas por más de noventa días con dos o más acreedores, que representen al menos el 30% del pasivo total, o dos o más procesos de cobro, con declaración bajo juramento (art. 538). Eso no garantiza que haya acuerdo: el acuerdo lo deben aprobar acreedores que representen más del 50% de los votos (art. 553, num. 2). Puedes ver el trámite completo en la guía de la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">Ley 2445 de 2025</a> y calcular tu situación con la <a href="/calculadora">calculadora de deudas</a>.</p>
 
 <h2>Qué hacer ahora</h2>
 
-<p>Si confirmaste que tienes un embargo, el orden razonable es: identificar el proceso y el despacho, verificar que los descuentos respetan los topes legales, y evaluar si tu situación configura la cesación de pagos del artículo 538 —mora superior a 90 días con dos o más acreedores y al menos el 30% del pasivo en mora—. Si la configura, el procedimiento de insolvencia es la vía para suspender la ejecución y renegociar.</p>
+<ol>
+  <li><strong>Confirma que el embargo existe</strong> con el oficio, la anotación o la consulta del proceso.</li>
+  <li><strong>Identifica el despacho, el número de proceso y el demandante</strong> y pide copia del expediente.</li>
+  <li><strong>Verifica que lo embargado esté dentro de los límites</strong> de la ley: salario, bienes inembargables y valor máximo de la medida.</li>
+  <li><strong>Reúne tus documentos:</strong> deudas y acreedores, ingresos, bienes y procesos en curso.</li>
+  <li><strong>Evalúa qué vía te sirve:</strong> pedir el levantamiento dentro del proceso, prestar caución o la negociación de deudas de la Ley 2445.</li>
+</ol>
 
-<p>Si quieres el detalle normativo, revisa nuestra guía sobre la <a href="/blog/ley-2445-de-2025-insolvencia-colombia">ley de insolvencia en Colombia</a>, con el articulado citado.</p>
+<p class="cta-consulta">Cada proceso avanza a su ritmo y cada caso tiene condiciones distintas. <a href="/consulta-gratuita">Habla con el equipo legal en tu consulta gratuita</a> para revisar qué hacer en el tuyo.</p>
 
-<p>Un embargo no se resuelve esperando. En Deuda OFF revisamos tu caso sin costo y te decimos con claridad qué protección puedes activar y en cuánto tiempo.</p>
+<blockquote>Saber exactamente qué está embargado, por quién y por cuánto es el primer paso para revisar si la medida se ajusta a la ley.</blockquote>
     `,
   },
 ]
